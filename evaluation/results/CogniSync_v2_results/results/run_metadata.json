@@ -1,0 +1,13 @@
+{
+  "run_id": "20260420T202638Z",
+  "seed": 42,
+  "n_gpus": 2,
+  "faiss_gpu": false,
+  "model": "all-MiniLM-L6-v2",
+  "batch": 256,
+  "dataset_n": 2000,
+  "platform": "kaggle-dual-t4",
+  "msmarco_n": 2000,
+  "codesearch_n": 2000,
+  "completed_at": "2026-04-20T20:37:07.725197+00:00"
+}

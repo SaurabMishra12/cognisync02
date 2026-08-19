@@ -1,0 +1,7 @@
+Variant,MRR@5,Recall@5
+Dense + Appended Generic Context,0.8605733333333334,0.96495
+Dense + Appended Topical Context,0.8605733333333334,0.96495
+Dense + No Context,0.8611966666666667,0.96515
+Hybrid + Appended Generic Context,0.8475166666666666,0.9525166666666666
+Hybrid + Appended Topical Context,0.84735,0.9523166666666666
+Hybrid + No Context,0.8465433333333332,0.95155

@@ -1,0 +1,8 @@
+comparison,p_value,significant,b_wins,c_wins
+CogniSync vs Vanilla RAG,0.00634765625,True,11,1
+CogniSync vs MemGPT (approx),5.010331956390452e-06,True,28,2
+CogniSync vs MemoryBank (approx),2.6382664692063404e-39,True,177,1
+CogniSync vs A-MEM (approx),0.000252249023327326,True,34,9
+CogniSync vs LangChain MMR,1.6505363085344744e-43,True,237,16
+CogniSync vs LlamaIndex,2.297590260376327e-10,True,45,1
+CogniSync vs Pinecone (sim),0.00634765625,True,11,1

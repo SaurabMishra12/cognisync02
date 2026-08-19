@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\caption{Full retrieval comparison (5-trial mean). Bold = CogniSync.}
+\label{tab:retrieval}
+\centering\small
+\begin{tabular}{@{}lrrrrrrl@{}}
+\toprule
+\textbf{System} & R@1 & R@5 & R@10 & MRR & NDCG@5 & MAP & Lat(ms) \\n\midrule
+  Vanilla RAG                    & 46.13 & 78.13 & 78.13 & 58.18 & 62.41 & 57.09 & 24.50 \
+  MemGPT (approx)                & 36.13 & 76.00 & 76.00 & 50.48 & 55.48 & 48.65 & 26.64 \
+  MemoryBank (approx)            & 18.93 & 56.00 & 56.00 & 30.66 & 35.00 & 28.52 & 24.01 \
+  A-MEM (approx)                 & 46.13 & 76.13 & 76.13 & 57.63 & 61.74 & 56.81 & 24.94 \
+  LangChain MMR                  & 46.13 & 50.00 & 50.00 & 47.38 & 45.96 & 44.72 & 28.79 \
+  LlamaIndex                     & 44.80 & 73.60 & 73.60 & 55.69 & 58.74 & 53.81 & 24.12 \
+  Pinecone (sim)                 & 46.13 & 78.13 & 78.13 & 58.18 & 62.41 & 57.09 & 223.36 \
+  CogniSync (Hybrid)             & \textbf{46.80} & \textbf{79.47} & \textbf{79.47} & \textbf{59.39} & \textbf{63.64} & \textbf{58.26} & 28.73 \
+\bottomrule
+\end{tabular}
+\end{table*}

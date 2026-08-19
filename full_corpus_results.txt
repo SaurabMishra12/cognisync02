@@ -1,0 +1,2 @@
+Dense MRR: 0.6010
+CogniSync MRR: 0.7000

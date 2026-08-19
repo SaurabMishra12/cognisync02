@@ -1,0 +1,4 @@
+Variant,MRR,Recall@5
+A-MEM (Semantic Edges),0.9316666666666666,1.0
+CogniSync (Episodic Edges),0.9436666666666667,1.0
+Vanilla RAG (Baseline),0.9426666666666667,1.0

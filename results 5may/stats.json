@@ -1,0 +1,7 @@
+{
+  "CogniSync_MRR_95_CI": "[0.8305, 0.8372]",
+  "Wilcoxon_p_value": 1.5043255662200547e-172,
+  "McNemar_p_value": 2.873943592558855e-54,
+  "CogniSync_Wins_Recall": 505,
+  "Vanilla_Wins_Recall": 1134
+}

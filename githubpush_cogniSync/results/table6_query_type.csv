@@ -1,0 +1,5 @@
+System,Exact-Match,Semantic
+CogniSync,1.000,0.887
+Dense,0.987,0.859
+Hybrid_Naive,1.000,0.838
+Lexical,1.000,0.788

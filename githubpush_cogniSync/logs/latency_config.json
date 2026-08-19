@@ -1,0 +1,7 @@
+{
+    "index_size": 100000,
+    "queries_run": 1000,
+    "average_latency_ms": 275.5999159812927,
+    "p95_latency_ms": 480.8056473731993,
+    "p99_latency_ms": 630.3105664253235
+}

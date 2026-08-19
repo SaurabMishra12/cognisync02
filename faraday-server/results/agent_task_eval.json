@@ -1,0 +1,79 @@
+{
+  "experiment": "agent_task",
+  "results": {
+    "CogniSync (Hybrid)": {
+      "code_generation": {
+        "success_mean": 1.0,
+        "success_std": 0.0,
+        "ci95_lower": 1.0,
+        "ci95_upper": 1.0,
+        "mrr_mean": 0.925,
+        "lat_mean_ms": 23.2118
+      },
+      "debugging": {
+        "success_mean": 0.95,
+        "success_std": 0.0,
+        "ci95_lower": 0.95,
+        "ci95_upper": 0.95,
+        "mrr_mean": 0.78667,
+        "lat_mean_ms": 26.4607
+      },
+      "api_integration": {
+        "success_mean": 1.0,
+        "success_std": 0.0,
+        "ci95_lower": 1.0,
+        "ci95_upper": 1.0,
+        "mrr_mean": 0.65167,
+        "lat_mean_ms": 22.7493
+      },
+      "cross_session": {
+        "success_mean": 0.8,
+        "success_std": 0.0,
+        "ci95_lower": 0.8,
+        "ci95_upper": 0.8,
+        "mrr_mean": 0.73917,
+        "lat_mean_ms": 30.5806
+      }
+    },
+    "Vanilla RAG": {
+      "code_generation": {
+        "success_mean": 1.0,
+        "success_std": 0.0,
+        "ci95_lower": 1.0,
+        "ci95_upper": 1.0,
+        "mrr_mean": 0.95,
+        "lat_mean_ms": 23.8835
+      },
+      "debugging": {
+        "success_mean": 0.95,
+        "success_std": 0.0,
+        "ci95_lower": 0.95,
+        "ci95_upper": 0.95,
+        "mrr_mean": 0.78333,
+        "lat_mean_ms": 24.738
+      },
+      "api_integration": {
+        "success_mean": 1.0,
+        "success_std": 0.0,
+        "ci95_lower": 1.0,
+        "ci95_upper": 1.0,
+        "mrr_mean": 0.69167,
+        "lat_mean_ms": 21.961
+      },
+      "cross_session": {
+        "success_mean": 0.8,
+        "success_std": 0.0,
+        "ci95_lower": 0.8,
+        "ci95_upper": 0.8,
+        "mrr_mean": 0.6975,
+        "lat_mean_ms": 25.9588
+      }
+    }
+  },
+  "task_types": [
+    "code_generation",
+    "debugging",
+    "api_integration",
+    "cross_session"
+  ]
+}

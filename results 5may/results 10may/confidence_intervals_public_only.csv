@@ -1,0 +1,4 @@
+Comparison,n_pairs,Mean MRR@5 Diff,95% CI
+CogniSync_RRF - Dense,29011,-0.0191,"[-0.0214, -0.0170]"
+CogniSync_RRF - Lexical,29011,0.0471,"[0.0450, 0.0494]"
+CogniSync_RRF - Hybrid_Naive,29011,0.0000,"[0.0000, 0.0000]"

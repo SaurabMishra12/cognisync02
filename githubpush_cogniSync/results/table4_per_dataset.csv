@@ -1,0 +1,6 @@
+Dataset,CogniSync,Dense,Hybrid_N,Lexical
+MS-MARCO,0.642,0.551,0.503,0.376
+CodeSearchNet,0.998,0.994,0.990,0.983
+SQuAD,0.960,0.961,0.934,0.879
+SciQ,0.962,0.963,0.951,0.929
+Synthetic,1.000,0.893,0.863,0.854

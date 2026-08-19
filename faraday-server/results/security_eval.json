@@ -1,0 +1,215 @@
+{
+  "experiment": "security",
+  "results": [
+    {
+      "attack": "prompt_injection",
+      "seed": 42,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.95
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 42,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.0
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 123,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.8
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 123,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.0
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 456,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 456,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.0
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 789,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.85
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 789,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.0
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 1337,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.9
+    },
+    {
+      "attack": "prompt_injection",
+      "seed": 1337,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.0
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 42,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 42,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.05
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 123,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 123,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.01
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 456,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 456,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.02
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 789,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 789,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.06
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 1337,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "tool_spoofing",
+      "seed": 1337,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.05
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 42,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 42,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.04333
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 123,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 123,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.10667
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 456,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 456,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.03333
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 789,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 789,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.11333
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 1337,
+      "condition": "raw",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 1.0
+    },
+    {
+      "attack": "data_exfiltration",
+      "seed": 1337,
+      "condition": "sanitized",
+      "poisoning_rate": 0.0,
+      "leakage_mrr": 0.05333
+    }
+  ]
+}

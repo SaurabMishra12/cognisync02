@@ -1,0 +1,7 @@
+Attack,System,ASR,FP_Rate,MRR_Drop
+Generic Injection,CogniSync,0.00%,1.04%,1.00 pp
+Generic Injection,No Defense,3.00%,N/A,N/A
+Adaptive Injection,CogniSync,0.12%,1.04%,1.01 pp
+Adaptive Injection,No Defense,99.30%,N/A,N/A
+Data Exfiltration,CogniSync,0.84%,1.04%,1.02 pp
+Data Exfiltration,No Defense,4.20%,N/A,N/A

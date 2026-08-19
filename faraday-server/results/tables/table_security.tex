@@ -1,0 +1,16 @@
+\begin{table}[t]
+\caption{Security evaluation (%).}
+\label{tab:security}
+\centering\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Attack & Sanitize & Poison & Degrade & Leak \\n\midrule
+  Data Exfiltration              & \xmark & 0.0 & 0.0 & 100.0 \
+  Data Exfiltration              & \checkmark & 0.0 & 0.0 & 7.0 \
+  Prompt Injection               & \xmark & 0.0 & 0.0 & 90.0 \
+  Prompt Injection               & \checkmark & 0.0 & 0.0 & 0.0 \
+  Tool Spoofing                  & \xmark & 0.0 & 0.0 & 100.0 \
+  Tool Spoofing                  & \checkmark & 0.0 & 0.0 & 3.8 \
+\bottomrule
+\end{tabular}
+\end{table}

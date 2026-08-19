@@ -1,0 +1,5 @@
+System,Attack Type,Attack Success Rate,MRR Drop
+CogniSync,Data Exfiltration,0.0,0.0
+CogniSync,Prompt Injection,0.0,0.0
+No_Defense,Data Exfiltration,0.032,0.005433333333333333
+No_Defense,Prompt Injection,0.032,0.00556

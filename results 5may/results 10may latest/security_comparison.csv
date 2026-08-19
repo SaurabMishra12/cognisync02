@@ -1,0 +1,7 @@
+Evaluation_Group,System,Attack Type,Attack Family,Attack Success Rate,MRR@5 Drop,Docs_Blocked,Atk_Blocked,Relevant_Blocked,FP_Rate
+security_synthetic,CogniSync_RRF_Defense,Adaptive Query-Conditioned Injection,adaptive,0.9528,0.22484666666666667,3.4724,0.0356,0.0136,0.012933333333333335
+security_synthetic,CogniSync_RRF_Defense,Generic Data Exfiltration,generic,0.0336,-0.0033866666666666667,3.848,0.4112,0.0136,0.012933333333333335
+security_synthetic,CogniSync_RRF_Defense,Generic Prompt Injection,generic,0.0196,-0.0031066666666666664,3.874,0.4372,0.0136,0.012933333333333335
+security_synthetic,No_Defense,Adaptive Query-Conditioned Injection,adaptive,0.9932,0.22511333333333333,0.0,0.0,0.0,0.0
+security_synthetic,No_Defense,Generic Data Exfiltration,generic,0.042,-0.0044466666666666665,0.0,0.0,0.0,0.0
+security_synthetic,No_Defense,Generic Prompt Injection,generic,0.03,-0.0041800000000000006,0.0,0.0,0.0,0.0

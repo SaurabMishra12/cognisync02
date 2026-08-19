@@ -1,0 +1,101 @@
+session_id,workflow_id,topic_id,topic_name,domain,turn,content
+wf01_s1,wf01,auth,JWT Authentication,backend,1,[JWT Authentication] Architecture finalized. Standard: 15-minute expiry via PyJWT+Redis. All components must comply.
+wf01_s2,wf01,auth,JWT Authentication,backend,2,[JWT Authentication] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.
+wf01_s3,wf01,auth,JWT Authentication,backend,3,"[JWT Authentication] Temporary override: Due to PyJWT+Redis issues, we are relaxing the constraint to 60-minute expiry for the current sprint only."
+wf01_s4,wf01,auth,JWT Authentication,backend,4,[JWT Authentication] Team reviewed alternatives. Confirmed 900-second validity window satisfies our requirements. Tech stack: PyJWT+Redis.
+wf01_s5,wf01,auth,JWT Authentication,backend,5,[JWT Authentication] FINAL for production: temporary override reverted. Enforcing 15-minute expiry globally. No exceptions.
+wf02_s1,wf02,db_schema,Database Schema,backend,1,[Database Schema] Architecture finalized. Standard: UUID primary keys via Alembic+PostgreSQL. All components must comply.
+wf02_s2,wf02,db_schema,Database Schema,backend,2,"[Database Schema] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements."
+wf02_s3,wf02,db_schema,Database Schema,backend,3,"[Database Schema] Temporary override: Due to Alembic+PostgreSQL issues, we are relaxing the constraint to auto-incrementing integer PKs for the current sprint only."
+wf02_s4,wf02,db_schema,Database Schema,backend,4,[Database Schema] Team reviewed alternatives. Confirmed 128-bit row identifiers satisfies our requirements. Tech stack: Alembic+PostgreSQL.
+wf02_s5,wf02,db_schema,Database Schema,backend,5,[Database Schema] FINAL for production: temporary override reverted. Enforcing UUID primary keys globally. No exceptions.
+wf03_s1,wf03,microservice,Microservice Context,architecture,1,[Microservice Context] Architecture finalized. Standard: strict domain boundary via gRPC+Protobuf. All components must comply.
+wf03_s2,wf03,microservice,Microservice Context,architecture,2,"[Microservice Context] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements."
+wf03_s3,wf03,microservice,Microservice Context,architecture,3,"[Microservice Context] Temporary override: Due to gRPC+Protobuf issues, we are relaxing the constraint to shared database schema for the current sprint only."
+wf03_s4,wf03,microservice,Microservice Context,architecture,4,[Microservice Context] Team reviewed alternatives. Confirmed decoupled bounded contexts satisfies our requirements. Tech stack: gRPC+Protobuf.
+wf03_s5,wf03,microservice,Microservice Context,architecture,5,[Microservice Context] FINAL for production: temporary override reverted. Enforcing strict domain boundary globally. No exceptions.
+wf04_s1,wf04,ci_cd,CI/CD Pipeline,devops,1,[CI/CD Pipeline] Architecture finalized. Standard: require 2 PR approvals via GitHub Actions. All components must comply.
+wf04_s2,wf04,ci_cd,CI/CD Pipeline,devops,2,[CI/CD Pipeline] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.
+wf04_s3,wf04,ci_cd,CI/CD Pipeline,devops,3,"[CI/CD Pipeline] Temporary override: Due to GitHub Actions issues, we are relaxing the constraint to admin bypass override for the current sprint only."
+wf04_s4,wf04,ci_cd,CI/CD Pipeline,devops,4,[CI/CD Pipeline] Team reviewed alternatives. Confirmed dual sign-off before merge satisfies our requirements. Tech stack: GitHub Actions.
+wf04_s5,wf04,ci_cd,CI/CD Pipeline,devops,5,[CI/CD Pipeline] FINAL for production: temporary override reverted. Enforcing require 2 PR approvals globally. No exceptions.
+wf05_s1,wf05,monitoring,Observability Stack,devops,1,[Observability Stack] Architecture finalized. Standard: 10% trace sampling via OpenTelemetry. All components must comply.
+wf05_s2,wf05,monitoring,Observability Stack,devops,2,[Observability Stack] Peripheral note: Fixed typo in user onboarding email template. QA confirmed it renders correctly on mobile.
+wf05_s3,wf05,monitoring,Observability Stack,devops,3,"[Observability Stack] Temporary override: Due to OpenTelemetry issues, we are relaxing the constraint to 100% full trace sampling for the current sprint only."
+wf05_s4,wf05,monitoring,Observability Stack,devops,4,[Observability Stack] Team reviewed alternatives. Confirmed one-in-ten request capture satisfies our requirements. Tech stack: OpenTelemetry.
+wf05_s5,wf05,monitoring,Observability Stack,devops,5,[Observability Stack] FINAL for production: temporary override reverted. Enforcing 10% trace sampling globally. No exceptions.
+wf06_s1,wf06,api_gateway,API Gateway Rate Limiting,backend,1,[API Gateway Rate Limiting] Architecture finalized. Standard: 100 RPM rate limit via nginx+Lua. All components must comply.
+wf06_s2,wf06,api_gateway,API Gateway Rate Limiting,backend,2,[API Gateway Rate Limiting] Peripheral note: Bumped base alpine image to address recent libssl CVEs. No functional changes.
+wf06_s3,wf06,api_gateway,API Gateway Rate Limiting,backend,3,"[API Gateway Rate Limiting] Temporary override: Due to nginx+Lua issues, we are relaxing the constraint to unlimited bursting for the current sprint only."
+wf06_s4,wf06,api_gateway,API Gateway Rate Limiting,backend,4,[API Gateway Rate Limiting] Team reviewed alternatives. Confirmed 100 requests-per-minute throttle satisfies our requirements. Tech stack: nginx+Lua.
+wf06_s5,wf06,api_gateway,API Gateway Rate Limiting,backend,5,[API Gateway Rate Limiting] FINAL for production: temporary override reverted. Enforcing 100 RPM rate limit globally. No exceptions.
+wf07_s1,wf07,caching,Distributed Caching,backend,1,[Distributed Caching] Architecture finalized. Standard: 5-minute TTL cache-aside via redis-py. All components must comply.
+wf07_s2,wf07,caching,Distributed Caching,backend,2,[Distributed Caching] Peripheral note: Bumped base alpine image to address recent libssl CVEs. No functional changes.
+wf07_s3,wf07,caching,Distributed Caching,backend,3,"[Distributed Caching] Temporary override: Due to redis-py issues, we are relaxing the constraint to write-through no expiry for the current sprint only."
+wf07_s4,wf07,caching,Distributed Caching,backend,4,[Distributed Caching] Team reviewed alternatives. Confirmed lazy-load with 300s expiration satisfies our requirements. Tech stack: redis-py.
+wf07_s5,wf07,caching,Distributed Caching,backend,5,[Distributed Caching] FINAL for production: temporary override reverted. Enforcing 5-minute TTL cache-aside globally. No exceptions.
+wf08_s1,wf08,frontend,React Architecture,frontend,1,[React Architecture] Architecture finalized. Standard: Atomic Design system via React+Storybook. All components must comply.
+wf08_s2,wf08,frontend,React Architecture,frontend,2,[React Architecture] Peripheral note: Bumped base alpine image to address recent libssl CVEs. No functional changes.
+wf08_s3,wf08,frontend,React Architecture,frontend,3,"[React Architecture] Temporary override: Due to React+Storybook issues, we are relaxing the constraint to monolithic render trees for the current sprint only."
+wf08_s4,wf08,frontend,React Architecture,frontend,4,[React Architecture] Team reviewed alternatives. Confirmed composable UI component hierarchy satisfies our requirements. Tech stack: React+Storybook.
+wf08_s5,wf08,frontend,React Architecture,frontend,5,[React Architecture] FINAL for production: temporary override reverted. Enforcing Atomic Design system globally. No exceptions.
+wf09_s1,wf09,ml_pipeline,ML Training Pipeline,mlops,1,[ML Training Pipeline] Architecture finalized. Standard: DVC data versioning via MLflow+DVC. All components must comply.
+wf09_s2,wf09,ml_pipeline,ML Training Pipeline,mlops,2,[ML Training Pipeline] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.
+wf09_s3,wf09,ml_pipeline,ML Training Pipeline,mlops,3,"[ML Training Pipeline] Temporary override: Due to MLflow+DVC issues, we are relaxing the constraint to manual S3 uploads for the current sprint only."
+wf09_s4,wf09,ml_pipeline,ML Training Pipeline,mlops,4,[ML Training Pipeline] Team reviewed alternatives. Confirmed immutable dataset snapshots with DVC satisfies our requirements. Tech stack: MLflow+DVC.
+wf09_s5,wf09,ml_pipeline,ML Training Pipeline,mlops,5,[ML Training Pipeline] FINAL for production: temporary override reverted. Enforcing DVC data versioning globally. No exceptions.
+wf10_s1,wf10,search,Elasticsearch Design,backend,1,[Elasticsearch Design] Architecture finalized. Standard: 2 shards 1 replica via elasticsearch-py. All components must comply.
+wf10_s2,wf10,search,Elasticsearch Design,backend,2,"[Elasticsearch Design] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements."
+wf10_s3,wf10,search,Elasticsearch Design,backend,3,"[Elasticsearch Design] Temporary override: Due to elasticsearch-py issues, we are relaxing the constraint to 5 shards 2 replicas for the current sprint only."
+wf10_s4,wf10,search,Elasticsearch Design,backend,4,[Elasticsearch Design] Team reviewed alternatives. Confirmed dual partitions single backup copy satisfies our requirements. Tech stack: elasticsearch-py.
+wf10_s5,wf10,search,Elasticsearch Design,backend,5,[Elasticsearch Design] FINAL for production: temporary override reverted. Enforcing 2 shards 1 replica globally. No exceptions.
+wf11_s1,wf11,auth_oauth,OAuth2 Flow,security,1,[OAuth2 Flow] Architecture finalized. Standard: PKCE S256 mandatory via Authlib+FastAPI. All components must comply.
+wf11_s2,wf11,auth_oauth,OAuth2 Flow,security,2,[OAuth2 Flow] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.
+wf11_s3,wf11,auth_oauth,OAuth2 Flow,security,3,"[OAuth2 Flow] Temporary override: Due to Authlib+FastAPI issues, we are relaxing the constraint to implicit grant permitted for the current sprint only."
+wf11_s4,wf11,auth_oauth,OAuth2 Flow,security,4,[OAuth2 Flow] Team reviewed alternatives. Confirmed SHA-256 code verifier required satisfies our requirements. Tech stack: Authlib+FastAPI.
+wf11_s5,wf11,auth_oauth,OAuth2 Flow,security,5,[OAuth2 Flow] FINAL for production: temporary override reverted. Enforcing PKCE S256 mandatory globally. No exceptions.
+wf12_s1,wf12,logging,Structured Logging,devops,1,[Structured Logging] Architecture finalized. Standard: correlation-id injection via structlog. All components must comply.
+wf12_s2,wf12,logging,Structured Logging,devops,2,[Structured Logging] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.
+wf12_s3,wf12,logging,Structured Logging,devops,3,"[Structured Logging] Temporary override: Due to structlog issues, we are relaxing the constraint to plain stdout only for the current sprint only."
+wf12_s4,wf12,logging,Structured Logging,devops,4,[Structured Logging] Team reviewed alternatives. Confirmed request trace-context propagation satisfies our requirements. Tech stack: structlog.
+wf12_s5,wf12,logging,Structured Logging,devops,5,[Structured Logging] FINAL for production: temporary override reverted. Enforcing correlation-id injection globally. No exceptions.
+wf13_s1,wf13,container,Docker Compose,devops,1,[Docker Compose] Architecture finalized. Standard: 512 MB RAM limit via Docker Compose. All components must comply.
+wf13_s2,wf13,container,Docker Compose,devops,2,[Docker Compose] Peripheral note: Added docstrings to utility functions in the string-formatting module. No logic change.
+wf13_s3,wf13,container,Docker Compose,devops,3,"[Docker Compose] Temporary override: Due to Docker Compose issues, we are relaxing the constraint to unbounded resource access for the current sprint only."
+wf13_s4,wf13,container,Docker Compose,devops,4,[Docker Compose] Team reviewed alternatives. Confirmed half-gigabyte memory ceiling satisfies our requirements. Tech stack: Docker Compose.
+wf13_s5,wf13,container,Docker Compose,devops,5,[Docker Compose] FINAL for production: temporary override reverted. Enforcing 512 MB RAM limit globally. No exceptions.
+wf14_s1,wf14,grpc,gRPC Service Contract,backend,1,[gRPC Service Contract] Architecture finalized. Standard: proto3 optional fields via grpcio+buf. All components must comply.
+wf14_s2,wf14,grpc,gRPC Service Contract,backend,2,"[gRPC Service Contract] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements."
+wf14_s3,wf14,grpc,gRPC Service Contract,backend,3,"[gRPC Service Contract] Temporary override: Due to grpcio+buf issues, we are relaxing the constraint to proto2 required fields for the current sprint only."
+wf14_s4,wf14,grpc,gRPC Service Contract,backend,4,[gRPC Service Contract] Team reviewed alternatives. Confirmed field presence tracking enabled satisfies our requirements. Tech stack: grpcio+buf.
+wf14_s5,wf14,grpc,gRPC Service Contract,backend,5,[gRPC Service Contract] FINAL for production: temporary override reverted. Enforcing proto3 optional fields globally. No exceptions.
+wf15_s1,wf15,migration,Database Migration,backend,1,[Database Migration] Architecture finalized. Standard: reversible down() migrations via Alembic. All components must comply.
+wf15_s2,wf15,migration,Database Migration,backend,2,[Database Migration] Peripheral note: Added docstrings to utility functions in the string-formatting module. No logic change.
+wf15_s3,wf15,migration,Database Migration,backend,3,"[Database Migration] Temporary override: Due to Alembic issues, we are relaxing the constraint to forward-only one-way for the current sprint only."
+wf15_s4,wf15,migration,Database Migration,backend,4,[Database Migration] Team reviewed alternatives. Confirmed bidirectional schema rollback paths satisfies our requirements. Tech stack: Alembic.
+wf15_s5,wf15,migration,Database Migration,backend,5,[Database Migration] FINAL for production: temporary override reverted. Enforcing reversible down() migrations globally. No exceptions.
+wf16_s1,wf16,rbac,RBAC Access Control,security,1,[RBAC Access Control] Architecture finalized. Standard: deny-by-default policy via Casbin+FastAPI. All components must comply.
+wf16_s2,wf16,rbac,RBAC Access Control,security,2,[RBAC Access Control] Peripheral note: Weekly sync rescheduled from Friday afternoon to Thursday morning starting next week.
+wf16_s3,wf16,rbac,RBAC Access Control,security,3,"[RBAC Access Control] Temporary override: Due to Casbin+FastAPI issues, we are relaxing the constraint to wildcard admin grants for the current sprint only."
+wf16_s4,wf16,rbac,RBAC Access Control,security,4,[RBAC Access Control] Team reviewed alternatives. Confirmed explicit allowlist whitelist only satisfies our requirements. Tech stack: Casbin+FastAPI.
+wf16_s5,wf16,rbac,RBAC Access Control,security,5,[RBAC Access Control] FINAL for production: temporary override reverted. Enforcing deny-by-default policy globally. No exceptions.
+wf17_s1,wf17,queue,Message Queue,backend,1,[Message Queue] Architecture finalized. Standard: DLQ with 3 retries via Celery+RabbitMQ. All components must comply.
+wf17_s2,wf17,queue,Message Queue,backend,2,"[Message Queue] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements."
+wf17_s3,wf17,queue,Message Queue,backend,3,"[Message Queue] Temporary override: Due to Celery+RabbitMQ issues, we are relaxing the constraint to silent drop on failure for the current sprint only."
+wf17_s4,wf17,queue,Message Queue,backend,4,[Message Queue] Team reviewed alternatives. Confirmed triple-attempt fallback queueing satisfies our requirements. Tech stack: Celery+RabbitMQ.
+wf17_s5,wf17,queue,Message Queue,backend,5,[Message Queue] FINAL for production: temporary override reverted. Enforcing DLQ with 3 retries globally. No exceptions.
+wf18_s1,wf18,cdn,CDN Cache Invalidation,frontend,1,[CDN Cache Invalidation] Architecture finalized. Standard: Cache-Control immutable via CloudFront. All components must comply.
+wf18_s2,wf18,cdn,CDN Cache Invalidation,frontend,2,"[CDN Cache Invalidation] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements."
+wf18_s3,wf18,cdn,CDN Cache Invalidation,frontend,3,"[CDN Cache Invalidation] Temporary override: Due to CloudFront issues, we are relaxing the constraint to no-cache validation for the current sprint only."
+wf18_s4,wf18,cdn,CDN Cache Invalidation,frontend,4,[CDN Cache Invalidation] Team reviewed alternatives. Confirmed infinite max-age directive on assets satisfies our requirements. Tech stack: CloudFront.
+wf18_s5,wf18,cdn,CDN Cache Invalidation,frontend,5,[CDN Cache Invalidation] FINAL for production: temporary override reverted. Enforcing Cache-Control immutable globally. No exceptions.
+wf19_s1,wf19,testing,Integration Testing,qa,1,[Integration Testing] Architecture finalized. Standard: Pact contract tests via pact-python. All components must comply.
+wf19_s2,wf19,testing,Integration Testing,qa,2,"[Integration Testing] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements."
+wf19_s3,wf19,testing,Integration Testing,qa,3,"[Integration Testing] Temporary override: Due to pact-python issues, we are relaxing the constraint to full E2E Selenium scripts for the current sprint only."
+wf19_s4,wf19,testing,Integration Testing,qa,4,[Integration Testing] Team reviewed alternatives. Confirmed consumer-driven service contracts satisfies our requirements. Tech stack: pact-python.
+wf19_s5,wf19,testing,Integration Testing,qa,5,[Integration Testing] FINAL for production: temporary override reverted. Enforcing Pact contract tests globally. No exceptions.
+wf20_s1,wf20,secrets,Secrets Management,security,1,[Secrets Management] Architecture finalized. Standard: Vault dynamic credentials via hvac+psycopg2. All components must comply.
+wf20_s2,wf20,secrets,Secrets Management,security,2,[Secrets Management] Peripheral note: Bumped base alpine image to address recent libssl CVEs. No functional changes.
+wf20_s3,wf20,secrets,Secrets Management,security,3,"[Secrets Management] Temporary override: Due to hvac+psycopg2 issues, we are relaxing the constraint to hardcoded .env files for the current sprint only."
+wf20_s4,wf20,secrets,Secrets Management,security,4,[Secrets Management] Team reviewed alternatives. Confirmed ephemeral leased DB passwords satisfies our requirements. Tech stack: hvac+psycopg2.
+wf20_s5,wf20,secrets,Secrets Management,security,5,[Secrets Management] FINAL for production: temporary override reverted. Enforcing Vault dynamic credentials globally. No exceptions.

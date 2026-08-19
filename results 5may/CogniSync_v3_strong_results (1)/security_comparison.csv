@@ -1,0 +1,7 @@
+System,Attack Type,Attack Success Rate,MRR Drop
+CogniSync,Adaptive Threshold Evasion,0.0472,0.008140000000000001
+CogniSync,Data Exfiltration,0.0,0.0
+CogniSync,Prompt Injection,0.0,0.0
+No_Defense,Adaptive Threshold Evasion,0.0472,0.008140000000000001
+No_Defense,Data Exfiltration,0.032,0.005433333333333333
+No_Defense,Prompt Injection,0.032,0.00556

@@ -1,0 +1,4 @@
+Comparison,Mean_Delta_MRR,95%_CI_Lower,95%_CI_Upper,Significant
+CogniSync vs Dense,+0.028,0.025,0.030,Yes
+CogniSync vs Hybrid_Naive,+0.048,0.046,0.051,Yes
+CogniSync vs Lexical,+0.099,0.096,0.102,Yes

@@ -1,0 +1,61 @@
+{
+  "run_id": "20260417T060155Z",
+  "started_at": "2026-04-17T06:01:55.106291+00:00",
+  "fast_mode": false,
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1337
+  ],
+  "scale_points": [
+    2000,
+    10000,
+    50000,
+    100000
+  ],
+  "embedding_model": "all-MiniLM-L6-v2",
+  "finished_at": "2026-04-17T15:46:07.252437+00:00",
+  "output_files": [
+    "results/ablation_results.csv",
+    "results/ablation_results.json",
+    "results/agent_task_aggregated.csv",
+    "results/agent_task_eval.json",
+    "results/agent_task_per_query.csv",
+    "results/data/benchmark_eval_queries.csv",
+    "results/data/benchmark_sessions.csv",
+    "results/data/cognisync_benchmark.json",
+    "results/figures/fig1_recall_vs_method.pdf",
+    "results/figures/fig1_recall_vs_method.png",
+    "results/figures/fig2_multi_metric.pdf",
+    "results/figures/fig2_multi_metric.png",
+    "results/figures/fig3_latency_scale.pdf",
+    "results/figures/fig3_latency_scale.png",
+    "results/figures/fig4_ablation_heatmap.pdf",
+    "results/figures/fig4_ablation_heatmap.png",
+    "results/figures/fig5_security.pdf",
+    "results/figures/fig5_security.png",
+    "results/figures/fig6_agent_tasks.pdf",
+    "results/figures/fig6_agent_tasks.png",
+    "results/retrieval_aggregated.csv",
+    "results/retrieval_eval.json",
+    "results/retrieval_per_query.csv",
+    "results/retrieval_stat_tests.csv",
+    "results/scalability_results.csv",
+    "results/scalability_results.json",
+    "results/security_eval.csv",
+    "results/security_eval.json",
+    "results/tables/table_retrieval.tex",
+    "results/tables/table_scalability.tex",
+    "results/tables/table_security.tex"
+  ],
+  "n_output_files": 31,
+  "key_results": {
+    "CogniSync_recall5": 79.47,
+    "VanillaRAG_recall5": 78.13,
+    "CogniSync_mrr": 59.39,
+    "CogniSync_ndcg5": 63.64,
+    "CogniSync_lat_ms": 28.732
+  }
+}

@@ -1,0 +1,2 @@
+Metric,Learned-Alpha Hybrid,Dense-Only Baseline,Corpus Size,Queries Evaluated
+MRR@10,0.9216746031746031,0.9197166666666667,100528,500

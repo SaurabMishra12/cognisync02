@@ -1,0 +1,4 @@
+Variant,MRR@5,Recall@5
+Hybrid (No Context),0.9308,1.000
++ Temporal Context,0.9327,0.990
++ Topical Distractor,0.9219,1.000

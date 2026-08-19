@@ -1,0 +1,5 @@
+{
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "dataset": "deepset/prompt-injections",
+    "test_size": 0.2
+}

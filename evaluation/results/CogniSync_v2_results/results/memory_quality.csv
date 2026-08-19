@@ -1,0 +1,501 @@
+q_idx,query,precision,redundancy,recall@5,mrr,latency_ms,is_checkpoint
+0,walgreens store sales average,0.2,0.074777,1.0,0.25,7.9628,1
+1,how much do bartenders make,0.0,0.161265,0.0,0.0,7.9628,0
+2,what is a furuncle boil,0.2,0.21586,1.0,0.333333,7.9628,0
+3,what can urinalysis detect,0.2,0.19496,1.0,0.5,7.9628,0
+4,what is vitamin a used for,0.2,0.135174,1.0,1.0,7.9628,0
+5,what causes genetic alterations in normal cells,0.2,0.139553,1.0,1.0,7.9628,0
+6,cost to frame basement,0.2,0.106928,1.0,1.0,7.9628,0
+7,erudite divergent definition,0.2,0.124515,1.0,0.25,7.9628,0
+8,why is albumin normally absent in urine,0.2,0.39349,1.0,0.333333,7.9628,0
+9,where was movie the birds filmed,0.0,0.164572,0.0,0.0,7.9628,0
+10,cost to file bankruptcy in virginia,0.2,0.205755,1.0,0.25,7.9628,0
+11,what is a hummingbird moth,0.2,0.131576,1.0,1.0,7.9628,0
+12,what does a western blot detect,0.2,0.151485,1.0,0.5,7.9628,0
+13,what is vegetable bouillon,0.2,0.137889,1.0,1.0,7.9628,0
+14,salary sacrifice super limits,0.0,0.226778,0.0,0.0,7.9628,0
+15,want is tom cruise doing now,0.2,0.151705,1.0,1.0,7.9628,0
+16,what means irie,0.2,0.223077,1.0,1.0,7.9628,0
+17,what is baseball twine made of,0.2,0.201704,1.0,1.0,7.9628,0
+18,What Does Lop means,0.4,0.106625,1.0,1.0,7.9628,0
+19,how much do tuna fishers first mates make,0.2,0.09417,1.0,0.333333,7.9628,0
+20,how to start gypsophila elegans seeds,0.2,0.27749,1.0,1.0,7.9628,0
+21,how long to get masters degree,0.2,0.168838,1.0,0.5,7.9628,0
+22,what is treatment for jaundice,0.2,0.161849,1.0,1.0,7.9628,0
+23,replacing permanent resident card canada,0.2,0.209477,1.0,0.2,7.9628,0
+24,what is a purified phytochemical,0.2,0.114867,1.0,0.333333,7.9628,0
+25,definition of IBR disease,0.2,0.122441,1.0,0.5,7.9628,0
+26,what landform makes a u shaped valley,0.2,0.213383,1.0,1.0,7.9628,0
+27,ovulation usually occurs on day _____ of a woman's cycle,0.2,0.187595,1.0,0.5,7.9628,0
+28,what kind of tick has rocky mountain spotted fever,0.2,0.156427,1.0,1.0,7.9628,0
+29,how long can you keep chicken salad in your fridge,0.2,0.226615,1.0,1.0,7.9628,0
+30,bulimia nervosa age range,0.2,0.148102,1.0,1.0,7.9628,0
+31,how much does an rn make in florida,0.2,0.274055,1.0,0.333333,7.9628,0
+32,who is discovered silk,0.2,0.190313,1.0,0.5,7.9628,0
+33,how long does it take to boil beets,0.2,0.171712,1.0,1.0,7.9628,0
+34,what is consumer capitalism,0.2,0.148282,1.0,0.25,7.9628,0
+35,at what age do males hit puberty,0.2,0.170187,1.0,0.333333,7.9628,0
+36,how does laser measure distance,0.0,0.097758,0.0,0.0,7.9628,0
+37,what is the statue of on the capitol building,0.0,0.139564,0.0,0.0,7.9628,0
+38,hakan what does oil do,0.2,0.085831,1.0,0.333333,7.9628,0
+39,sustainability is also referred to as,0.0,0.113629,0.0,0.0,7.9628,0
+40,what type of enzyme is aldolase,0.2,0.197602,1.0,0.2,7.9628,0
+41,what are the two main functions of the skeletal system,0.2,0.317302,1.0,1.0,7.9628,0
+42,what is gold formed in,0.2,0.2035,1.0,0.333333,7.9628,0
+43,lakes around michigan,0.4,0.116197,1.0,1.0,7.9628,0
+44,training and qualifications needed to be a social worker,0.4,0.265275,1.0,1.0,7.9628,0
+45,what is an example of a psychological need,0.2,0.206742,1.0,0.5,7.9628,0
+46,how long to study lpn school,0.2,0.220971,1.0,1.0,7.9628,0
+47,is the pharynx located before the mouth ?,0.2,0.277017,1.0,0.5,7.9628,0
+48,why do we have different time zones,0.2,0.169464,1.0,0.2,7.9628,0
+49,cyndi lauper goonies lyrics,0.2,0.164275,1.0,0.333333,7.9628,0
+50,where do roseate spoonbills live,0.2,0.191057,1.0,1.0,7.9628,0
+51,meaning of the name darcy,0.2,0.362728,1.0,0.333333,7.9628,0
+52,how much is a heater core replacement,0.2,0.124813,1.0,1.0,7.9628,0
+53,where is energy located in the atp molecule,0.2,0.253091,1.0,0.25,7.9628,0
+54,what does TD stand for in catholic parlance,0.2,0.128635,1.0,0.5,7.9628,0
+55,definition of diminution,0.2,0.100389,1.0,1.0,7.9628,0
+56,what type of chemical bond has the most potential energy stored in it,0.2,0.26372,1.0,0.2,7.9628,0
+57,is ginkgo biloba good for vertigo,0.0,0.126121,0.0,0.0,7.9628,0
+58,how tall is a redwood tree,0.2,0.113582,1.0,0.5,7.9628,0
+59,what is the meaning of the decameron,0.0,0.109722,0.0,0.0,7.9628,0
+60,what is rotation,0.0,0.199472,0.0,0.0,7.9628,0
+61,price to resurface rotors,0.2,0.130963,1.0,0.2,7.9628,0
+62,where is popocatepetl located,0.2,0.245927,1.0,0.25,7.9628,0
+63,which phase of mitosis does dna condense into chromosomes,0.2,0.140714,1.0,1.0,7.9628,0
+64,what is highest fico score,0.4,0.202464,1.0,0.5,7.9628,0
+65,is net interest expense the same as interest payments,0.2,0.156492,1.0,0.5,7.9628,0
+66,what is the meaning of something inside so strong,0.2,0.22891,1.0,1.0,7.9628,0
+67,what is the average water pressure for a home,0.4,0.202431,1.0,1.0,7.9628,0
+68,how long does ground beef stay good for frozen,0.0,0.203742,0.0,0.0,7.9628,0
+69,is accumulated depreciation required to be presented,0.2,0.205131,1.0,0.5,7.9628,0
+70,what is parkerized finish,0.0,0.122146,0.0,0.0,7.9628,0
+71,how young do babies start teething,0.0,0.215607,0.0,0.0,7.9628,0
+72,types of precancerous skin cancer,0.2,0.161881,1.0,1.0,7.9628,0
+73,how long to cook lamb chops in nuwave oven,0.0,0.219801,0.0,0.0,7.9628,0
+74,temperature range in singapore,0.0,0.216731,0.0,0.0,7.9628,0
+75,a antonym for politely,0.2,0.054629,1.0,0.25,7.9628,0
+76,large platelets causes,0.0,0.163301,0.0,0.0,7.9628,0
+77,what is puerperal sepsis,0.2,0.152134,1.0,0.5,7.9628,0
+78,sugars definition,0.2,0.111398,1.0,1.0,7.9628,0
+79,normal range for full blood count,0.0,0.141575,0.0,0.0,7.9628,0
+80,where is the viaduct in seattle,0.2,0.291748,1.0,0.5,7.9628,0
+81,what does blue colour signify,0.0,0.16682,0.0,0.0,7.9628,0
+82,what is a urethra,0.2,0.187073,1.0,1.0,7.9628,0
+83,can you truncate a table variable,0.2,0.182357,1.0,0.5,7.9628,0
+84,does asda have a negative impact on the environment,0.2,0.119968,1.0,1.0,7.9628,0
+85,psyllium husk fiber,0.2,0.182279,1.0,0.5,7.9628,0
+86,how to keep house plants from becoming leggy,0.2,0.154714,1.0,0.2,7.9628,0
+87,unit charge definition,0.2,0.166649,1.0,1.0,7.9628,0
+88,immunoglobulin definition,0.2,0.125144,1.0,0.5,7.9628,0
+89,what is atherosclerosis caused by,0.2,0.211293,1.0,1.0,7.9628,0
+90,how long is a city block in chicago,0.4,0.262303,1.0,0.5,7.9628,0
+91,where does the phrase what the dickens come from,0.2,0.26271,1.0,0.333333,7.9628,0
+92,how to establish salary ranges,0.2,0.127138,1.0,0.2,7.9628,0
+93,salary of import and export in usa,0.2,0.195561,1.0,0.5,7.9628,0
+94,cholesterol in shrimp good or bad,0.2,0.254587,1.0,1.0,7.9628,0
+95,how long is a parvo vaccine good for,0.0,0.122149,0.0,0.0,7.9628,0
+96,what shape is streptococcus,0.2,0.148149,1.0,1.0,7.9628,0
+97,what is plasma lactate test,0.2,0.225651,1.0,1.0,7.9628,0
+98,what does medium do,0.2,0.12735,1.0,0.2,7.9628,0
+99,what is a nerve block in the foot,0.2,0.203654,1.0,1.0,7.9628,0
+100,does carvedilol affect your libido,0.2,0.150409,1.0,1.0,7.9628,1
+101,what is lean,0.2,0.200756,1.0,0.2,7.9628,0
+102,how long are the longest axons in humans,0.4,0.249165,1.0,0.333333,7.9628,0
+103,which neuron secretes neurotransmitters in light,0.0,0.175713,0.0,0.0,7.9628,0
+104,name meanings felicity,0.0,0.147074,0.0,0.0,7.9628,0
+105,where is gerdau steel located,0.2,0.20874,1.0,0.333333,7.9628,0
+106,where can i buy nematodes,0.2,0.173824,1.0,1.0,7.9628,0
+107,caesura literary definition,0.2,0.13154,1.0,1.0,7.9628,0
+108,determines meaning,0.0,0.118799,0.0,0.0,7.9628,0
+109,how much does pet insurance cost for cats,0.0,0.122807,0.0,0.0,7.9628,0
+110,where is retroperitoneal lymph nodes,0.0,0.112378,0.0,0.0,7.9628,0
+111,what temperature does a house fire reach,0.0,0.161438,0.0,0.0,7.9628,0
+112,ingredients of diphtheria tetanus vaccine,0.2,0.178161,1.0,0.2,7.9628,0
+113,what is a pear shaped diamond called,0.2,0.143352,1.0,0.333333,7.9628,0
+114,what is the bride entrance called,0.2,0.143746,1.0,0.25,7.9628,0
+115,what does jitter mean,0.2,0.178649,1.0,1.0,7.9628,0
+116,when did the triceratops appear in the fossil record,0.2,0.153848,1.0,0.2,7.9628,0
+117,who was philip kiriakis mother on days,0.2,0.154593,1.0,1.0,7.9628,0
+118,what kind of fertilizer does a oleander like?,0.0,0.125618,0.0,0.0,7.9628,0
+119,major landforms of the amazon rainforest,0.2,0.2397,1.0,0.5,7.9628,0
+120,what is the normal range for body fat percentage,0.2,0.224427,1.0,0.5,7.9628,0
+121,what is tie dye made of,0.2,0.087902,1.0,0.5,7.9628,0
+122,is ruthenium expensive,0.2,0.132967,1.0,1.0,7.9628,0
+123,cat named as director of company,0.4,0.162746,1.0,1.0,7.9628,0
+124,when did the masking tape come out,0.2,0.106734,1.0,0.5,7.9628,0
+125,what is the name of the star called la superba,0.2,0.167441,1.0,0.333333,7.9628,0
+126,where is sinus located,0.0,0.164912,0.0,0.0,7.9628,0
+127,what is lecithin used for in food,0.4,0.174249,1.0,1.0,7.9628,0
+128,what are nerve reflexes,0.0,0.340949,0.0,0.0,7.9628,0
+129,how far is the moon from planet earth,0.2,0.133309,1.0,1.0,7.9628,0
+130,when did etta james start her career,0.2,0.132594,1.0,0.5,7.9628,0
+131,what is brodmann areas,0.2,0.23955,1.0,1.0,7.9628,0
+132,what age of children fifths disease,0.2,0.190963,1.0,0.5,7.9628,0
+133,is influenza a contagious,0.0,0.141596,0.0,0.0,7.9628,0
+134,symbolic archetype definition,0.4,0.098656,1.0,1.0,7.9628,0
+135,what is hazus,0.2,0.129674,1.0,0.5,7.9628,0
+136,How to Get Rid of Food Poisoning,0.2,0.14621,1.0,1.0,7.9628,0
+137,tissue is formed from,0.2,0.191636,1.0,1.0,7.9628,0
+138,how far to space watermelon plants,0.2,0.263407,1.0,0.5,7.9628,0
+139,average cost to become a us citizen,0.2,0.175583,1.0,0.5,7.9628,0
+140,which blood type occurs most frequently,0.2,0.127248,1.0,1.0,7.9628,0
+141,what is land around australia,0.2,0.106889,1.0,0.5,7.9628,0
+142,elvis sings what key,0.2,0.054197,1.0,1.0,7.9628,0
+143,how fast do camellias grow,0.2,0.13624,1.0,0.333333,7.9628,0
+144,what causes alkalosis,0.2,0.154869,1.0,0.333333,7.9628,0
+145,what is cns toxicity,0.2,0.162061,1.0,0.2,7.9628,0
+146,most carbon monoxide is produced by,0.0,0.153776,0.0,0.0,7.9628,0
+147,how much does it cost to register a vehicle in ohio,0.0,0.203797,0.0,0.0,7.9628,0
+148,what are signs of dementia,0.2,0.164417,1.0,0.333333,7.9628,0
+149,what does a firewall do,0.2,0.21,1.0,1.0,7.9628,0
+150,what is a captor,0.2,0.094639,1.0,1.0,7.9628,0
+151,how to oven roast brussel sprouts,0.0,0.197209,0.0,0.0,7.9628,0
+152,is chase website down today,0.2,0.104143,1.0,0.2,7.9628,0
+153,what does the surname holt mean,0.2,0.19354,1.0,1.0,7.9628,0
+154,new oil furnace should cost,0.2,0.12535,1.0,0.5,7.9628,0
+155,what is progressive reform,0.2,0.144338,1.0,1.0,7.9628,0
+156,who invented the first vehicle,0.2,0.158406,1.0,0.5,7.9628,0
+157,why do my eyes look squinty in pictures,0.2,0.170757,1.0,0.2,7.9628,0
+158,what is cabaret music,0.2,0.202113,1.0,0.5,7.9628,0
+159,how much does an mri cost in dallas,0.2,0.090455,1.0,1.0,7.9628,0
+160,ainsley name meaning,0.2,0.193133,1.0,1.0,7.9628,0
+161,what is a bandog,0.2,0.156549,1.0,1.0,7.9628,0
+162,what is craic mean,0.2,0.137287,1.0,1.0,7.9628,0
+163,do you have to be smart to be an ultrasound tech,0.2,0.113563,1.0,1.0,7.9628,0
+164,where is the parietal lobe located,0.2,0.193458,1.0,1.0,7.9628,0
+165,what is functional constipation,0.2,0.131321,1.0,0.5,7.9628,0
+166,what causes a hoarse voice,0.2,0.161192,1.0,0.333333,7.9628,0
+167,what is a bear's hand called,0.2,0.112664,1.0,1.0,7.9628,0
+168,what is mediastinal mass,0.4,0.107178,1.0,0.333333,7.9628,0
+169,what group does the squirrel monkey belong to,0.0,0.154605,0.0,0.0,7.9628,0
+170,what does the name carmel mean,0.2,0.171849,1.0,1.0,7.9628,0
+171,nike name meaning,0.2,0.137374,1.0,1.0,7.9628,0
+172,peripheral nervous is part of what system,0.0,0.250092,0.0,0.0,7.9628,0
+173,where was chayanne born,0.2,0.479344,1.0,0.2,7.9628,0
+174,cost to install a deck,0.2,0.200089,1.0,0.5,7.9628,0
+175,qualification of a registered biomedical scientist,0.2,0.221149,1.0,1.0,7.9628,0
+176,what is astrocyte function,0.2,0.118485,1.0,0.333333,7.9628,0
+177,where was laura ingalls wilder born,0.4,0.354909,1.0,0.5,7.9628,0
+178,where is Serotonin made in the body,0.2,0.295978,1.0,0.25,7.9628,0
+179,weighted average price,0.0,0.151708,0.0,0.0,7.9628,0
+180,what is austenitic and martensitic,0.2,0.144293,1.0,0.25,7.9628,0
+181,can other fish be placed with bala sharks,0.2,0.142129,1.0,1.0,7.9628,0
+182,how often is cal grant disbursed,0.2,0.327802,1.0,0.5,7.9628,0
+183,why was the napoleonic code significant,0.2,0.171885,1.0,0.333333,7.9628,0
+184,what is thick waxy coating means in microbiology,0.2,0.193721,1.0,0.2,7.9628,0
+185,what evidence does dna show,0.2,0.190225,1.0,0.5,7.9628,0
+186,scarlett johansson comic book movie roles,0.4,0.203596,1.0,1.0,7.9628,0
+187,what is adobo chicken,0.2,0.114437,1.0,0.2,7.9628,0
+188,where do zebras live,0.2,0.137347,1.0,0.333333,7.9628,0
+189,what kind of climate do truffles grow in,0.2,0.15039,1.0,0.5,7.9628,0
+190,average cost of dog teeth cleaning,0.2,0.288853,1.0,0.2,7.9628,0
+191,what does a chromosome do,0.0,0.184461,0.0,0.0,7.9628,0
+192,what if jury summons excuses confirmation notice,0.2,0.234418,1.0,1.0,7.9628,0
+193,does poppy seed mean mustard seeds,0.2,0.12848,1.0,1.0,7.9628,0
+194,what is the importance of having an organizational structure in a project environment,0.2,0.169915,1.0,1.0,7.9628,0
+195,temperature effect on cellular respiration,0.4,0.160068,1.0,1.0,7.9628,0
+196,with what product did the term brand name originate,0.0,0.199182,0.0,0.0,7.9628,0
+197,eye problems caused by graves disease,0.0,0.176942,0.0,0.0,7.9628,0
+198,does the cardiovascular system produce hormones,0.2,0.171299,1.0,1.0,7.9628,0
+199,how to cook eat crab,0.2,0.146417,1.0,0.333333,7.9628,0
+200,who wrote Nothing compares to you,0.2,0.251441,1.0,0.5,7.9628,1
+201,cost for relining dentures,0.2,0.105111,1.0,0.333333,7.9628,0
+202,what is sherry wine made of,0.2,0.324157,1.0,0.2,7.9628,0
+203,dna in bacteria,0.2,0.121086,1.0,1.0,7.9628,0
+204,primary secondary and tertiary sectors definition,0.0,0.161313,0.0,0.0,7.9628,0
+205,what is mf ceiling,0.2,0.242685,1.0,0.25,7.9628,0
+206,how long does collar dove take to hatch,0.2,0.297936,1.0,0.333333,7.9628,0
+207,how much does an lpn make an hour in illinois,0.0,0.225997,0.0,0.0,7.9628,0
+208,what does the aortic valve do,0.4,0.168033,1.0,0.5,7.9628,0
+209,common extensor tendon origin and insertion,0.2,0.136941,1.0,0.333333,7.9628,0
+210,when was the death penalty abolished,0.2,0.179504,1.0,0.5,7.9628,0
+211,how long does a raincheck from tractor supply last?,0.0,0.113871,0.0,0.0,7.9628,0
+212,what types of movements are observed in transport of bedload,0.2,0.139357,1.0,0.5,7.9628,0
+213,what is the average bookkeeper hourly rate,0.2,0.12102,1.0,0.333333,7.9628,0
+214,what is stone color,0.0,0.202157,0.0,0.0,7.9628,0
+215,what does a k in a mustang's vin code mean,0.2,0.152792,1.0,1.0,7.9628,0
+216,what are environmental impacts of hydropower,0.2,0.105348,1.0,1.0,7.9628,0
+217,anandi name meaning,0.2,0.126501,1.0,0.2,7.9628,0
+218,what is mesothelioma cancer,0.2,0.17361,1.0,0.5,7.9628,0
+219,do you have to have a special license to be a plumber virginia,0.0,0.124909,0.0,0.0,7.9628,0
+220,what effect would cutting the vagus nerve branch that innervates the stomach on gastric function,0.2,0.116754,1.0,1.0,7.9628,0
+221,what does superficial muscles mean,0.2,0.138324,1.0,1.0,7.9628,0
+222,what are kelpies,0.0,0.124464,0.0,0.0,7.9628,0
+223,how much money does a hoverboard cost,0.2,0.168977,1.0,0.2,7.9628,0
+224,how much does a social worker make in florida,0.0,0.151724,0.0,0.0,7.9628,0
+225,how long do you have to be working at a job to get maternity leave,0.2,0.196098,1.0,1.0,7.9628,0
+226,what is the average cost of a funeral,0.2,0.167952,1.0,0.25,7.9628,0
+227,what is a mango lassi,0.2,0.140868,1.0,0.5,7.9628,0
+228,is a swollen tongue a sign of cancer,0.2,0.188948,1.0,1.0,7.9628,0
+229,how many hours does a radiologist work,0.0,0.105196,0.0,0.0,7.9628,0
+230,salary for insurance agent,0.2,0.185887,1.0,0.25,7.9628,0
+231,what is pygeum used for,0.2,0.202863,1.0,0.2,7.9628,0
+232,what is transesophageal echocardiogram,0.2,0.17942,1.0,0.5,7.9628,0
+233,average price of a kayak pool,0.2,0.172037,1.0,0.5,7.9628,0
+234,what are dangerous carbon monoxide levels,0.2,0.127544,1.0,1.0,7.9628,0
+235,what are fingernails made of,0.2,0.215229,1.0,1.0,7.9628,0
+236,what does the frontal sinus do,0.2,0.127876,1.0,1.0,7.9628,0
+237,definition epistle,0.2,0.235781,1.0,0.333333,7.9628,0
+238,sensorineural hearing loss diagnosis code,0.0,0.557707,0.0,0.0,7.9628,0
+239,where did sacagawea grow up,0.2,0.190679,1.0,1.0,7.9628,0
+240,what does the amplitude mean in a cosine equation,0.2,0.177451,1.0,1.0,7.9628,0
+241,what flavor is black truffle,0.2,0.17272,1.0,1.0,7.9628,0
+242,average cost of redoing a small bathroom,0.2,0.233124,1.0,0.25,7.9628,0
+243,why is immune system lower?,0.0,0.234772,0.0,0.0,7.9628,0
+244,how many kWh does one person use per day,0.2,0.176012,1.0,0.5,7.9628,0
+245,how long do lab mixes live,0.2,0.168195,1.0,0.333333,7.9628,0
+246,what is korean ethnicity,0.2,0.129856,1.0,0.5,7.9628,0
+247,how long to bake chicken legs for,0.2,0.188892,1.0,1.0,7.9628,0
+248,how much do ladies footballers get paid,0.2,0.082731,1.0,0.333333,7.9628,0
+249,what are the colors of the Zantedeschia flower,0.2,0.192495,1.0,0.5,7.9628,0
+250,how long after conception will a urine pregnancy test show positive,0.2,0.24647,1.0,1.0,7.9628,0
+251,what receptor does MIBG target,0.2,0.1155,1.0,0.2,7.9628,0
+252,what is platform analytics,0.2,0.112897,1.0,0.5,7.9628,0
+253,steam cleaning carpet pesticides,0.2,0.106269,1.0,0.333333,7.9628,0
+254,do nerves contain collagen,0.2,0.186373,1.0,0.5,7.9628,0
+255,meaning of name myah,0.0,0.173039,0.0,0.0,7.9628,0
+256,when was lady jane grey born,0.2,0.180999,1.0,1.0,7.9628,0
+257,how much will new brakes cost for my car,0.2,0.255975,1.0,0.333333,7.9628,0
+258,is there a age requirement to become ny corrections,0.2,0.160651,1.0,0.5,7.9628,0
+259,best way to debug shell script,0.0,0.365861,0.0,0.0,7.9628,0
+260,what artery supplies dorsal part of hand,0.2,0.134812,1.0,0.25,7.9628,0
+261,what is ionic,0.2,0.22967,1.0,1.0,7.9628,0
+262,how to wash clothes with mites,0.2,0.19913,1.0,1.0,7.9628,0
+263,what is chyle leak,0.2,0.199846,1.0,1.0,7.9628,0
+264,what is gaskin maneuver shoulder dystocia,0.2,0.203676,1.0,0.5,7.9628,0
+265,is hepatitis classified as autoimmune disease,0.2,0.325617,1.0,0.5,7.9628,0
+266,what is tetramethylammonium chloride used for,0.4,0.136325,1.0,1.0,7.9628,0
+267,how to turn xerox printer online,0.0,0.149784,0.0,0.0,7.9628,0
+268,what is nitrofurantoin used for,0.0,0.226126,0.0,0.0,7.9628,0
+269,how long do artichoke seeds take to germinate,0.2,0.112317,1.0,0.5,7.9628,0
+270,why does my gas pedal keep sticking,0.2,0.185989,1.0,0.25,7.9628,0
+271,what general function does the skeletal system perform,0.0,0.298554,0.0,0.0,7.9628,0
+272,which planets are considered twins,0.0,0.190102,0.0,0.0,7.9628,0
+273,correlational study definition,0.2,0.120849,1.0,0.5,7.9628,0
+274,silver rate today in vijayawada,0.2,0.250323,1.0,1.0,7.9628,0
+275,what is contract furniture,0.2,0.161938,1.0,0.5,7.9628,0
+276,cost of postage to france,0.2,0.085866,1.0,1.0,7.9628,0
+277,how to cook swordfish in a pan,0.2,0.146871,1.0,0.5,7.9628,0
+278,which range of mountains is growing the fastest the himalayas or the andes,0.2,0.130459,1.0,0.333333,7.9628,0
+279,what is gullah culture,0.2,0.194542,1.0,1.0,7.9628,0
+280,size of postcards for us post office,0.0,0.20205,0.0,0.0,7.9628,0
+281,types of connective tissue in the heart,0.2,0.126143,1.0,0.5,7.9628,0
+282,can you buy a hat band to make a hat fit that is too small,0.2,0.271152,1.0,0.333333,7.9628,0
+283,what is an evaluation instrument,0.2,0.132037,1.0,0.5,7.9628,0
+284,what is ipsec used for,0.2,0.195865,1.0,0.333333,7.9628,0
+285,socialist nations adopt features of capitalism. This theory is referred to as ________. quizlet,0.2,0.136755,1.0,1.0,7.9628,0
+286,which kingdom contain all unicellular organisms,0.2,0.213333,1.0,0.2,7.9628,0
+287,how much does it cost to add another cell phone to verizon,0.2,0.178406,1.0,1.0,7.9628,0
+288,what is a pterodactyl dinosaur,0.2,0.102077,1.0,1.0,7.9628,0
+289,is hilary duff an illuminati,0.2,0.163104,1.0,0.5,7.9628,0
+290,what causes lung disease,0.4,0.143996,1.0,0.5,7.9628,0
+291,source of radioactive gaseous radon in homes,0.0,0.157845,0.0,0.0,7.9628,0
+292,average assistant director of nursing salary,0.4,0.274673,1.0,1.0,7.9628,0
+293,absorption of blood from abdominal cavity,0.2,0.127442,1.0,1.0,7.9628,0
+294,what does jule mean,0.0,0.179382,0.0,0.0,7.9628,0
+295,why did tim hortons expand internationally,0.0,0.123539,0.0,0.0,7.9628,0
+296,does a reduction agent become positive,0.4,0.20761,1.0,1.0,7.9628,0
+297,what are is fibromyalgia,0.2,0.145213,1.0,0.25,7.9628,0
+298,what is considered a good lsat score,0.2,0.162149,1.0,1.0,7.9628,0
+299,xtandi cost per month,0.2,0.135025,1.0,1.0,7.9628,0
+300,is cfs a disease,0.2,0.153375,1.0,0.5,7.9628,1
+301,body systems affected by kidney stones,0.2,0.151645,1.0,0.333333,7.9628,0
+302,what is the equation for calculating density,0.0,0.205844,0.0,0.0,7.9628,0
+303,what do you use to clean a keyboard,0.2,0.148265,1.0,0.5,7.9628,0
+304,is reactive depression a mental illness,0.2,0.182979,1.0,1.0,7.9628,0
+305,is basmati rice natural or processed,0.4,0.153076,1.0,1.0,7.9628,0
+306,characteristics of spina bifida,0.2,0.211766,1.0,1.0,7.9628,0
+307,does fish oil supplement contain DHA,0.2,0.166091,1.0,1.0,7.9628,0
+308,salary for qa manager,0.2,0.199656,1.0,1.0,7.9628,0
+309,what is nearsightedness called,0.2,0.112248,1.0,1.0,7.9628,0
+310,pepita def,0.2,0.059995,1.0,1.0,7.9628,0
+311,how much does ups charge to notarize,0.2,0.275753,1.0,1.0,7.9628,0
+312,should you use a spirometer to increase lung capacity,0.2,0.125268,1.0,0.333333,7.9628,0
+313,what is pulmonary fibrosis symptoms,0.2,0.181076,1.0,1.0,7.9628,0
+314,does goat cheese contain lactose,0.4,0.163042,1.0,1.0,7.9628,0
+315,how much does a redo of rhinoplasty cost,0.4,0.178778,1.0,1.0,7.9628,0
+316,what are young rabbits called,0.4,0.322818,1.0,0.333333,7.9628,0
+317,what are the uses of radon,0.0,0.102483,0.0,0.0,7.9628,0
+318,cushing disease is caused by,0.4,0.269793,1.0,0.333333,7.9628,0
+319,consolute temperature meaning,0.2,0.352976,1.0,0.5,7.9628,0
+320,Where is the river Danube and where is its source and length,0.0,0.122732,0.0,0.0,7.9628,0
+321,what is spinosad,0.2,0.200941,1.0,0.25,7.9628,0
+322,how long can nicotine be detected in blood,0.0,0.175864,0.0,0.0,7.9628,0
+323,what is the grantor of a revocable trust,0.2,0.229294,1.0,0.5,7.9628,0
+324,what is the blastula,0.2,0.211641,1.0,0.5,7.9628,0
+325,what colours represent what emotions,0.2,0.101006,1.0,0.5,7.9628,0
+326,why are elephants considered mammals,0.2,0.110982,1.0,0.333333,7.9628,0
+327,what is tax identification,0.2,0.22546,1.0,0.5,7.9628,0
+328,what is a fabric that are dull,0.2,0.210839,1.0,1.0,7.9628,0
+329,what was the main goal of the military reconstruction act,0.0,0.274946,0.0,0.0,7.9628,0
+330,what is your spleen responsible for,0.2,0.175485,1.0,1.0,7.9628,0
+331,similarities between due process and crime control models,0.2,0.30811,1.0,0.333333,7.9628,0
+332,what is konjac glucomannan,0.2,0.196158,1.0,1.0,7.9628,0
+333,what does drostdy mean,0.2,0.075692,1.0,0.5,7.9628,0
+334,talbots hourly wage,0.0,0.197185,0.0,0.0,7.9628,0
+335,how to disable popups,0.2,0.195524,1.0,1.0,7.9628,0
+336,what is prader willi syndrome caused by,0.0,0.189492,0.0,0.0,7.9628,0
+337,what particles make up a proton,0.2,0.179868,1.0,0.25,7.9628,0
+338,average age of women who get married,0.2,0.204365,1.0,0.333333,7.9628,0
+339,what is a balustrade,0.2,0.114358,1.0,0.5,7.9628,0
+340,how to become a cna fast,0.0,0.162675,0.0,0.0,7.9628,0
+341,which gene mutation is constitutive mutation gene regulation lac operon,0.0,0.233922,0.0,0.0,7.9628,0
+342,what does rms mean,0.2,0.20976,1.0,0.5,7.9628,0
+343,Possible health risks of consuming cilantro leaves,0.2,0.202218,1.0,0.25,7.9628,0
+344,best way to find raikou in crystal,0.0,0.136837,0.0,0.0,7.9628,0
+345,cost attend yale,0.2,0.175397,1.0,0.25,7.9628,0
+346,how long does a felony conviction stay on your record in california,0.2,0.40382,1.0,1.0,7.9628,0
+347,how much does student digs cost,0.2,0.103274,1.0,1.0,7.9628,0
+348,define express included contract terms,0.2,0.158796,1.0,1.0,7.9628,0
+349,how much is a lawyer on retainer,0.0,0.158929,0.0,0.0,7.9628,0
+350,how to measure oven temperature,0.2,0.174923,1.0,1.0,7.9628,0
+351,what kind of fossil is a petoskey stone,0.4,0.182491,1.0,0.333333,7.9628,0
+352,what is a novel,0.2,0.132371,1.0,0.333333,7.9628,0
+353,what do the arteries do in the respiratory system,0.2,0.132912,1.0,0.5,7.9628,0
+354,can you connect your laptop to your xbox,0.2,0.288379,1.0,1.0,7.9628,0
+355,what is a emg test,0.2,0.24285,1.0,0.25,7.9628,0
+356,biological therapy definition,0.2,0.201253,1.0,0.2,7.9628,0
+357,why is it called flatbush,0.2,0.340517,1.0,1.0,7.9628,0
+358,what created the start of the manhattan project,0.2,0.153694,1.0,1.0,7.9628,0
+359,do you store royal icing in the refrigerator,0.2,0.214676,1.0,1.0,7.9628,0
+360,cost of screening for ovarian cancer,0.2,0.239842,1.0,0.5,7.9628,0
+361,a common sodium deficiency is muscle cramps,0.2,0.247044,1.0,1.0,7.9628,0
+362,where did ansel adams live,0.2,0.183232,1.0,0.2,7.9628,0
+363,disease synonyms english,0.2,0.157212,1.0,0.5,7.9628,0
+364,what does the air temperature controller do,0.0,0.10759,0.0,0.0,7.9628,0
+365,how to get spin from a wedge shot,0.2,0.193298,1.0,0.5,7.9628,0
+366,what makes a lava lamp work,0.2,0.116539,1.0,0.2,7.9628,0
+367,can grapes cause canker sores,0.2,0.167364,1.0,1.0,7.9628,0
+368,orthographic projection is a means of representing,0.4,0.228736,1.0,1.0,7.9628,0
+369,tyre puncture repair cost,0.0,0.161254,0.0,0.0,7.9628,0
+370,who invented the first jet plane,0.4,0.138634,1.0,1.0,7.9628,0
+371,what is a lease agreement,0.2,0.135939,1.0,0.25,7.9628,0
+372,what unit of wavelength is a de broglie,0.0,0.246475,0.0,0.0,7.9628,0
+373,what temperature for pork ribs,0.2,0.142774,1.0,0.2,7.9628,0
+374,what is albumin in urine,0.2,0.292277,1.0,0.2,7.9628,0
+375,salary ranges for nurses,0.2,0.14159,1.0,0.2,7.9628,0
+376,is contractor cost wages,0.0,0.125146,0.0,0.0,7.9628,0
+377,what is smallest particle size a human eye can see,0.2,0.183714,1.0,0.5,7.9628,0
+378,what is the going salary for market risk analyst,0.2,0.122948,1.0,0.5,7.9628,0
+379,did prince have children,0.2,0.13262,1.0,1.0,7.9628,0
+380,what are the differences between chromosome chromatid and chromatin,0.2,0.205612,1.0,0.5,7.9628,0
+381,temperature required to stain a deck,0.4,0.174718,1.0,0.5,7.9628,0
+382,what kind of diversity is in grassland,0.0,0.136997,0.0,0.0,7.9628,0
+383,requirements to be a forensic toxicologist,0.2,0.130148,1.0,1.0,7.9628,0
+384,what is scorpion fish adaptations,0.2,0.139361,1.0,1.0,7.9628,0
+385,what is a nether crystal,0.2,0.178608,1.0,0.25,7.9628,0
+386,what property do solids and liquids share,0.2,0.224361,1.0,0.333333,7.9628,0
+387,how long does it take to qualify for a home loan,0.0,0.217778,0.0,0.0,7.9628,0
+388,what does rose quartz known for,0.0,0.222854,0.0,0.0,7.9628,0
+389,what caused the great chinese famine,0.2,0.199285,1.0,0.5,7.9628,0
+390,what does the name refugio mean?,0.4,0.158047,1.0,1.0,7.9628,0
+391,cost of radon mitigation on a slab foundation,0.2,0.134959,1.0,1.0,7.9628,0
+392,is dubai a desert,0.2,0.117996,1.0,1.0,7.9628,0
+393,how long does it take to receive a insurance check,0.2,0.161334,1.0,0.5,7.9628,0
+394,what is saturn second largest moon,0.0,0.168666,0.0,0.0,7.9628,0
+395,what does sacramento republic fc mean,0.2,0.167036,1.0,1.0,7.9628,0
+396,tablet android how to close application,0.2,0.190439,1.0,0.333333,7.9628,0
+397,is wollemi a town,0.2,0.091028,1.0,1.0,7.9628,0
+398,what is a habitat of a wolf,0.0,0.132033,0.0,0.0,7.9628,0
+399,is barcelona vs atletico madrid on tv,0.2,0.089416,1.0,1.0,7.9628,0
+400,best tablet to reduce fever,0.2,0.160465,1.0,1.0,7.9628,1
+401,what temperature to cook roast lamb,0.0,0.134608,0.0,0.0,7.9628,0
+402,where is catalina island,0.2,0.144745,1.0,1.0,7.9628,0
+403,when to claim parent as dependent,0.2,0.212,1.0,1.0,7.9628,0
+404,at what age can a fetus survive,0.0,0.165004,0.0,0.0,7.9628,0
+405,should i wear a pad for discharge,0.2,0.141622,1.0,0.333333,7.9628,0
+406,meaning of name arman,0.2,0.145255,1.0,1.0,7.9628,0
+407,what does the peripheral nervous system do,0.0,0.269927,0.0,0.0,7.9628,0
+408,how can you tell if there is a problem with your transmission,0.2,0.137359,1.0,0.2,7.9628,0
+409,what is there to do in penzance,0.2,0.135396,1.0,0.25,7.9628,0
+410,cost of professional cleaning services,0.2,0.129606,1.0,1.0,7.9628,0
+411,warning signs of someone contemplating suicide,0.2,0.164027,1.0,0.333333,7.9628,0
+412,what causes an upper respiratory infection,0.2,0.193446,1.0,0.2,7.9628,0
+413,what is jati,0.2,0.507185,1.0,0.5,7.9628,0
+414,tv character who sang the opening theme song,0.2,0.120075,1.0,1.0,7.9628,0
+415,what is a retail buyer,0.2,0.212957,1.0,0.5,7.9628,0
+416,how much does a pilot earn,0.2,0.103406,1.0,1.0,7.9628,0
+417,what ligaments and cartilage are in middle of chest,0.2,0.111817,1.0,1.0,7.9628,0
+418,what are the three types of vertebrae,0.4,0.2254,1.0,1.0,7.9628,0
+419,what is physiology mean,0.2,0.140507,1.0,0.25,7.9628,0
+420,what is the average pay for police officers vs the army,0.2,0.125379,1.0,0.25,7.9628,0
+421,is a class a misdemeanor deportable offense to a residence,0.2,0.22578,1.0,1.0,7.9628,0
+422,shedding tissues (carbuncles) in eye,0.0,0.209554,0.0,0.0,7.9628,0
+423,what does algaecide do,0.2,0.26661,1.0,0.5,7.9628,0
+424,sign and symptoms of pneumonia caused by bacillus subtilis,0.0,0.15947,0.0,0.0,7.9628,0
+425,what is myasthenia gravis treatment,0.2,0.198439,1.0,0.5,7.9628,0
+426,what kind of gravel is bad for a fish tank,0.2,0.148515,1.0,0.5,7.9628,0
+427,what is south china tiger habitat location,0.2,0.162127,1.0,1.0,7.9628,0
+428,how they verify overseas education,0.2,0.236896,1.0,0.5,7.9628,0
+429,famous actors born in alaska,0.0,0.1681,0.0,0.0,7.9628,0
+430,platelet count normal range,0.2,0.215597,1.0,0.5,7.9628,0
+431,why is brassica rapa a good model organism,0.2,0.462504,1.0,0.333333,7.9628,0
+432,what diseases can skin rashes,0.0,0.176323,0.0,0.0,7.9628,0
+433,what is oleoresin,0.2,0.089708,1.0,0.2,7.9628,0
+434,pharmacist salary in oregon,0.4,0.160021,1.0,1.0,7.9628,0
+435,price for chaco canyon entrance fee,0.0,0.182444,0.0,0.0,7.9628,0
+436,who is jake mason,0.2,0.184924,1.0,0.2,7.9628,0
+437,what age is recommended for a baby to fly,0.2,0.119995,1.0,0.25,7.9628,0
+438,will a credit limit increase decline hurt your credit,0.0,0.199947,0.0,0.0,7.9628,0
+439,how long should i steam crab legs,0.2,0.204071,1.0,1.0,7.9628,0
+440,what factors could cause false positive for blood ethanol test,0.2,0.136052,1.0,1.0,7.9628,0
+441,kilaya name meaning,0.0,0.130516,0.0,0.0,7.9628,0
+442,what type of government did the bolsheviks established,0.2,0.125502,1.0,0.25,7.9628,0
+443,who is the director of ncis,0.2,0.111508,1.0,0.333333,7.9628,0
+444,average nurse salary singapore,0.2,0.241146,1.0,1.0,7.9628,0
+445,what is a shanty town,0.4,0.14919,1.0,0.5,7.9628,0
+446,what is chain hotel,0.2,0.159353,1.0,1.0,7.9628,0
+447,assistant professor salary in turkey,0.2,0.207153,1.0,1.0,7.9628,0
+448,what type of government does djibouti have,0.2,0.217023,1.0,1.0,7.9628,0
+449,what age can westies leave their mothers,0.2,0.187094,1.0,0.25,7.9628,0
+450,what is polycythemia,0.2,0.287637,1.0,0.333333,7.9628,0
+451,how long does it take a guinea egg to hatch,0.2,0.236594,1.0,1.0,7.9628,0
+452,html stop underline button text,0.2,0.113506,1.0,0.5,7.9628,0
+453,average price of hernia surgery in chicago,0.2,0.181167,1.0,1.0,7.9628,0
+454,neutrophil normal range,0.2,0.244885,1.0,0.2,7.9628,0
+455,limit of aspirin dose for antiplatelet therapy,0.2,0.097962,1.0,1.0,7.9628,0
+456,what is ferroelectric material,0.0,0.177443,0.0,0.0,7.9628,0
+457,what creates earthquakes,0.4,0.135378,1.0,0.25,7.9628,0
+458,how much does it cost to build house,0.2,0.184522,1.0,0.5,7.9628,0
+459,bad gasoline how to clean carburetor,0.2,0.224125,1.0,0.5,7.9628,0
+460,what is the main function of the superior vena cava,0.2,0.269008,1.0,0.333333,7.9628,0
+461,how much to pay for drywall work,0.0,0.131137,0.0,0.0,7.9628,0
+462,lyme disease what determines geographical region,0.2,0.132766,1.0,0.5,7.9628,0
+463,how much does it cost for varicose vein removal,0.2,0.345508,1.0,1.0,7.9628,0
+464,what is chromatography,0.2,0.121958,1.0,0.5,7.9628,0
+465,how fast do pandas run,0.2,0.176296,1.0,1.0,7.9628,0
+466,two basic tissues of which the skin is composed are,0.2,0.36375,1.0,0.25,7.9628,0
+467,jackie chan net worth,0.2,0.19944,1.0,0.2,7.9628,0
+468,swamp definition,0.2,0.086609,1.0,1.0,7.9628,0
+469,process procedure definition,0.2,0.17206,1.0,1.0,7.9628,0
+470,what is a compound noun in english,0.2,0.14326,1.0,1.0,7.9628,0
+471,how long does it take for a baby to be fully developed,0.2,0.10802,1.0,1.0,7.9628,0
+472,how much does a afghan hound cost,0.2,0.10519,1.0,0.5,7.9628,0
+473,how much does it cost to rebook a skills test,0.2,0.10438,1.0,0.2,7.9628,0
+474,calories in a rasgulla,0.2,0.108837,1.0,1.0,7.9628,0
+475,what is the average temperature in pei in july,0.2,0.093211,1.0,1.0,7.9628,0
+476,what does it mean dysbacteriosis,0.2,0.10348,1.0,1.0,7.9628,0
+477,cost to replace check valve on well pump,0.0,0.190264,0.0,0.0,7.9628,0
+478,what is speed of an object,0.2,0.223931,1.0,0.2,7.9628,0
+479,how long can you keep hard boiled eggs in the fridge before they go bad,0.2,0.179515,1.0,0.25,7.9628,0
+480,what is a patent attorney,0.2,0.254937,1.0,0.5,7.9628,0
+481,what is pregnyl used for,0.2,0.152031,1.0,0.333333,7.9628,0
+482,what is habu sake,0.2,0.164476,1.0,0.2,7.9628,0
+483,does transcription require dna polymerase,0.2,0.152942,1.0,0.5,7.9628,0
+484,barite is in what mineral group,0.0,0.211554,0.0,0.0,7.9628,0
+485,tiny house can i convert a modular home,0.2,0.131526,1.0,0.333333,7.9628,0
+486,texas When does the legislature meet?,0.2,0.290939,1.0,0.333333,7.9628,0
+487,what is public health model,0.2,0.269434,1.0,0.2,7.9628,0
+488,what is the alaskan delta mountain range,0.2,0.271395,1.0,0.333333,7.9628,0
+489,What are the symptoms and causes of conjunctivitis,0.2,0.171486,1.0,0.2,7.9628,0
+490,what does viral infection means,0.2,0.149112,1.0,0.333333,7.9628,0
+491,why is genetic engineering bad for humans,0.2,0.1732,1.0,0.5,7.9628,0
+492,"what are NK cells, scientific name",0.2,0.348516,1.0,0.5,7.9628,0
+493,are scissor jacks dangerous,0.2,0.149675,1.0,1.0,7.9628,0
+494,what does the name colleen mean,0.2,0.126736,1.0,1.0,7.9628,0
+495,what is echocardiogram test,0.2,0.194836,1.0,0.333333,7.9628,0
+496,where does king salmon live,0.2,0.125222,1.0,0.333333,7.9628,0
+497,what is the kaaba and where is it located,0.2,0.135281,1.0,1.0,7.9628,0
+498,how long should lambs nurse till weaned,0.2,0.279944,1.0,0.25,7.9628,0
+499,why is msg unhealthy,0.2,0.138921,1.0,0.25,7.9628,1

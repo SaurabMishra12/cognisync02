@@ -1,0 +1,4 @@
+Comparison,n_pairs,Wilcoxon Statistic,Raw p-value,Bonferroni p-value,Mean MRR@5 Diff,All paired differences zero,Significant (adj. p<0.05)
+CogniSync_RRF vs Dense,29011,9616420.0,2.6209296451697036e-116,7.862788935509111e-116,0.02753797410177749,False,True
+CogniSync_RRF vs Lexical,29011,23401852.0,0.0,0.0,0.09864246894855974,False,True
+CogniSync_RRF vs Hybrid_Naive,29011,12929463.5,5.8862690227966536e-282,1.765880706838996e-281,0.04827335608332472,False,True

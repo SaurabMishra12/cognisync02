@@ -1,0 +1,4274 @@
+{
+  "dataset_name": "CogniSync NeurIPS Benchmark v2.1 (with distractors)",
+  "version": "2.1.0",
+  "generated_at": "2026-04-17T06:02:01.766695+00:00",
+  "stats": {
+    "n_workflows": 20,
+    "n_sessions": 160,
+    "n_eval_queries": 160
+  },
+  "sessions": [
+    {
+      "session_id": "wf01_s1",
+      "workflow_id": "wf01",
+      "topic_id": "auth",
+      "topic_name": "JWT Authentication",
+      "domain": "backend",
+      "turn": 1,
+      "content": "[JWT Authentication] Architecture finalized. Standard: 15-minute expiry via PyJWT+Redis. All components must comply.",
+      "tags": [
+        "auth",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf01_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf01_s2",
+      "workflow_id": "wf01",
+      "topic_id": "auth",
+      "topic_name": "JWT Authentication",
+      "domain": "backend",
+      "turn": 2,
+      "content": "[JWT Authentication] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.",
+      "tags": [
+        "auth",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf01_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf01_s3",
+      "workflow_id": "wf01",
+      "topic_id": "auth",
+      "topic_name": "JWT Authentication",
+      "domain": "backend",
+      "turn": 3,
+      "content": "[JWT Authentication] Temporary override: Due to PyJWT+Redis issues, we are relaxing the constraint to 60-minute expiry for the current sprint only.",
+      "tags": [
+        "auth",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf01_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf01_s4",
+      "workflow_id": "wf01",
+      "topic_id": "auth",
+      "topic_name": "JWT Authentication",
+      "domain": "backend",
+      "turn": 4,
+      "content": "[JWT Authentication] Team reviewed alternatives. Confirmed 900-second validity window satisfies our requirements. Tech stack: PyJWT+Redis.",
+      "tags": [
+        "auth",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf01_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf01_s5",
+      "workflow_id": "wf01",
+      "topic_id": "auth",
+      "topic_name": "JWT Authentication",
+      "domain": "backend",
+      "turn": 5,
+      "content": "[JWT Authentication] FINAL for production: temporary override reverted. Enforcing 15-minute expiry globally. No exceptions.",
+      "tags": [
+        "auth",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf01_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf01_d1",
+      "workflow_id": "wf01",
+      "topic_id": "auth",
+      "topic_name": "JWT Authentication",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[JWT Authentication] Draft consideration: 30-minute expiry proposed during early scoping. Not selected.",
+      "tags": [
+        "auth",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf01_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf01_d2",
+      "workflow_id": "wf01",
+      "topic_id": "auth",
+      "topic_name": "JWT Authentication",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[JWT Authentication] Vendor doc reference: 24-hour session expiry found in external white paper. Not applicable.",
+      "tags": [
+        "auth",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf01_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf01_d3",
+      "workflow_id": "wf01",
+      "topic_id": "auth",
+      "topic_name": "JWT Authentication",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[JWT Authentication] Archived proposal: dynamic session expiry evaluated and rejected in pre-design phase.",
+      "tags": [
+        "auth",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf01_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf02_s1",
+      "workflow_id": "wf02",
+      "topic_id": "db_schema",
+      "topic_name": "Database Schema",
+      "domain": "backend",
+      "turn": 1,
+      "content": "[Database Schema] Architecture finalized. Standard: UUID primary keys via Alembic+PostgreSQL. All components must comply.",
+      "tags": [
+        "db_schema",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf02_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf02_s2",
+      "workflow_id": "wf02",
+      "topic_id": "db_schema",
+      "topic_name": "Database Schema",
+      "domain": "backend",
+      "turn": 2,
+      "content": "[Database Schema] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements.",
+      "tags": [
+        "db_schema",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf02_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf02_s3",
+      "workflow_id": "wf02",
+      "topic_id": "db_schema",
+      "topic_name": "Database Schema",
+      "domain": "backend",
+      "turn": 3,
+      "content": "[Database Schema] Temporary override: Due to Alembic+PostgreSQL issues, we are relaxing the constraint to auto-incrementing integer PKs for the current sprint only.",
+      "tags": [
+        "db_schema",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf02_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf02_s4",
+      "workflow_id": "wf02",
+      "topic_id": "db_schema",
+      "topic_name": "Database Schema",
+      "domain": "backend",
+      "turn": 4,
+      "content": "[Database Schema] Team reviewed alternatives. Confirmed 128-bit row identifiers satisfies our requirements. Tech stack: Alembic+PostgreSQL.",
+      "tags": [
+        "db_schema",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf02_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf02_s5",
+      "workflow_id": "wf02",
+      "topic_id": "db_schema",
+      "topic_name": "Database Schema",
+      "domain": "backend",
+      "turn": 5,
+      "content": "[Database Schema] FINAL for production: temporary override reverted. Enforcing UUID primary keys globally. No exceptions.",
+      "tags": [
+        "db_schema",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf02_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf02_d1",
+      "workflow_id": "wf02",
+      "topic_id": "db_schema",
+      "topic_name": "Database Schema",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Database Schema] Draft consideration: composite primary keys proposed during early scoping. Not selected.",
+      "tags": [
+        "db_schema",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf02_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf02_d2",
+      "workflow_id": "wf02",
+      "topic_id": "db_schema",
+      "topic_name": "Database Schema",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Database Schema] Vendor doc reference: hash-based primary keys found in external white paper. Not applicable.",
+      "tags": [
+        "db_schema",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf02_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf02_d3",
+      "workflow_id": "wf02",
+      "topic_id": "db_schema",
+      "topic_name": "Database Schema",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Database Schema] Archived proposal: natural key scheme evaluated and rejected in pre-design phase.",
+      "tags": [
+        "db_schema",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf02_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf03_s1",
+      "workflow_id": "wf03",
+      "topic_id": "microservice",
+      "topic_name": "Microservice Context",
+      "domain": "architecture",
+      "turn": 1,
+      "content": "[Microservice Context] Architecture finalized. Standard: strict domain boundary via gRPC+Protobuf. All components must comply.",
+      "tags": [
+        "microservice",
+        "architecture"
+      ],
+      "chunk_ids": [
+        "wf03_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf03_s2",
+      "workflow_id": "wf03",
+      "topic_id": "microservice",
+      "topic_name": "Microservice Context",
+      "domain": "architecture",
+      "turn": 2,
+      "content": "[Microservice Context] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements.",
+      "tags": [
+        "microservice",
+        "architecture"
+      ],
+      "chunk_ids": [
+        "wf03_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf03_s3",
+      "workflow_id": "wf03",
+      "topic_id": "microservice",
+      "topic_name": "Microservice Context",
+      "domain": "architecture",
+      "turn": 3,
+      "content": "[Microservice Context] Temporary override: Due to gRPC+Protobuf issues, we are relaxing the constraint to shared database schema for the current sprint only.",
+      "tags": [
+        "microservice",
+        "architecture"
+      ],
+      "chunk_ids": [
+        "wf03_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf03_s4",
+      "workflow_id": "wf03",
+      "topic_id": "microservice",
+      "topic_name": "Microservice Context",
+      "domain": "architecture",
+      "turn": 4,
+      "content": "[Microservice Context] Team reviewed alternatives. Confirmed decoupled bounded contexts satisfies our requirements. Tech stack: gRPC+Protobuf.",
+      "tags": [
+        "microservice",
+        "architecture"
+      ],
+      "chunk_ids": [
+        "wf03_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf03_s5",
+      "workflow_id": "wf03",
+      "topic_id": "microservice",
+      "topic_name": "Microservice Context",
+      "domain": "architecture",
+      "turn": 5,
+      "content": "[Microservice Context] FINAL for production: temporary override reverted. Enforcing strict domain boundary globally. No exceptions.",
+      "tags": [
+        "microservice",
+        "architecture"
+      ],
+      "chunk_ids": [
+        "wf03_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf03_d1",
+      "workflow_id": "wf03",
+      "topic_id": "microservice",
+      "topic_name": "Microservice Context",
+      "domain": "architecture",
+      "turn": 0,
+      "content": "[Microservice Context] Draft consideration: flexible domain boundary proposed during early scoping. Not selected.",
+      "tags": [
+        "microservice",
+        "architecture",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf03_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf03_d2",
+      "workflow_id": "wf03",
+      "topic_id": "microservice",
+      "topic_name": "Microservice Context",
+      "domain": "architecture",
+      "turn": 0,
+      "content": "[Microservice Context] Vendor doc reference: shared service context found in external white paper. Not applicable.",
+      "tags": [
+        "microservice",
+        "architecture",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf03_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf03_d3",
+      "workflow_id": "wf03",
+      "topic_id": "microservice",
+      "topic_name": "Microservice Context",
+      "domain": "architecture",
+      "turn": 0,
+      "content": "[Microservice Context] Archived proposal: loose coupling allowed evaluated and rejected in pre-design phase.",
+      "tags": [
+        "microservice",
+        "architecture",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf03_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf04_s1",
+      "workflow_id": "wf04",
+      "topic_id": "ci_cd",
+      "topic_name": "CI/CD Pipeline",
+      "domain": "devops",
+      "turn": 1,
+      "content": "[CI/CD Pipeline] Architecture finalized. Standard: require 2 PR approvals via GitHub Actions. All components must comply.",
+      "tags": [
+        "ci_cd",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf04_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf04_s2",
+      "workflow_id": "wf04",
+      "topic_id": "ci_cd",
+      "topic_name": "CI/CD Pipeline",
+      "domain": "devops",
+      "turn": 2,
+      "content": "[CI/CD Pipeline] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.",
+      "tags": [
+        "ci_cd",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf04_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf04_s3",
+      "workflow_id": "wf04",
+      "topic_id": "ci_cd",
+      "topic_name": "CI/CD Pipeline",
+      "domain": "devops",
+      "turn": 3,
+      "content": "[CI/CD Pipeline] Temporary override: Due to GitHub Actions issues, we are relaxing the constraint to admin bypass override for the current sprint only.",
+      "tags": [
+        "ci_cd",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf04_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf04_s4",
+      "workflow_id": "wf04",
+      "topic_id": "ci_cd",
+      "topic_name": "CI/CD Pipeline",
+      "domain": "devops",
+      "turn": 4,
+      "content": "[CI/CD Pipeline] Team reviewed alternatives. Confirmed dual sign-off before merge satisfies our requirements. Tech stack: GitHub Actions.",
+      "tags": [
+        "ci_cd",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf04_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf04_s5",
+      "workflow_id": "wf04",
+      "topic_id": "ci_cd",
+      "topic_name": "CI/CD Pipeline",
+      "domain": "devops",
+      "turn": 5,
+      "content": "[CI/CD Pipeline] FINAL for production: temporary override reverted. Enforcing require 2 PR approvals globally. No exceptions.",
+      "tags": [
+        "ci_cd",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf04_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf04_d1",
+      "workflow_id": "wf04",
+      "topic_id": "ci_cd",
+      "topic_name": "CI/CD Pipeline",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[CI/CD Pipeline] Draft consideration: require 1 PR approval proposed during early scoping. Not selected.",
+      "tags": [
+        "ci_cd",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf04_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf04_d2",
+      "workflow_id": "wf04",
+      "topic_id": "ci_cd",
+      "topic_name": "CI/CD Pipeline",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[CI/CD Pipeline] Vendor doc reference: require 3 PR approvals found in external white paper. Not applicable.",
+      "tags": [
+        "ci_cd",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf04_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf04_d3",
+      "workflow_id": "wf04",
+      "topic_id": "ci_cd",
+      "topic_name": "CI/CD Pipeline",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[CI/CD Pipeline] Archived proposal: self-merge allowed evaluated and rejected in pre-design phase.",
+      "tags": [
+        "ci_cd",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf04_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf05_s1",
+      "workflow_id": "wf05",
+      "topic_id": "monitoring",
+      "topic_name": "Observability Stack",
+      "domain": "devops",
+      "turn": 1,
+      "content": "[Observability Stack] Architecture finalized. Standard: 10% trace sampling via OpenTelemetry. All components must comply.",
+      "tags": [
+        "monitoring",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf05_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf05_s2",
+      "workflow_id": "wf05",
+      "topic_id": "monitoring",
+      "topic_name": "Observability Stack",
+      "domain": "devops",
+      "turn": 2,
+      "content": "[Observability Stack] Peripheral note: Fixed typo in user onboarding email template. QA confirmed it renders correctly on mobile.",
+      "tags": [
+        "monitoring",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf05_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf05_s3",
+      "workflow_id": "wf05",
+      "topic_id": "monitoring",
+      "topic_name": "Observability Stack",
+      "domain": "devops",
+      "turn": 3,
+      "content": "[Observability Stack] Temporary override: Due to OpenTelemetry issues, we are relaxing the constraint to 100% full trace sampling for the current sprint only.",
+      "tags": [
+        "monitoring",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf05_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf05_s4",
+      "workflow_id": "wf05",
+      "topic_id": "monitoring",
+      "topic_name": "Observability Stack",
+      "domain": "devops",
+      "turn": 4,
+      "content": "[Observability Stack] Team reviewed alternatives. Confirmed one-in-ten request capture satisfies our requirements. Tech stack: OpenTelemetry.",
+      "tags": [
+        "monitoring",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf05_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf05_s5",
+      "workflow_id": "wf05",
+      "topic_id": "monitoring",
+      "topic_name": "Observability Stack",
+      "domain": "devops",
+      "turn": 5,
+      "content": "[Observability Stack] FINAL for production: temporary override reverted. Enforcing 10% trace sampling globally. No exceptions.",
+      "tags": [
+        "monitoring",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf05_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf05_d1",
+      "workflow_id": "wf05",
+      "topic_id": "monitoring",
+      "topic_name": "Observability Stack",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Observability Stack] Draft consideration: 5% trace sampling proposed during early scoping. Not selected.",
+      "tags": [
+        "monitoring",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf05_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf05_d2",
+      "workflow_id": "wf05",
+      "topic_id": "monitoring",
+      "topic_name": "Observability Stack",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Observability Stack] Vendor doc reference: 25% trace sampling found in external white paper. Not applicable.",
+      "tags": [
+        "monitoring",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf05_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf05_d3",
+      "workflow_id": "wf05",
+      "topic_id": "monitoring",
+      "topic_name": "Observability Stack",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Observability Stack] Archived proposal: adaptive trace sampling evaluated and rejected in pre-design phase.",
+      "tags": [
+        "monitoring",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf05_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf06_s1",
+      "workflow_id": "wf06",
+      "topic_id": "api_gateway",
+      "topic_name": "API Gateway Rate Limiting",
+      "domain": "backend",
+      "turn": 1,
+      "content": "[API Gateway Rate Limiting] Architecture finalized. Standard: 100 RPM rate limit via nginx+Lua. All components must comply.",
+      "tags": [
+        "api_gateway",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf06_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf06_s2",
+      "workflow_id": "wf06",
+      "topic_id": "api_gateway",
+      "topic_name": "API Gateway Rate Limiting",
+      "domain": "backend",
+      "turn": 2,
+      "content": "[API Gateway Rate Limiting] Peripheral note: Bumped base alpine image to address recent libssl CVEs. No functional changes.",
+      "tags": [
+        "api_gateway",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf06_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf06_s3",
+      "workflow_id": "wf06",
+      "topic_id": "api_gateway",
+      "topic_name": "API Gateway Rate Limiting",
+      "domain": "backend",
+      "turn": 3,
+      "content": "[API Gateway Rate Limiting] Temporary override: Due to nginx+Lua issues, we are relaxing the constraint to unlimited bursting for the current sprint only.",
+      "tags": [
+        "api_gateway",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf06_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf06_s4",
+      "workflow_id": "wf06",
+      "topic_id": "api_gateway",
+      "topic_name": "API Gateway Rate Limiting",
+      "domain": "backend",
+      "turn": 4,
+      "content": "[API Gateway Rate Limiting] Team reviewed alternatives. Confirmed 100 requests-per-minute throttle satisfies our requirements. Tech stack: nginx+Lua.",
+      "tags": [
+        "api_gateway",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf06_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf06_s5",
+      "workflow_id": "wf06",
+      "topic_id": "api_gateway",
+      "topic_name": "API Gateway Rate Limiting",
+      "domain": "backend",
+      "turn": 5,
+      "content": "[API Gateway Rate Limiting] FINAL for production: temporary override reverted. Enforcing 100 RPM rate limit globally. No exceptions.",
+      "tags": [
+        "api_gateway",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf06_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf06_d1",
+      "workflow_id": "wf06",
+      "topic_id": "api_gateway",
+      "topic_name": "API Gateway Rate Limiting",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[API Gateway Rate Limiting] Draft consideration: 500 RPM rate limit proposed during early scoping. Not selected.",
+      "tags": [
+        "api_gateway",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf06_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf06_d2",
+      "workflow_id": "wf06",
+      "topic_id": "api_gateway",
+      "topic_name": "API Gateway Rate Limiting",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[API Gateway Rate Limiting] Vendor doc reference: 50 RPM rate limit found in external white paper. Not applicable.",
+      "tags": [
+        "api_gateway",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf06_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf06_d3",
+      "workflow_id": "wf06",
+      "topic_id": "api_gateway",
+      "topic_name": "API Gateway Rate Limiting",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[API Gateway Rate Limiting] Archived proposal: 1000 RPM rate limit evaluated and rejected in pre-design phase.",
+      "tags": [
+        "api_gateway",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf06_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf07_s1",
+      "workflow_id": "wf07",
+      "topic_id": "caching",
+      "topic_name": "Distributed Caching",
+      "domain": "backend",
+      "turn": 1,
+      "content": "[Distributed Caching] Architecture finalized. Standard: 5-minute TTL cache-aside via redis-py. All components must comply.",
+      "tags": [
+        "caching",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf07_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf07_s2",
+      "workflow_id": "wf07",
+      "topic_id": "caching",
+      "topic_name": "Distributed Caching",
+      "domain": "backend",
+      "turn": 2,
+      "content": "[Distributed Caching] Peripheral note: Bumped base alpine image to address recent libssl CVEs. No functional changes.",
+      "tags": [
+        "caching",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf07_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf07_s3",
+      "workflow_id": "wf07",
+      "topic_id": "caching",
+      "topic_name": "Distributed Caching",
+      "domain": "backend",
+      "turn": 3,
+      "content": "[Distributed Caching] Temporary override: Due to redis-py issues, we are relaxing the constraint to write-through no expiry for the current sprint only.",
+      "tags": [
+        "caching",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf07_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf07_s4",
+      "workflow_id": "wf07",
+      "topic_id": "caching",
+      "topic_name": "Distributed Caching",
+      "domain": "backend",
+      "turn": 4,
+      "content": "[Distributed Caching] Team reviewed alternatives. Confirmed lazy-load with 300s expiration satisfies our requirements. Tech stack: redis-py.",
+      "tags": [
+        "caching",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf07_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf07_s5",
+      "workflow_id": "wf07",
+      "topic_id": "caching",
+      "topic_name": "Distributed Caching",
+      "domain": "backend",
+      "turn": 5,
+      "content": "[Distributed Caching] FINAL for production: temporary override reverted. Enforcing 5-minute TTL cache-aside globally. No exceptions.",
+      "tags": [
+        "caching",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf07_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf07_d1",
+      "workflow_id": "wf07",
+      "topic_id": "caching",
+      "topic_name": "Distributed Caching",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Distributed Caching] Draft consideration: 10-minute TTL cache-aside proposed during early scoping. Not selected.",
+      "tags": [
+        "caching",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf07_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf07_d2",
+      "workflow_id": "wf07",
+      "topic_id": "caching",
+      "topic_name": "Distributed Caching",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Distributed Caching] Vendor doc reference: 1-minute TTL cache-aside found in external white paper. Not applicable.",
+      "tags": [
+        "caching",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf07_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf07_d3",
+      "workflow_id": "wf07",
+      "topic_id": "caching",
+      "topic_name": "Distributed Caching",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Distributed Caching] Archived proposal: 30-minute TTL cache-aside evaluated and rejected in pre-design phase.",
+      "tags": [
+        "caching",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf07_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf08_s1",
+      "workflow_id": "wf08",
+      "topic_id": "frontend",
+      "topic_name": "React Architecture",
+      "domain": "frontend",
+      "turn": 1,
+      "content": "[React Architecture] Architecture finalized. Standard: Atomic Design system via React+Storybook. All components must comply.",
+      "tags": [
+        "frontend",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf08_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf08_s2",
+      "workflow_id": "wf08",
+      "topic_id": "frontend",
+      "topic_name": "React Architecture",
+      "domain": "frontend",
+      "turn": 2,
+      "content": "[React Architecture] Peripheral note: Bumped base alpine image to address recent libssl CVEs. No functional changes.",
+      "tags": [
+        "frontend",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf08_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf08_s3",
+      "workflow_id": "wf08",
+      "topic_id": "frontend",
+      "topic_name": "React Architecture",
+      "domain": "frontend",
+      "turn": 3,
+      "content": "[React Architecture] Temporary override: Due to React+Storybook issues, we are relaxing the constraint to monolithic render trees for the current sprint only.",
+      "tags": [
+        "frontend",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf08_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf08_s4",
+      "workflow_id": "wf08",
+      "topic_id": "frontend",
+      "topic_name": "React Architecture",
+      "domain": "frontend",
+      "turn": 4,
+      "content": "[React Architecture] Team reviewed alternatives. Confirmed composable UI component hierarchy satisfies our requirements. Tech stack: React+Storybook.",
+      "tags": [
+        "frontend",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf08_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf08_s5",
+      "workflow_id": "wf08",
+      "topic_id": "frontend",
+      "topic_name": "React Architecture",
+      "domain": "frontend",
+      "turn": 5,
+      "content": "[React Architecture] FINAL for production: temporary override reverted. Enforcing Atomic Design system globally. No exceptions.",
+      "tags": [
+        "frontend",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf08_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf08_d1",
+      "workflow_id": "wf08",
+      "topic_id": "frontend",
+      "topic_name": "React Architecture",
+      "domain": "frontend",
+      "turn": 0,
+      "content": "[React Architecture] Draft consideration: BEM Design system proposed during early scoping. Not selected.",
+      "tags": [
+        "frontend",
+        "frontend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf08_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf08_d2",
+      "workflow_id": "wf08",
+      "topic_id": "frontend",
+      "topic_name": "React Architecture",
+      "domain": "frontend",
+      "turn": 0,
+      "content": "[React Architecture] Vendor doc reference: Material Design system found in external white paper. Not applicable.",
+      "tags": [
+        "frontend",
+        "frontend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf08_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf08_d3",
+      "workflow_id": "wf08",
+      "topic_id": "frontend",
+      "topic_name": "React Architecture",
+      "domain": "frontend",
+      "turn": 0,
+      "content": "[React Architecture] Archived proposal: feature-based component design evaluated and rejected in pre-design phase.",
+      "tags": [
+        "frontend",
+        "frontend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf08_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf09_s1",
+      "workflow_id": "wf09",
+      "topic_id": "ml_pipeline",
+      "topic_name": "ML Training Pipeline",
+      "domain": "mlops",
+      "turn": 1,
+      "content": "[ML Training Pipeline] Architecture finalized. Standard: DVC data versioning via MLflow+DVC. All components must comply.",
+      "tags": [
+        "ml_pipeline",
+        "mlops"
+      ],
+      "chunk_ids": [
+        "wf09_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf09_s2",
+      "workflow_id": "wf09",
+      "topic_id": "ml_pipeline",
+      "topic_name": "ML Training Pipeline",
+      "domain": "mlops",
+      "turn": 2,
+      "content": "[ML Training Pipeline] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.",
+      "tags": [
+        "ml_pipeline",
+        "mlops"
+      ],
+      "chunk_ids": [
+        "wf09_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf09_s3",
+      "workflow_id": "wf09",
+      "topic_id": "ml_pipeline",
+      "topic_name": "ML Training Pipeline",
+      "domain": "mlops",
+      "turn": 3,
+      "content": "[ML Training Pipeline] Temporary override: Due to MLflow+DVC issues, we are relaxing the constraint to manual S3 uploads for the current sprint only.",
+      "tags": [
+        "ml_pipeline",
+        "mlops"
+      ],
+      "chunk_ids": [
+        "wf09_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf09_s4",
+      "workflow_id": "wf09",
+      "topic_id": "ml_pipeline",
+      "topic_name": "ML Training Pipeline",
+      "domain": "mlops",
+      "turn": 4,
+      "content": "[ML Training Pipeline] Team reviewed alternatives. Confirmed immutable dataset snapshots with DVC satisfies our requirements. Tech stack: MLflow+DVC.",
+      "tags": [
+        "ml_pipeline",
+        "mlops"
+      ],
+      "chunk_ids": [
+        "wf09_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf09_s5",
+      "workflow_id": "wf09",
+      "topic_id": "ml_pipeline",
+      "topic_name": "ML Training Pipeline",
+      "domain": "mlops",
+      "turn": 5,
+      "content": "[ML Training Pipeline] FINAL for production: temporary override reverted. Enforcing DVC data versioning globally. No exceptions.",
+      "tags": [
+        "ml_pipeline",
+        "mlops"
+      ],
+      "chunk_ids": [
+        "wf09_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf09_d1",
+      "workflow_id": "wf09",
+      "topic_id": "ml_pipeline",
+      "topic_name": "ML Training Pipeline",
+      "domain": "mlops",
+      "turn": 0,
+      "content": "[ML Training Pipeline] Draft consideration: Git-LFS data versioning proposed during early scoping. Not selected.",
+      "tags": [
+        "ml_pipeline",
+        "mlops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf09_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf09_d2",
+      "workflow_id": "wf09",
+      "topic_id": "ml_pipeline",
+      "topic_name": "ML Training Pipeline",
+      "domain": "mlops",
+      "turn": 0,
+      "content": "[ML Training Pipeline] Vendor doc reference: Delta Lake data versioning found in external white paper. Not applicable.",
+      "tags": [
+        "ml_pipeline",
+        "mlops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf09_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf09_d3",
+      "workflow_id": "wf09",
+      "topic_id": "ml_pipeline",
+      "topic_name": "ML Training Pipeline",
+      "domain": "mlops",
+      "turn": 0,
+      "content": "[ML Training Pipeline] Archived proposal: manual data versioning evaluated and rejected in pre-design phase.",
+      "tags": [
+        "ml_pipeline",
+        "mlops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf09_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf10_s1",
+      "workflow_id": "wf10",
+      "topic_id": "search",
+      "topic_name": "Elasticsearch Design",
+      "domain": "backend",
+      "turn": 1,
+      "content": "[Elasticsearch Design] Architecture finalized. Standard: 2 shards 1 replica via elasticsearch-py. All components must comply.",
+      "tags": [
+        "search",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf10_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf10_s2",
+      "workflow_id": "wf10",
+      "topic_id": "search",
+      "topic_name": "Elasticsearch Design",
+      "domain": "backend",
+      "turn": 2,
+      "content": "[Elasticsearch Design] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements.",
+      "tags": [
+        "search",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf10_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf10_s3",
+      "workflow_id": "wf10",
+      "topic_id": "search",
+      "topic_name": "Elasticsearch Design",
+      "domain": "backend",
+      "turn": 3,
+      "content": "[Elasticsearch Design] Temporary override: Due to elasticsearch-py issues, we are relaxing the constraint to 5 shards 2 replicas for the current sprint only.",
+      "tags": [
+        "search",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf10_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf10_s4",
+      "workflow_id": "wf10",
+      "topic_id": "search",
+      "topic_name": "Elasticsearch Design",
+      "domain": "backend",
+      "turn": 4,
+      "content": "[Elasticsearch Design] Team reviewed alternatives. Confirmed dual partitions single backup copy satisfies our requirements. Tech stack: elasticsearch-py.",
+      "tags": [
+        "search",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf10_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf10_s5",
+      "workflow_id": "wf10",
+      "topic_id": "search",
+      "topic_name": "Elasticsearch Design",
+      "domain": "backend",
+      "turn": 5,
+      "content": "[Elasticsearch Design] FINAL for production: temporary override reverted. Enforcing 2 shards 1 replica globally. No exceptions.",
+      "tags": [
+        "search",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf10_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf10_d1",
+      "workflow_id": "wf10",
+      "topic_id": "search",
+      "topic_name": "Elasticsearch Design",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Elasticsearch Design] Draft consideration: 3 shards 1 replica proposed during early scoping. Not selected.",
+      "tags": [
+        "search",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf10_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf10_d2",
+      "workflow_id": "wf10",
+      "topic_id": "search",
+      "topic_name": "Elasticsearch Design",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Elasticsearch Design] Vendor doc reference: 1 shard 2 replicas found in external white paper. Not applicable.",
+      "tags": [
+        "search",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf10_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf10_d3",
+      "workflow_id": "wf10",
+      "topic_id": "search",
+      "topic_name": "Elasticsearch Design",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Elasticsearch Design] Archived proposal: 4 shards 0 replicas evaluated and rejected in pre-design phase.",
+      "tags": [
+        "search",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf10_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf11_s1",
+      "workflow_id": "wf11",
+      "topic_id": "auth_oauth",
+      "topic_name": "OAuth2 Flow",
+      "domain": "security",
+      "turn": 1,
+      "content": "[OAuth2 Flow] Architecture finalized. Standard: PKCE S256 mandatory via Authlib+FastAPI. All components must comply.",
+      "tags": [
+        "auth_oauth",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf11_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf11_s2",
+      "workflow_id": "wf11",
+      "topic_id": "auth_oauth",
+      "topic_name": "OAuth2 Flow",
+      "domain": "security",
+      "turn": 2,
+      "content": "[OAuth2 Flow] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.",
+      "tags": [
+        "auth_oauth",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf11_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf11_s3",
+      "workflow_id": "wf11",
+      "topic_id": "auth_oauth",
+      "topic_name": "OAuth2 Flow",
+      "domain": "security",
+      "turn": 3,
+      "content": "[OAuth2 Flow] Temporary override: Due to Authlib+FastAPI issues, we are relaxing the constraint to implicit grant permitted for the current sprint only.",
+      "tags": [
+        "auth_oauth",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf11_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf11_s4",
+      "workflow_id": "wf11",
+      "topic_id": "auth_oauth",
+      "topic_name": "OAuth2 Flow",
+      "domain": "security",
+      "turn": 4,
+      "content": "[OAuth2 Flow] Team reviewed alternatives. Confirmed SHA-256 code verifier required satisfies our requirements. Tech stack: Authlib+FastAPI.",
+      "tags": [
+        "auth_oauth",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf11_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf11_s5",
+      "workflow_id": "wf11",
+      "topic_id": "auth_oauth",
+      "topic_name": "OAuth2 Flow",
+      "domain": "security",
+      "turn": 5,
+      "content": "[OAuth2 Flow] FINAL for production: temporary override reverted. Enforcing PKCE S256 mandatory globally. No exceptions.",
+      "tags": [
+        "auth_oauth",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf11_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf11_d1",
+      "workflow_id": "wf11",
+      "topic_id": "auth_oauth",
+      "topic_name": "OAuth2 Flow",
+      "domain": "security",
+      "turn": 0,
+      "content": "[OAuth2 Flow] Draft consideration: PKCE plain mandatory proposed during early scoping. Not selected.",
+      "tags": [
+        "auth_oauth",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf11_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf11_d2",
+      "workflow_id": "wf11",
+      "topic_id": "auth_oauth",
+      "topic_name": "OAuth2 Flow",
+      "domain": "security",
+      "turn": 0,
+      "content": "[OAuth2 Flow] Vendor doc reference: client_credentials grant only found in external white paper. Not applicable.",
+      "tags": [
+        "auth_oauth",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf11_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf11_d3",
+      "workflow_id": "wf11",
+      "topic_id": "auth_oauth",
+      "topic_name": "OAuth2 Flow",
+      "domain": "security",
+      "turn": 0,
+      "content": "[OAuth2 Flow] Archived proposal: device flow mandatory evaluated and rejected in pre-design phase.",
+      "tags": [
+        "auth_oauth",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf11_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf12_s1",
+      "workflow_id": "wf12",
+      "topic_id": "logging",
+      "topic_name": "Structured Logging",
+      "domain": "devops",
+      "turn": 1,
+      "content": "[Structured Logging] Architecture finalized. Standard: correlation-id injection via structlog. All components must comply.",
+      "tags": [
+        "logging",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf12_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf12_s2",
+      "workflow_id": "wf12",
+      "topic_id": "logging",
+      "topic_name": "Structured Logging",
+      "domain": "devops",
+      "turn": 2,
+      "content": "[Structured Logging] Peripheral note: Upgraded dev dependency: prettier 3.1 -> 3.2. Reformatted affected files.",
+      "tags": [
+        "logging",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf12_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf12_s3",
+      "workflow_id": "wf12",
+      "topic_id": "logging",
+      "topic_name": "Structured Logging",
+      "domain": "devops",
+      "turn": 3,
+      "content": "[Structured Logging] Temporary override: Due to structlog issues, we are relaxing the constraint to plain stdout only for the current sprint only.",
+      "tags": [
+        "logging",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf12_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf12_s4",
+      "workflow_id": "wf12",
+      "topic_id": "logging",
+      "topic_name": "Structured Logging",
+      "domain": "devops",
+      "turn": 4,
+      "content": "[Structured Logging] Team reviewed alternatives. Confirmed request trace-context propagation satisfies our requirements. Tech stack: structlog.",
+      "tags": [
+        "logging",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf12_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf12_s5",
+      "workflow_id": "wf12",
+      "topic_id": "logging",
+      "topic_name": "Structured Logging",
+      "domain": "devops",
+      "turn": 5,
+      "content": "[Structured Logging] FINAL for production: temporary override reverted. Enforcing correlation-id injection globally. No exceptions.",
+      "tags": [
+        "logging",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf12_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf12_d1",
+      "workflow_id": "wf12",
+      "topic_id": "logging",
+      "topic_name": "Structured Logging",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Structured Logging] Draft consideration: session-id injection proposed during early scoping. Not selected.",
+      "tags": [
+        "logging",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf12_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf12_d2",
+      "workflow_id": "wf12",
+      "topic_id": "logging",
+      "topic_name": "Structured Logging",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Structured Logging] Vendor doc reference: user-id injection found in external white paper. Not applicable.",
+      "tags": [
+        "logging",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf12_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf12_d3",
+      "workflow_id": "wf12",
+      "topic_id": "logging",
+      "topic_name": "Structured Logging",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Structured Logging] Archived proposal: request-id injection evaluated and rejected in pre-design phase.",
+      "tags": [
+        "logging",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf12_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf13_s1",
+      "workflow_id": "wf13",
+      "topic_id": "container",
+      "topic_name": "Docker Compose",
+      "domain": "devops",
+      "turn": 1,
+      "content": "[Docker Compose] Architecture finalized. Standard: 512 MB RAM limit via Docker Compose. All components must comply.",
+      "tags": [
+        "container",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf13_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf13_s2",
+      "workflow_id": "wf13",
+      "topic_id": "container",
+      "topic_name": "Docker Compose",
+      "domain": "devops",
+      "turn": 2,
+      "content": "[Docker Compose] Peripheral note: Added docstrings to utility functions in the string-formatting module. No logic change.",
+      "tags": [
+        "container",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf13_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf13_s3",
+      "workflow_id": "wf13",
+      "topic_id": "container",
+      "topic_name": "Docker Compose",
+      "domain": "devops",
+      "turn": 3,
+      "content": "[Docker Compose] Temporary override: Due to Docker Compose issues, we are relaxing the constraint to unbounded resource access for the current sprint only.",
+      "tags": [
+        "container",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf13_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf13_s4",
+      "workflow_id": "wf13",
+      "topic_id": "container",
+      "topic_name": "Docker Compose",
+      "domain": "devops",
+      "turn": 4,
+      "content": "[Docker Compose] Team reviewed alternatives. Confirmed half-gigabyte memory ceiling satisfies our requirements. Tech stack: Docker Compose.",
+      "tags": [
+        "container",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf13_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf13_s5",
+      "workflow_id": "wf13",
+      "topic_id": "container",
+      "topic_name": "Docker Compose",
+      "domain": "devops",
+      "turn": 5,
+      "content": "[Docker Compose] FINAL for production: temporary override reverted. Enforcing 512 MB RAM limit globally. No exceptions.",
+      "tags": [
+        "container",
+        "devops"
+      ],
+      "chunk_ids": [
+        "wf13_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf13_d1",
+      "workflow_id": "wf13",
+      "topic_id": "container",
+      "topic_name": "Docker Compose",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Docker Compose] Draft consideration: 256 MB RAM limit proposed during early scoping. Not selected.",
+      "tags": [
+        "container",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf13_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf13_d2",
+      "workflow_id": "wf13",
+      "topic_id": "container",
+      "topic_name": "Docker Compose",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Docker Compose] Vendor doc reference: 1 GB RAM limit found in external white paper. Not applicable.",
+      "tags": [
+        "container",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf13_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf13_d3",
+      "workflow_id": "wf13",
+      "topic_id": "container",
+      "topic_name": "Docker Compose",
+      "domain": "devops",
+      "turn": 0,
+      "content": "[Docker Compose] Archived proposal: 2 GB RAM limit evaluated and rejected in pre-design phase.",
+      "tags": [
+        "container",
+        "devops",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf13_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf14_s1",
+      "workflow_id": "wf14",
+      "topic_id": "grpc",
+      "topic_name": "gRPC Service Contract",
+      "domain": "backend",
+      "turn": 1,
+      "content": "[gRPC Service Contract] Architecture finalized. Standard: proto3 optional fields via grpcio+buf. All components must comply.",
+      "tags": [
+        "grpc",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf14_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf14_s2",
+      "workflow_id": "wf14",
+      "topic_id": "grpc",
+      "topic_name": "gRPC Service Contract",
+      "domain": "backend",
+      "turn": 2,
+      "content": "[gRPC Service Contract] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements.",
+      "tags": [
+        "grpc",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf14_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf14_s3",
+      "workflow_id": "wf14",
+      "topic_id": "grpc",
+      "topic_name": "gRPC Service Contract",
+      "domain": "backend",
+      "turn": 3,
+      "content": "[gRPC Service Contract] Temporary override: Due to grpcio+buf issues, we are relaxing the constraint to proto2 required fields for the current sprint only.",
+      "tags": [
+        "grpc",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf14_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf14_s4",
+      "workflow_id": "wf14",
+      "topic_id": "grpc",
+      "topic_name": "gRPC Service Contract",
+      "domain": "backend",
+      "turn": 4,
+      "content": "[gRPC Service Contract] Team reviewed alternatives. Confirmed field presence tracking enabled satisfies our requirements. Tech stack: grpcio+buf.",
+      "tags": [
+        "grpc",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf14_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf14_s5",
+      "workflow_id": "wf14",
+      "topic_id": "grpc",
+      "topic_name": "gRPC Service Contract",
+      "domain": "backend",
+      "turn": 5,
+      "content": "[gRPC Service Contract] FINAL for production: temporary override reverted. Enforcing proto3 optional fields globally. No exceptions.",
+      "tags": [
+        "grpc",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf14_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf14_d1",
+      "workflow_id": "wf14",
+      "topic_id": "grpc",
+      "topic_name": "gRPC Service Contract",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[gRPC Service Contract] Draft consideration: proto3 repeated fields proposed during early scoping. Not selected.",
+      "tags": [
+        "grpc",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf14_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf14_d2",
+      "workflow_id": "wf14",
+      "topic_id": "grpc",
+      "topic_name": "gRPC Service Contract",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[gRPC Service Contract] Vendor doc reference: proto3 oneof fields found in external white paper. Not applicable.",
+      "tags": [
+        "grpc",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf14_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf14_d3",
+      "workflow_id": "wf14",
+      "topic_id": "grpc",
+      "topic_name": "gRPC Service Contract",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[gRPC Service Contract] Archived proposal: proto3 reserved fields evaluated and rejected in pre-design phase.",
+      "tags": [
+        "grpc",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf14_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf15_s1",
+      "workflow_id": "wf15",
+      "topic_id": "migration",
+      "topic_name": "Database Migration",
+      "domain": "backend",
+      "turn": 1,
+      "content": "[Database Migration] Architecture finalized. Standard: reversible down() migrations via Alembic. All components must comply.",
+      "tags": [
+        "migration",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf15_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf15_s2",
+      "workflow_id": "wf15",
+      "topic_id": "migration",
+      "topic_name": "Database Migration",
+      "domain": "backend",
+      "turn": 2,
+      "content": "[Database Migration] Peripheral note: Added docstrings to utility functions in the string-formatting module. No logic change.",
+      "tags": [
+        "migration",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf15_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf15_s3",
+      "workflow_id": "wf15",
+      "topic_id": "migration",
+      "topic_name": "Database Migration",
+      "domain": "backend",
+      "turn": 3,
+      "content": "[Database Migration] Temporary override: Due to Alembic issues, we are relaxing the constraint to forward-only one-way for the current sprint only.",
+      "tags": [
+        "migration",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf15_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf15_s4",
+      "workflow_id": "wf15",
+      "topic_id": "migration",
+      "topic_name": "Database Migration",
+      "domain": "backend",
+      "turn": 4,
+      "content": "[Database Migration] Team reviewed alternatives. Confirmed bidirectional schema rollback paths satisfies our requirements. Tech stack: Alembic.",
+      "tags": [
+        "migration",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf15_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf15_s5",
+      "workflow_id": "wf15",
+      "topic_id": "migration",
+      "topic_name": "Database Migration",
+      "domain": "backend",
+      "turn": 5,
+      "content": "[Database Migration] FINAL for production: temporary override reverted. Enforcing reversible down() migrations globally. No exceptions.",
+      "tags": [
+        "migration",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf15_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf15_d1",
+      "workflow_id": "wf15",
+      "topic_id": "migration",
+      "topic_name": "Database Migration",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Database Migration] Draft consideration: optional down() migrations proposed during early scoping. Not selected.",
+      "tags": [
+        "migration",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf15_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf15_d2",
+      "workflow_id": "wf15",
+      "topic_id": "migration",
+      "topic_name": "Database Migration",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Database Migration] Vendor doc reference: automated rollback migrations found in external white paper. Not applicable.",
+      "tags": [
+        "migration",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf15_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf15_d3",
+      "workflow_id": "wf15",
+      "topic_id": "migration",
+      "topic_name": "Database Migration",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Database Migration] Archived proposal: snapshot-based rollback evaluated and rejected in pre-design phase.",
+      "tags": [
+        "migration",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf15_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf16_s1",
+      "workflow_id": "wf16",
+      "topic_id": "rbac",
+      "topic_name": "RBAC Access Control",
+      "domain": "security",
+      "turn": 1,
+      "content": "[RBAC Access Control] Architecture finalized. Standard: deny-by-default policy via Casbin+FastAPI. All components must comply.",
+      "tags": [
+        "rbac",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf16_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf16_s2",
+      "workflow_id": "wf16",
+      "topic_id": "rbac",
+      "topic_name": "RBAC Access Control",
+      "domain": "security",
+      "turn": 2,
+      "content": "[RBAC Access Control] Peripheral note: Weekly sync rescheduled from Friday afternoon to Thursday morning starting next week.",
+      "tags": [
+        "rbac",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf16_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf16_s3",
+      "workflow_id": "wf16",
+      "topic_id": "rbac",
+      "topic_name": "RBAC Access Control",
+      "domain": "security",
+      "turn": 3,
+      "content": "[RBAC Access Control] Temporary override: Due to Casbin+FastAPI issues, we are relaxing the constraint to wildcard admin grants for the current sprint only.",
+      "tags": [
+        "rbac",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf16_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf16_s4",
+      "workflow_id": "wf16",
+      "topic_id": "rbac",
+      "topic_name": "RBAC Access Control",
+      "domain": "security",
+      "turn": 4,
+      "content": "[RBAC Access Control] Team reviewed alternatives. Confirmed explicit allowlist whitelist only satisfies our requirements. Tech stack: Casbin+FastAPI.",
+      "tags": [
+        "rbac",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf16_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf16_s5",
+      "workflow_id": "wf16",
+      "topic_id": "rbac",
+      "topic_name": "RBAC Access Control",
+      "domain": "security",
+      "turn": 5,
+      "content": "[RBAC Access Control] FINAL for production: temporary override reverted. Enforcing deny-by-default policy globally. No exceptions.",
+      "tags": [
+        "rbac",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf16_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf16_d1",
+      "workflow_id": "wf16",
+      "topic_id": "rbac",
+      "topic_name": "RBAC Access Control",
+      "domain": "security",
+      "turn": 0,
+      "content": "[RBAC Access Control] Draft consideration: allow-by-default policy proposed during early scoping. Not selected.",
+      "tags": [
+        "rbac",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf16_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf16_d2",
+      "workflow_id": "wf16",
+      "topic_id": "rbac",
+      "topic_name": "RBAC Access Control",
+      "domain": "security",
+      "turn": 0,
+      "content": "[RBAC Access Control] Vendor doc reference: role-inherit policy found in external white paper. Not applicable.",
+      "tags": [
+        "rbac",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf16_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf16_d3",
+      "workflow_id": "wf16",
+      "topic_id": "rbac",
+      "topic_name": "RBAC Access Control",
+      "domain": "security",
+      "turn": 0,
+      "content": "[RBAC Access Control] Archived proposal: attribute-based access policy evaluated and rejected in pre-design phase.",
+      "tags": [
+        "rbac",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf16_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf17_s1",
+      "workflow_id": "wf17",
+      "topic_id": "queue",
+      "topic_name": "Message Queue",
+      "domain": "backend",
+      "turn": 1,
+      "content": "[Message Queue] Architecture finalized. Standard: DLQ with 3 retries via Celery+RabbitMQ. All components must comply.",
+      "tags": [
+        "queue",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf17_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf17_s2",
+      "workflow_id": "wf17",
+      "topic_id": "queue",
+      "topic_name": "Message Queue",
+      "domain": "backend",
+      "turn": 2,
+      "content": "[Message Queue] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements.",
+      "tags": [
+        "queue",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf17_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf17_s3",
+      "workflow_id": "wf17",
+      "topic_id": "queue",
+      "topic_name": "Message Queue",
+      "domain": "backend",
+      "turn": 3,
+      "content": "[Message Queue] Temporary override: Due to Celery+RabbitMQ issues, we are relaxing the constraint to silent drop on failure for the current sprint only.",
+      "tags": [
+        "queue",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf17_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf17_s4",
+      "workflow_id": "wf17",
+      "topic_id": "queue",
+      "topic_name": "Message Queue",
+      "domain": "backend",
+      "turn": 4,
+      "content": "[Message Queue] Team reviewed alternatives. Confirmed triple-attempt fallback queueing satisfies our requirements. Tech stack: Celery+RabbitMQ.",
+      "tags": [
+        "queue",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf17_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf17_s5",
+      "workflow_id": "wf17",
+      "topic_id": "queue",
+      "topic_name": "Message Queue",
+      "domain": "backend",
+      "turn": 5,
+      "content": "[Message Queue] FINAL for production: temporary override reverted. Enforcing DLQ with 3 retries globally. No exceptions.",
+      "tags": [
+        "queue",
+        "backend"
+      ],
+      "chunk_ids": [
+        "wf17_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf17_d1",
+      "workflow_id": "wf17",
+      "topic_id": "queue",
+      "topic_name": "Message Queue",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Message Queue] Draft consideration: DLQ with 5 retries proposed during early scoping. Not selected.",
+      "tags": [
+        "queue",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf17_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf17_d2",
+      "workflow_id": "wf17",
+      "topic_id": "queue",
+      "topic_name": "Message Queue",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Message Queue] Vendor doc reference: DLQ with 1 retry found in external white paper. Not applicable.",
+      "tags": [
+        "queue",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf17_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf17_d3",
+      "workflow_id": "wf17",
+      "topic_id": "queue",
+      "topic_name": "Message Queue",
+      "domain": "backend",
+      "turn": 0,
+      "content": "[Message Queue] Archived proposal: DLQ with 10 retries evaluated and rejected in pre-design phase.",
+      "tags": [
+        "queue",
+        "backend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf17_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf18_s1",
+      "workflow_id": "wf18",
+      "topic_id": "cdn",
+      "topic_name": "CDN Cache Invalidation",
+      "domain": "frontend",
+      "turn": 1,
+      "content": "[CDN Cache Invalidation] Architecture finalized. Standard: Cache-Control immutable via CloudFront. All components must comply.",
+      "tags": [
+        "cdn",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf18_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf18_s2",
+      "workflow_id": "wf18",
+      "topic_id": "cdn",
+      "topic_name": "CDN Cache Invalidation",
+      "domain": "frontend",
+      "turn": 2,
+      "content": "[CDN Cache Invalidation] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements.",
+      "tags": [
+        "cdn",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf18_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf18_s3",
+      "workflow_id": "wf18",
+      "topic_id": "cdn",
+      "topic_name": "CDN Cache Invalidation",
+      "domain": "frontend",
+      "turn": 3,
+      "content": "[CDN Cache Invalidation] Temporary override: Due to CloudFront issues, we are relaxing the constraint to no-cache validation for the current sprint only.",
+      "tags": [
+        "cdn",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf18_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf18_s4",
+      "workflow_id": "wf18",
+      "topic_id": "cdn",
+      "topic_name": "CDN Cache Invalidation",
+      "domain": "frontend",
+      "turn": 4,
+      "content": "[CDN Cache Invalidation] Team reviewed alternatives. Confirmed infinite max-age directive on assets satisfies our requirements. Tech stack: CloudFront.",
+      "tags": [
+        "cdn",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf18_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf18_s5",
+      "workflow_id": "wf18",
+      "topic_id": "cdn",
+      "topic_name": "CDN Cache Invalidation",
+      "domain": "frontend",
+      "turn": 5,
+      "content": "[CDN Cache Invalidation] FINAL for production: temporary override reverted. Enforcing Cache-Control immutable globally. No exceptions.",
+      "tags": [
+        "cdn",
+        "frontend"
+      ],
+      "chunk_ids": [
+        "wf18_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf18_d1",
+      "workflow_id": "wf18",
+      "topic_id": "cdn",
+      "topic_name": "CDN Cache Invalidation",
+      "domain": "frontend",
+      "turn": 0,
+      "content": "[CDN Cache Invalidation] Draft consideration: Cache-Control max-age=3600 proposed during early scoping. Not selected.",
+      "tags": [
+        "cdn",
+        "frontend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf18_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf18_d2",
+      "workflow_id": "wf18",
+      "topic_id": "cdn",
+      "topic_name": "CDN Cache Invalidation",
+      "domain": "frontend",
+      "turn": 0,
+      "content": "[CDN Cache Invalidation] Vendor doc reference: Cache-Control no-store found in external white paper. Not applicable.",
+      "tags": [
+        "cdn",
+        "frontend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf18_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf18_d3",
+      "workflow_id": "wf18",
+      "topic_id": "cdn",
+      "topic_name": "CDN Cache Invalidation",
+      "domain": "frontend",
+      "turn": 0,
+      "content": "[CDN Cache Invalidation] Archived proposal: Cache-Control must-revalidate evaluated and rejected in pre-design phase.",
+      "tags": [
+        "cdn",
+        "frontend",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf18_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf19_s1",
+      "workflow_id": "wf19",
+      "topic_id": "testing",
+      "topic_name": "Integration Testing",
+      "domain": "qa",
+      "turn": 1,
+      "content": "[Integration Testing] Architecture finalized. Standard: Pact contract tests via pact-python. All components must comply.",
+      "tags": [
+        "testing",
+        "qa"
+      ],
+      "chunk_ids": [
+        "wf19_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf19_s2",
+      "workflow_id": "wf19",
+      "topic_id": "testing",
+      "topic_name": "Integration Testing",
+      "domain": "qa",
+      "turn": 2,
+      "content": "[Integration Testing] Peripheral note: Updated the README with new local setup instructions, including nvm version requirements.",
+      "tags": [
+        "testing",
+        "qa"
+      ],
+      "chunk_ids": [
+        "wf19_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf19_s3",
+      "workflow_id": "wf19",
+      "topic_id": "testing",
+      "topic_name": "Integration Testing",
+      "domain": "qa",
+      "turn": 3,
+      "content": "[Integration Testing] Temporary override: Due to pact-python issues, we are relaxing the constraint to full E2E Selenium scripts for the current sprint only.",
+      "tags": [
+        "testing",
+        "qa"
+      ],
+      "chunk_ids": [
+        "wf19_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf19_s4",
+      "workflow_id": "wf19",
+      "topic_id": "testing",
+      "topic_name": "Integration Testing",
+      "domain": "qa",
+      "turn": 4,
+      "content": "[Integration Testing] Team reviewed alternatives. Confirmed consumer-driven service contracts satisfies our requirements. Tech stack: pact-python.",
+      "tags": [
+        "testing",
+        "qa"
+      ],
+      "chunk_ids": [
+        "wf19_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf19_s5",
+      "workflow_id": "wf19",
+      "topic_id": "testing",
+      "topic_name": "Integration Testing",
+      "domain": "qa",
+      "turn": 5,
+      "content": "[Integration Testing] FINAL for production: temporary override reverted. Enforcing Pact contract tests globally. No exceptions.",
+      "tags": [
+        "testing",
+        "qa"
+      ],
+      "chunk_ids": [
+        "wf19_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf19_d1",
+      "workflow_id": "wf19",
+      "topic_id": "testing",
+      "topic_name": "Integration Testing",
+      "domain": "qa",
+      "turn": 0,
+      "content": "[Integration Testing] Draft consideration: OpenAPI contract tests proposed during early scoping. Not selected.",
+      "tags": [
+        "testing",
+        "qa",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf19_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf19_d2",
+      "workflow_id": "wf19",
+      "topic_id": "testing",
+      "topic_name": "Integration Testing",
+      "domain": "qa",
+      "turn": 0,
+      "content": "[Integration Testing] Vendor doc reference: schema-based contract tests found in external white paper. Not applicable.",
+      "tags": [
+        "testing",
+        "qa",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf19_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf19_d3",
+      "workflow_id": "wf19",
+      "topic_id": "testing",
+      "topic_name": "Integration Testing",
+      "domain": "qa",
+      "turn": 0,
+      "content": "[Integration Testing] Archived proposal: snapshot contract tests evaluated and rejected in pre-design phase.",
+      "tags": [
+        "testing",
+        "qa",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf19_d3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf20_s1",
+      "workflow_id": "wf20",
+      "topic_id": "secrets",
+      "topic_name": "Secrets Management",
+      "domain": "security",
+      "turn": 1,
+      "content": "[Secrets Management] Architecture finalized. Standard: Vault dynamic credentials via hvac+psycopg2. All components must comply.",
+      "tags": [
+        "secrets",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf20_s1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf20_s2",
+      "workflow_id": "wf20",
+      "topic_id": "secrets",
+      "topic_name": "Secrets Management",
+      "domain": "security",
+      "turn": 2,
+      "content": "[Secrets Management] Peripheral note: Bumped base alpine image to address recent libssl CVEs. No functional changes.",
+      "tags": [
+        "secrets",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf20_s2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf20_s3",
+      "workflow_id": "wf20",
+      "topic_id": "secrets",
+      "topic_name": "Secrets Management",
+      "domain": "security",
+      "turn": 3,
+      "content": "[Secrets Management] Temporary override: Due to hvac+psycopg2 issues, we are relaxing the constraint to hardcoded .env files for the current sprint only.",
+      "tags": [
+        "secrets",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf20_s3_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf20_s4",
+      "workflow_id": "wf20",
+      "topic_id": "secrets",
+      "topic_name": "Secrets Management",
+      "domain": "security",
+      "turn": 4,
+      "content": "[Secrets Management] Team reviewed alternatives. Confirmed ephemeral leased DB passwords satisfies our requirements. Tech stack: hvac+psycopg2.",
+      "tags": [
+        "secrets",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf20_s4_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf20_s5",
+      "workflow_id": "wf20",
+      "topic_id": "secrets",
+      "topic_name": "Secrets Management",
+      "domain": "security",
+      "turn": 5,
+      "content": "[Secrets Management] FINAL for production: temporary override reverted. Enforcing Vault dynamic credentials globally. No exceptions.",
+      "tags": [
+        "secrets",
+        "security"
+      ],
+      "chunk_ids": [
+        "wf20_s5_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf20_d1",
+      "workflow_id": "wf20",
+      "topic_id": "secrets",
+      "topic_name": "Secrets Management",
+      "domain": "security",
+      "turn": 0,
+      "content": "[Secrets Management] Draft consideration: Vault static credentials proposed during early scoping. Not selected.",
+      "tags": [
+        "secrets",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf20_d1_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf20_d2",
+      "workflow_id": "wf20",
+      "topic_id": "secrets",
+      "topic_name": "Secrets Management",
+      "domain": "security",
+      "turn": 0,
+      "content": "[Secrets Management] Vendor doc reference: AWS Secrets Manager credentials found in external white paper. Not applicable.",
+      "tags": [
+        "secrets",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf20_d2_chunk_0"
+      ]
+    },
+    {
+      "session_id": "wf20_d3",
+      "workflow_id": "wf20",
+      "topic_id": "secrets",
+      "topic_name": "Secrets Management",
+      "domain": "security",
+      "turn": 0,
+      "content": "[Secrets Management] Archived proposal: environment variable credentials evaluated and rejected in pre-design phase.",
+      "tags": [
+        "secrets",
+        "security",
+        "distractor"
+      ],
+      "chunk_ids": [
+        "wf20_d3_chunk_0"
+      ]
+    }
+  ],
+  "eval_queries": [
+    {
+      "query_id": "q00_e1",
+      "workflow_id": "wf01",
+      "query": "What is the JWT expiry policy for JWT Authentication?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf01_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q00_e2",
+      "workflow_id": "wf01",
+      "query": "How is JWT expiry implemented using PyJWT+Redis?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf01_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q00_m1",
+      "workflow_id": "wf01",
+      "query": "Find the backend standard for session token lifetime.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf01_s1_chunk_0",
+        "wf01_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q00_m2",
+      "workflow_id": "wf01",
+      "query": "Summarise the technical decision on session token lifetime during JWT Authentication design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf01_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q00_h1",
+      "workflow_id": "wf01",
+      "query": "What is the final JWT expiry rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf01_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q00_h2",
+      "workflow_id": "wf01",
+      "query": "Was the temporary 60-minute expiry change kept, or did we revert to the original session token lifetime?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf01_s3_chunk_0",
+        "wf01_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q00_hl1",
+      "workflow_id": "wf01",
+      "query": "Which document defines 15-minute expiry as the approved JWT expiry setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf01_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q00_hl2",
+      "workflow_id": "wf01",
+      "query": "Confirm the architecture decision that adopted 15-minute expiry for JWT Authentication.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf01_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q01_e1",
+      "workflow_id": "wf02",
+      "query": "What is the primary keys policy for Database Schema?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf02_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q01_e2",
+      "workflow_id": "wf02",
+      "query": "How is primary keys implemented using Alembic+PostgreSQL?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf02_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q01_m1",
+      "workflow_id": "wf02",
+      "query": "Find the backend standard for row identifier scheme.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf02_s1_chunk_0",
+        "wf02_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q01_m2",
+      "workflow_id": "wf02",
+      "query": "Summarise the technical decision on row identifier scheme during Database Schema design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf02_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q01_h1",
+      "workflow_id": "wf02",
+      "query": "What is the final primary keys rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf02_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q01_h2",
+      "workflow_id": "wf02",
+      "query": "Was the temporary auto-incrementing integer PKs change kept, or did we revert to the original row identifier scheme?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf02_s3_chunk_0",
+        "wf02_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q01_hl1",
+      "workflow_id": "wf02",
+      "query": "Which document defines UUID primary keys as the approved primary keys setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf02_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q01_hl2",
+      "workflow_id": "wf02",
+      "query": "Confirm the architecture decision that adopted UUID primary keys for Database Schema.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf02_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q02_e1",
+      "workflow_id": "wf03",
+      "query": "What is the domain boundary policy for Microservice Context?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf03_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q02_e2",
+      "workflow_id": "wf03",
+      "query": "How is domain boundary implemented using gRPC+Protobuf?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf03_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q02_m1",
+      "workflow_id": "wf03",
+      "query": "Find the architecture standard for inter-service coupling.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf03_s1_chunk_0",
+        "wf03_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q02_m2",
+      "workflow_id": "wf03",
+      "query": "Summarise the technical decision on inter-service coupling during Microservice Context design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf03_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q02_h1",
+      "workflow_id": "wf03",
+      "query": "What is the final domain boundary rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf03_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q02_h2",
+      "workflow_id": "wf03",
+      "query": "Was the temporary shared database schema change kept, or did we revert to the original inter-service coupling?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf03_s3_chunk_0",
+        "wf03_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q02_hl1",
+      "workflow_id": "wf03",
+      "query": "Which document defines strict domain boundary as the approved domain boundary setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf03_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q02_hl2",
+      "workflow_id": "wf03",
+      "query": "Confirm the architecture decision that adopted strict domain boundary for Microservice Context.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf03_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q03_e1",
+      "workflow_id": "wf04",
+      "query": "What is the PR approvals policy for CI/CD Pipeline?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf04_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q03_e2",
+      "workflow_id": "wf04",
+      "query": "How is PR approvals implemented using GitHub Actions?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf04_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q03_m1",
+      "workflow_id": "wf04",
+      "query": "Find the devops standard for merge gate policy.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf04_s1_chunk_0",
+        "wf04_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q03_m2",
+      "workflow_id": "wf04",
+      "query": "Summarise the technical decision on merge gate policy during CI/CD Pipeline design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf04_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q03_h1",
+      "workflow_id": "wf04",
+      "query": "What is the final PR approvals rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf04_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q03_h2",
+      "workflow_id": "wf04",
+      "query": "Was the temporary admin bypass override change kept, or did we revert to the original merge gate policy?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf04_s3_chunk_0",
+        "wf04_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q03_hl1",
+      "workflow_id": "wf04",
+      "query": "Which document defines require 2 PR approvals as the approved PR approvals setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf04_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q03_hl2",
+      "workflow_id": "wf04",
+      "query": "Confirm the architecture decision that adopted require 2 PR approvals for CI/CD Pipeline.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf04_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q04_e1",
+      "workflow_id": "wf05",
+      "query": "What is the trace sampling policy for Observability Stack?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf05_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q04_e2",
+      "workflow_id": "wf05",
+      "query": "How is trace sampling implemented using OpenTelemetry?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf05_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q04_m1",
+      "workflow_id": "wf05",
+      "query": "Find the devops standard for telemetry capture rate.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf05_s1_chunk_0",
+        "wf05_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q04_m2",
+      "workflow_id": "wf05",
+      "query": "Summarise the technical decision on telemetry capture rate during Observability Stack design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf05_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q04_h1",
+      "workflow_id": "wf05",
+      "query": "What is the final trace sampling rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf05_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q04_h2",
+      "workflow_id": "wf05",
+      "query": "Was the temporary 100% full trace sampling change kept, or did we revert to the original telemetry capture rate?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf05_s3_chunk_0",
+        "wf05_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q04_hl1",
+      "workflow_id": "wf05",
+      "query": "Which document defines 10% trace sampling as the approved trace sampling setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf05_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q04_hl2",
+      "workflow_id": "wf05",
+      "query": "Confirm the architecture decision that adopted 10% trace sampling for Observability Stack.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf05_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q05_e1",
+      "workflow_id": "wf06",
+      "query": "What is the rate limit policy for API Gateway Rate Limiting?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf06_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q05_e2",
+      "workflow_id": "wf06",
+      "query": "How is rate limit implemented using nginx+Lua?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf06_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q05_m1",
+      "workflow_id": "wf06",
+      "query": "Find the backend standard for inbound request throttle.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf06_s1_chunk_0",
+        "wf06_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q05_m2",
+      "workflow_id": "wf06",
+      "query": "Summarise the technical decision on inbound request throttle during API Gateway Rate Limiting design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf06_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q05_h1",
+      "workflow_id": "wf06",
+      "query": "What is the final rate limit rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf06_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q05_h2",
+      "workflow_id": "wf06",
+      "query": "Was the temporary unlimited bursting change kept, or did we revert to the original inbound request throttle?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf06_s3_chunk_0",
+        "wf06_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q05_hl1",
+      "workflow_id": "wf06",
+      "query": "Which document defines 100 RPM rate limit as the approved rate limit setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf06_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q05_hl2",
+      "workflow_id": "wf06",
+      "query": "Confirm the architecture decision that adopted 100 RPM rate limit for API Gateway Rate Limiting.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf06_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q06_e1",
+      "workflow_id": "wf07",
+      "query": "What is the cache TTL policy for Distributed Caching?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf07_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q06_e2",
+      "workflow_id": "wf07",
+      "query": "How is cache TTL implemented using redis-py?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf07_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q06_m1",
+      "workflow_id": "wf07",
+      "query": "Find the backend standard for object persistence window.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf07_s1_chunk_0",
+        "wf07_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q06_m2",
+      "workflow_id": "wf07",
+      "query": "Summarise the technical decision on object persistence window during Distributed Caching design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf07_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q06_h1",
+      "workflow_id": "wf07",
+      "query": "What is the final cache TTL rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf07_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q06_h2",
+      "workflow_id": "wf07",
+      "query": "Was the temporary write-through no expiry change kept, or did we revert to the original object persistence window?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf07_s3_chunk_0",
+        "wf07_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q06_hl1",
+      "workflow_id": "wf07",
+      "query": "Which document defines 5-minute TTL cache-aside as the approved cache TTL setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf07_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q06_hl2",
+      "workflow_id": "wf07",
+      "query": "Confirm the architecture decision that adopted 5-minute TTL cache-aside for Distributed Caching.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf07_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q07_e1",
+      "workflow_id": "wf08",
+      "query": "What is the Atomic Design policy for React Architecture?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf08_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q07_e2",
+      "workflow_id": "wf08",
+      "query": "How is Atomic Design implemented using React+Storybook?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf08_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q07_m1",
+      "workflow_id": "wf08",
+      "query": "Find the frontend standard for UI composition rules.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf08_s1_chunk_0",
+        "wf08_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q07_m2",
+      "workflow_id": "wf08",
+      "query": "Summarise the technical decision on UI composition rules during React Architecture design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf08_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q07_h1",
+      "workflow_id": "wf08",
+      "query": "What is the final Atomic Design rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf08_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q07_h2",
+      "workflow_id": "wf08",
+      "query": "Was the temporary monolithic render trees change kept, or did we revert to the original UI composition rules?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf08_s3_chunk_0",
+        "wf08_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q07_hl1",
+      "workflow_id": "wf08",
+      "query": "Which document defines Atomic Design system as the approved Atomic Design setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf08_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q07_hl2",
+      "workflow_id": "wf08",
+      "query": "Confirm the architecture decision that adopted Atomic Design system for React Architecture.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf08_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q08_e1",
+      "workflow_id": "wf09",
+      "query": "What is the data versioning policy for ML Training Pipeline?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf09_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q08_e2",
+      "workflow_id": "wf09",
+      "query": "How is data versioning implemented using MLflow+DVC?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf09_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q08_m1",
+      "workflow_id": "wf09",
+      "query": "Find the mlops standard for artifact immutability.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf09_s1_chunk_0",
+        "wf09_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q08_m2",
+      "workflow_id": "wf09",
+      "query": "Summarise the technical decision on artifact immutability during ML Training Pipeline design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf09_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q08_h1",
+      "workflow_id": "wf09",
+      "query": "What is the final data versioning rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf09_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q08_h2",
+      "workflow_id": "wf09",
+      "query": "Was the temporary manual S3 uploads change kept, or did we revert to the original artifact immutability?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf09_s3_chunk_0",
+        "wf09_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q08_hl1",
+      "workflow_id": "wf09",
+      "query": "Which document defines DVC data versioning as the approved data versioning setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf09_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q08_hl2",
+      "workflow_id": "wf09",
+      "query": "Confirm the architecture decision that adopted DVC data versioning for ML Training Pipeline.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf09_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q09_e1",
+      "workflow_id": "wf10",
+      "query": "What is the shard count policy for Elasticsearch Design?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf10_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q09_e2",
+      "workflow_id": "wf10",
+      "query": "How is shard count implemented using elasticsearch-py?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf10_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q09_m1",
+      "workflow_id": "wf10",
+      "query": "Find the backend standard for index partitioning strategy.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf10_s1_chunk_0",
+        "wf10_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q09_m2",
+      "workflow_id": "wf10",
+      "query": "Summarise the technical decision on index partitioning strategy during Elasticsearch Design design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf10_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q09_h1",
+      "workflow_id": "wf10",
+      "query": "What is the final shard count rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf10_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q09_h2",
+      "workflow_id": "wf10",
+      "query": "Was the temporary 5 shards 2 replicas change kept, or did we revert to the original index partitioning strategy?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf10_s3_chunk_0",
+        "wf10_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q09_hl1",
+      "workflow_id": "wf10",
+      "query": "Which document defines 2 shards 1 replica as the approved shard count setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf10_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q09_hl2",
+      "workflow_id": "wf10",
+      "query": "Confirm the architecture decision that adopted 2 shards 1 replica for Elasticsearch Design.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf10_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q10_e1",
+      "workflow_id": "wf11",
+      "query": "What is the PKCE flow policy for OAuth2 Flow?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf11_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q10_e2",
+      "workflow_id": "wf11",
+      "query": "How is PKCE flow implemented using Authlib+FastAPI?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf11_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q10_m1",
+      "workflow_id": "wf11",
+      "query": "Find the security standard for OAuth security challenge.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf11_s1_chunk_0",
+        "wf11_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q10_m2",
+      "workflow_id": "wf11",
+      "query": "Summarise the technical decision on OAuth security challenge during OAuth2 Flow design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf11_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q10_h1",
+      "workflow_id": "wf11",
+      "query": "What is the final PKCE flow rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf11_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q10_h2",
+      "workflow_id": "wf11",
+      "query": "Was the temporary implicit grant permitted change kept, or did we revert to the original OAuth security challenge?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf11_s3_chunk_0",
+        "wf11_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q10_hl1",
+      "workflow_id": "wf11",
+      "query": "Which document defines PKCE S256 mandatory as the approved PKCE flow setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf11_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q10_hl2",
+      "workflow_id": "wf11",
+      "query": "Confirm the architecture decision that adopted PKCE S256 mandatory for OAuth2 Flow.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf11_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q11_e1",
+      "workflow_id": "wf12",
+      "query": "What is the correlation-id policy for Structured Logging?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf12_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q11_e2",
+      "workflow_id": "wf12",
+      "query": "How is correlation-id implemented using structlog?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf12_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q11_m1",
+      "workflow_id": "wf12",
+      "query": "Find the devops standard for distributed request tracing.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf12_s1_chunk_0",
+        "wf12_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q11_m2",
+      "workflow_id": "wf12",
+      "query": "Summarise the technical decision on distributed request tracing during Structured Logging design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf12_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q11_h1",
+      "workflow_id": "wf12",
+      "query": "What is the final correlation-id rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf12_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q11_h2",
+      "workflow_id": "wf12",
+      "query": "Was the temporary plain stdout only change kept, or did we revert to the original distributed request tracing?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf12_s3_chunk_0",
+        "wf12_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q11_hl1",
+      "workflow_id": "wf12",
+      "query": "Which document defines correlation-id injection as the approved correlation-id setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf12_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q11_hl2",
+      "workflow_id": "wf12",
+      "query": "Confirm the architecture decision that adopted correlation-id injection for Structured Logging.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf12_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q12_e1",
+      "workflow_id": "wf13",
+      "query": "What is the memory limit policy for Docker Compose?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf13_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q12_e2",
+      "workflow_id": "wf13",
+      "query": "How is memory limit implemented using Docker Compose?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf13_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q12_m1",
+      "workflow_id": "wf13",
+      "query": "Find the devops standard for container resource quota.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf13_s1_chunk_0",
+        "wf13_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q12_m2",
+      "workflow_id": "wf13",
+      "query": "Summarise the technical decision on container resource quota during Docker Compose design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf13_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q12_h1",
+      "workflow_id": "wf13",
+      "query": "What is the final memory limit rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf13_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q12_h2",
+      "workflow_id": "wf13",
+      "query": "Was the temporary unbounded resource access change kept, or did we revert to the original container resource quota?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf13_s3_chunk_0",
+        "wf13_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q12_hl1",
+      "workflow_id": "wf13",
+      "query": "Which document defines 512 MB RAM limit as the approved memory limit setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf13_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q12_hl2",
+      "workflow_id": "wf13",
+      "query": "Confirm the architecture decision that adopted 512 MB RAM limit for Docker Compose.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf13_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q13_e1",
+      "workflow_id": "wf14",
+      "query": "What is the optional fields policy for gRPC Service Contract?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf14_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q13_e2",
+      "workflow_id": "wf14",
+      "query": "How is optional fields implemented using grpcio+buf?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf14_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q13_m1",
+      "workflow_id": "wf14",
+      "query": "Find the backend standard for protobuf field presence.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf14_s1_chunk_0",
+        "wf14_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q13_m2",
+      "workflow_id": "wf14",
+      "query": "Summarise the technical decision on protobuf field presence during gRPC Service Contract design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf14_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q13_h1",
+      "workflow_id": "wf14",
+      "query": "What is the final optional fields rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf14_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q13_h2",
+      "workflow_id": "wf14",
+      "query": "Was the temporary proto2 required fields change kept, or did we revert to the original protobuf field presence?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf14_s3_chunk_0",
+        "wf14_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q13_hl1",
+      "workflow_id": "wf14",
+      "query": "Which document defines proto3 optional fields as the approved optional fields setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf14_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q13_hl2",
+      "workflow_id": "wf14",
+      "query": "Confirm the architecture decision that adopted proto3 optional fields for gRPC Service Contract.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf14_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q14_e1",
+      "workflow_id": "wf15",
+      "query": "What is the down() method policy for Database Migration?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf15_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q14_e2",
+      "workflow_id": "wf15",
+      "query": "How is down() method implemented using Alembic?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf15_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q14_m1",
+      "workflow_id": "wf15",
+      "query": "Find the backend standard for schema rollback strategy.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf15_s1_chunk_0",
+        "wf15_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q14_m2",
+      "workflow_id": "wf15",
+      "query": "Summarise the technical decision on schema rollback strategy during Database Migration design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf15_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q14_h1",
+      "workflow_id": "wf15",
+      "query": "What is the final down() method rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf15_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q14_h2",
+      "workflow_id": "wf15",
+      "query": "Was the temporary forward-only one-way change kept, or did we revert to the original schema rollback strategy?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf15_s3_chunk_0",
+        "wf15_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q14_hl1",
+      "workflow_id": "wf15",
+      "query": "Which document defines reversible down() migrations as the approved down() method setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf15_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q14_hl2",
+      "workflow_id": "wf15",
+      "query": "Confirm the architecture decision that adopted reversible down() migrations for Database Migration.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf15_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q15_e1",
+      "workflow_id": "wf16",
+      "query": "What is the deny-by-default policy for RBAC Access Control?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf16_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q15_e2",
+      "workflow_id": "wf16",
+      "query": "How is deny-by-default implemented using Casbin+FastAPI?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf16_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q15_m1",
+      "workflow_id": "wf16",
+      "query": "Find the security standard for baseline permission model.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf16_s1_chunk_0",
+        "wf16_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q15_m2",
+      "workflow_id": "wf16",
+      "query": "Summarise the technical decision on baseline permission model during RBAC Access Control design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf16_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q15_h1",
+      "workflow_id": "wf16",
+      "query": "What is the final deny-by-default rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf16_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q15_h2",
+      "workflow_id": "wf16",
+      "query": "Was the temporary wildcard admin grants change kept, or did we revert to the original baseline permission model?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf16_s3_chunk_0",
+        "wf16_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q15_hl1",
+      "workflow_id": "wf16",
+      "query": "Which document defines deny-by-default policy as the approved deny-by-default setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf16_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q15_hl2",
+      "workflow_id": "wf16",
+      "query": "Confirm the architecture decision that adopted deny-by-default policy for RBAC Access Control.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf16_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q16_e1",
+      "workflow_id": "wf17",
+      "query": "What is the retry count policy for Message Queue?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf17_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q16_e2",
+      "workflow_id": "wf17",
+      "query": "How is retry count implemented using Celery+RabbitMQ?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf17_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q16_m1",
+      "workflow_id": "wf17",
+      "query": "Find the backend standard for failure recovery strategy.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf17_s1_chunk_0",
+        "wf17_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q16_m2",
+      "workflow_id": "wf17",
+      "query": "Summarise the technical decision on failure recovery strategy during Message Queue design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf17_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q16_h1",
+      "workflow_id": "wf17",
+      "query": "What is the final retry count rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf17_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q16_h2",
+      "workflow_id": "wf17",
+      "query": "Was the temporary silent drop on failure change kept, or did we revert to the original failure recovery strategy?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf17_s3_chunk_0",
+        "wf17_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q16_hl1",
+      "workflow_id": "wf17",
+      "query": "Which document defines DLQ with 3 retries as the approved retry count setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf17_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q16_hl2",
+      "workflow_id": "wf17",
+      "query": "Confirm the architecture decision that adopted DLQ with 3 retries for Message Queue.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf17_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q17_e1",
+      "workflow_id": "wf18",
+      "query": "What is the cache immutable policy for CDN Cache Invalidation?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf18_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q17_e2",
+      "workflow_id": "wf18",
+      "query": "How is cache immutable implemented using CloudFront?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf18_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q17_m1",
+      "workflow_id": "wf18",
+      "query": "Find the frontend standard for edge cache retention policy.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf18_s1_chunk_0",
+        "wf18_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q17_m2",
+      "workflow_id": "wf18",
+      "query": "Summarise the technical decision on edge cache retention policy during CDN Cache Invalidation design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf18_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q17_h1",
+      "workflow_id": "wf18",
+      "query": "What is the final cache immutable rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf18_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q17_h2",
+      "workflow_id": "wf18",
+      "query": "Was the temporary no-cache validation change kept, or did we revert to the original edge cache retention policy?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf18_s3_chunk_0",
+        "wf18_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q17_hl1",
+      "workflow_id": "wf18",
+      "query": "Which document defines Cache-Control immutable as the approved cache immutable setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf18_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q17_hl2",
+      "workflow_id": "wf18",
+      "query": "Confirm the architecture decision that adopted Cache-Control immutable for CDN Cache Invalidation.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf18_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q18_e1",
+      "workflow_id": "wf19",
+      "query": "What is the contract tests policy for Integration Testing?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf19_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q18_e2",
+      "workflow_id": "wf19",
+      "query": "How is contract tests implemented using pact-python?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf19_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q18_m1",
+      "workflow_id": "wf19",
+      "query": "Find the qa standard for boundary verification approach.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf19_s1_chunk_0",
+        "wf19_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q18_m2",
+      "workflow_id": "wf19",
+      "query": "Summarise the technical decision on boundary verification approach during Integration Testing design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf19_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q18_h1",
+      "workflow_id": "wf19",
+      "query": "What is the final contract tests rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf19_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q18_h2",
+      "workflow_id": "wf19",
+      "query": "Was the temporary full E2E Selenium scripts change kept, or did we revert to the original boundary verification approach?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf19_s3_chunk_0",
+        "wf19_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q18_hl1",
+      "workflow_id": "wf19",
+      "query": "Which document defines Pact contract tests as the approved contract tests setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf19_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q18_hl2",
+      "workflow_id": "wf19",
+      "query": "Confirm the architecture decision that adopted Pact contract tests for Integration Testing.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf19_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q19_e1",
+      "workflow_id": "wf20",
+      "query": "What is the dynamic creds policy for Secrets Management?",
+      "task_type": "knowledge_retrieval",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf20_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q19_e2",
+      "workflow_id": "wf20",
+      "query": "How is dynamic creds implemented using hvac+psycopg2?",
+      "task_type": "code_generation",
+      "difficulty": "easy",
+      "ground_truth_chunk_ids": [
+        "wf20_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q19_m1",
+      "workflow_id": "wf20",
+      "query": "Find the security standard for short-lived credential strategy.",
+      "task_type": "api_integration",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf20_s1_chunk_0",
+        "wf20_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q19_m2",
+      "workflow_id": "wf20",
+      "query": "Summarise the technical decision on short-lived credential strategy during Secrets Management design.",
+      "task_type": "cross_session",
+      "difficulty": "medium",
+      "ground_truth_chunk_ids": [
+        "wf20_s4_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q19_h1",
+      "workflow_id": "wf20",
+      "query": "What is the final dynamic creds rule deployed to production after the sprint override?",
+      "task_type": "debugging",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf20_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q19_h2",
+      "workflow_id": "wf20",
+      "query": "Was the temporary hardcoded .env files change kept, or did we revert to the original short-lived credential strategy?",
+      "task_type": "cross_session",
+      "difficulty": "hard",
+      "ground_truth_chunk_ids": [
+        "wf20_s3_chunk_0",
+        "wf20_s5_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q19_hl1",
+      "workflow_id": "wf20",
+      "query": "Which document defines Vault dynamic credentials as the approved dynamic creds setting?",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf20_s1_chunk_0"
+      ]
+    },
+    {
+      "query_id": "q19_hl2",
+      "workflow_id": "wf20",
+      "query": "Confirm the architecture decision that adopted Vault dynamic credentials for Secrets Management.",
+      "task_type": "exact_lookup",
+      "difficulty": "hard_lex",
+      "ground_truth_chunk_ids": [
+        "wf20_s1_chunk_0"
+      ]
+    }
+  ]
+}

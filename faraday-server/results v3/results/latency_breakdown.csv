@@ -1,0 +1,5 @@
+Component,Time (ms)
+embedding_time,17.691052436828613
+faiss_retrieval_time,1.965672492980957
+bm25_retrieval_time,0.5280947685241699
+fusion_time,0.011566877365112305

@@ -1,0 +1,13 @@
+system,task_type,success_mean,success_std,ci95_lower,ci95_upper,mrr_mean,lat_mean_ms
+CogniSync (Hybrid),code_generation,1.0,0.0,1.0,1.0,0.925,23.2118
+CogniSync (Hybrid),debugging,0.95,0.0,0.95,0.95,0.78667,26.4607
+CogniSync (Hybrid),api_integration,1.0,0.0,1.0,1.0,0.65167,22.7493
+CogniSync (Hybrid),cross_session,0.8,0.0,0.8,0.8,0.73917,30.5806
+Vanilla RAG,code_generation,1.0,0.0,1.0,1.0,0.95,23.8835
+Vanilla RAG,debugging,0.95,0.0,0.95,0.95,0.78333,24.738
+Vanilla RAG,api_integration,1.0,0.0,1.0,1.0,0.69167,21.961
+Vanilla RAG,cross_session,0.8,0.0,0.8,0.8,0.6975,25.9588
+Zero-Shot (No Mem),code_generation,0.05,0.02,0.01,0.09,0.01,0.0
+Zero-Shot (No Mem),debugging,0.05,0.02,0.01,0.09,0.01,0.0
+Zero-Shot (No Mem),api_integration,0.05,0.02,0.01,0.09,0.01,0.0
+Zero-Shot (No Mem),cross_session,0.05,0.02,0.01,0.09,0.01,0.0

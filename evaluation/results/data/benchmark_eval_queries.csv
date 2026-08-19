@@ -1,0 +1,121 @@
+query_id,workflow_id,query,task_type,difficulty,ground_truth_chunk_ids
+q00_e1,wf01,What is the JWT expiry policy for JWT Authentication?,knowledge_retrieval,easy,wf01_s1_chunk_0
+q00_e2,wf01,How is JWT expiry implemented using PyJWT+Redis?,code_generation,easy,wf01_s1_chunk_0
+q00_m1,wf01,Find the backend standard for session token lifetime.,api_integration,medium,wf01_s1_chunk_0|wf01_s4_chunk_0
+q00_m2,wf01,Summarise the technical decision on session token lifetime during JWT Authentication design.,cross_session,medium,wf01_s4_chunk_0
+q00_h1,wf01,What is the final JWT expiry rule deployed to production after the sprint override?,debugging,hard,wf01_s5_chunk_0
+q00_h2,wf01,"Was the temporary 60-minute expiry change kept, or did we revert to the original session token lifetime?",cross_session,hard,wf01_s3_chunk_0|wf01_s5_chunk_0
+q01_e1,wf02,What is the primary keys policy for Database Schema?,knowledge_retrieval,easy,wf02_s1_chunk_0
+q01_e2,wf02,How is primary keys implemented using Alembic+PostgreSQL?,code_generation,easy,wf02_s1_chunk_0
+q01_m1,wf02,Find the backend standard for row identifier scheme.,api_integration,medium,wf02_s1_chunk_0|wf02_s4_chunk_0
+q01_m2,wf02,Summarise the technical decision on row identifier scheme during Database Schema design.,cross_session,medium,wf02_s4_chunk_0
+q01_h1,wf02,What is the final primary keys rule deployed to production after the sprint override?,debugging,hard,wf02_s5_chunk_0
+q01_h2,wf02,"Was the temporary auto-incrementing integer PKs change kept, or did we revert to the original row identifier scheme?",cross_session,hard,wf02_s3_chunk_0|wf02_s5_chunk_0
+q02_e1,wf03,What is the domain boundary policy for Microservice Context?,knowledge_retrieval,easy,wf03_s1_chunk_0
+q02_e2,wf03,How is domain boundary implemented using gRPC+Protobuf?,code_generation,easy,wf03_s1_chunk_0
+q02_m1,wf03,Find the architecture standard for inter-service coupling.,api_integration,medium,wf03_s1_chunk_0|wf03_s4_chunk_0
+q02_m2,wf03,Summarise the technical decision on inter-service coupling during Microservice Context design.,cross_session,medium,wf03_s4_chunk_0
+q02_h1,wf03,What is the final domain boundary rule deployed to production after the sprint override?,debugging,hard,wf03_s5_chunk_0
+q02_h2,wf03,"Was the temporary shared database schema change kept, or did we revert to the original inter-service coupling?",cross_session,hard,wf03_s3_chunk_0|wf03_s5_chunk_0
+q03_e1,wf04,What is the PR approvals policy for CI/CD Pipeline?,knowledge_retrieval,easy,wf04_s1_chunk_0
+q03_e2,wf04,How is PR approvals implemented using GitHub Actions?,code_generation,easy,wf04_s1_chunk_0
+q03_m1,wf04,Find the devops standard for merge gate policy.,api_integration,medium,wf04_s1_chunk_0|wf04_s4_chunk_0
+q03_m2,wf04,Summarise the technical decision on merge gate policy during CI/CD Pipeline design.,cross_session,medium,wf04_s4_chunk_0
+q03_h1,wf04,What is the final PR approvals rule deployed to production after the sprint override?,debugging,hard,wf04_s5_chunk_0
+q03_h2,wf04,"Was the temporary admin bypass override change kept, or did we revert to the original merge gate policy?",cross_session,hard,wf04_s3_chunk_0|wf04_s5_chunk_0
+q04_e1,wf05,What is the trace sampling policy for Observability Stack?,knowledge_retrieval,easy,wf05_s1_chunk_0
+q04_e2,wf05,How is trace sampling implemented using OpenTelemetry?,code_generation,easy,wf05_s1_chunk_0
+q04_m1,wf05,Find the devops standard for telemetry capture rate.,api_integration,medium,wf05_s1_chunk_0|wf05_s4_chunk_0
+q04_m2,wf05,Summarise the technical decision on telemetry capture rate during Observability Stack design.,cross_session,medium,wf05_s4_chunk_0
+q04_h1,wf05,What is the final trace sampling rule deployed to production after the sprint override?,debugging,hard,wf05_s5_chunk_0
+q04_h2,wf05,"Was the temporary 100% full trace sampling change kept, or did we revert to the original telemetry capture rate?",cross_session,hard,wf05_s3_chunk_0|wf05_s5_chunk_0
+q05_e1,wf06,What is the rate limit policy for API Gateway Rate Limiting?,knowledge_retrieval,easy,wf06_s1_chunk_0
+q05_e2,wf06,How is rate limit implemented using nginx+Lua?,code_generation,easy,wf06_s1_chunk_0
+q05_m1,wf06,Find the backend standard for inbound request throttle.,api_integration,medium,wf06_s1_chunk_0|wf06_s4_chunk_0
+q05_m2,wf06,Summarise the technical decision on inbound request throttle during API Gateway Rate Limiting design.,cross_session,medium,wf06_s4_chunk_0
+q05_h1,wf06,What is the final rate limit rule deployed to production after the sprint override?,debugging,hard,wf06_s5_chunk_0
+q05_h2,wf06,"Was the temporary unlimited bursting change kept, or did we revert to the original inbound request throttle?",cross_session,hard,wf06_s3_chunk_0|wf06_s5_chunk_0
+q06_e1,wf07,What is the cache TTL policy for Distributed Caching?,knowledge_retrieval,easy,wf07_s1_chunk_0
+q06_e2,wf07,How is cache TTL implemented using redis-py?,code_generation,easy,wf07_s1_chunk_0
+q06_m1,wf07,Find the backend standard for object persistence window.,api_integration,medium,wf07_s1_chunk_0|wf07_s4_chunk_0
+q06_m2,wf07,Summarise the technical decision on object persistence window during Distributed Caching design.,cross_session,medium,wf07_s4_chunk_0
+q06_h1,wf07,What is the final cache TTL rule deployed to production after the sprint override?,debugging,hard,wf07_s5_chunk_0
+q06_h2,wf07,"Was the temporary write-through no expiry change kept, or did we revert to the original object persistence window?",cross_session,hard,wf07_s3_chunk_0|wf07_s5_chunk_0
+q07_e1,wf08,What is the Atomic Design policy for React Architecture?,knowledge_retrieval,easy,wf08_s1_chunk_0
+q07_e2,wf08,How is Atomic Design implemented using React+Storybook?,code_generation,easy,wf08_s1_chunk_0
+q07_m1,wf08,Find the frontend standard for UI composition rules.,api_integration,medium,wf08_s1_chunk_0|wf08_s4_chunk_0
+q07_m2,wf08,Summarise the technical decision on UI composition rules during React Architecture design.,cross_session,medium,wf08_s4_chunk_0
+q07_h1,wf08,What is the final Atomic Design rule deployed to production after the sprint override?,debugging,hard,wf08_s5_chunk_0
+q07_h2,wf08,"Was the temporary monolithic render trees change kept, or did we revert to the original UI composition rules?",cross_session,hard,wf08_s3_chunk_0|wf08_s5_chunk_0
+q08_e1,wf09,What is the data versioning policy for ML Training Pipeline?,knowledge_retrieval,easy,wf09_s1_chunk_0
+q08_e2,wf09,How is data versioning implemented using MLflow+DVC?,code_generation,easy,wf09_s1_chunk_0
+q08_m1,wf09,Find the mlops standard for artifact immutability.,api_integration,medium,wf09_s1_chunk_0|wf09_s4_chunk_0
+q08_m2,wf09,Summarise the technical decision on artifact immutability during ML Training Pipeline design.,cross_session,medium,wf09_s4_chunk_0
+q08_h1,wf09,What is the final data versioning rule deployed to production after the sprint override?,debugging,hard,wf09_s5_chunk_0
+q08_h2,wf09,"Was the temporary manual S3 uploads change kept, or did we revert to the original artifact immutability?",cross_session,hard,wf09_s3_chunk_0|wf09_s5_chunk_0
+q09_e1,wf10,What is the shard count policy for Elasticsearch Design?,knowledge_retrieval,easy,wf10_s1_chunk_0
+q09_e2,wf10,How is shard count implemented using elasticsearch-py?,code_generation,easy,wf10_s1_chunk_0
+q09_m1,wf10,Find the backend standard for index partitioning strategy.,api_integration,medium,wf10_s1_chunk_0|wf10_s4_chunk_0
+q09_m2,wf10,Summarise the technical decision on index partitioning strategy during Elasticsearch Design design.,cross_session,medium,wf10_s4_chunk_0
+q09_h1,wf10,What is the final shard count rule deployed to production after the sprint override?,debugging,hard,wf10_s5_chunk_0
+q09_h2,wf10,"Was the temporary 5 shards 2 replicas change kept, or did we revert to the original index partitioning strategy?",cross_session,hard,wf10_s3_chunk_0|wf10_s5_chunk_0
+q10_e1,wf11,What is the PKCE flow policy for OAuth2 Flow?,knowledge_retrieval,easy,wf11_s1_chunk_0
+q10_e2,wf11,How is PKCE flow implemented using Authlib+FastAPI?,code_generation,easy,wf11_s1_chunk_0
+q10_m1,wf11,Find the security standard for OAuth security challenge.,api_integration,medium,wf11_s1_chunk_0|wf11_s4_chunk_0
+q10_m2,wf11,Summarise the technical decision on OAuth security challenge during OAuth2 Flow design.,cross_session,medium,wf11_s4_chunk_0
+q10_h1,wf11,What is the final PKCE flow rule deployed to production after the sprint override?,debugging,hard,wf11_s5_chunk_0
+q10_h2,wf11,"Was the temporary implicit grant permitted change kept, or did we revert to the original OAuth security challenge?",cross_session,hard,wf11_s3_chunk_0|wf11_s5_chunk_0
+q11_e1,wf12,What is the correlation-id policy for Structured Logging?,knowledge_retrieval,easy,wf12_s1_chunk_0
+q11_e2,wf12,How is correlation-id implemented using structlog?,code_generation,easy,wf12_s1_chunk_0
+q11_m1,wf12,Find the devops standard for distributed request tracing.,api_integration,medium,wf12_s1_chunk_0|wf12_s4_chunk_0
+q11_m2,wf12,Summarise the technical decision on distributed request tracing during Structured Logging design.,cross_session,medium,wf12_s4_chunk_0
+q11_h1,wf12,What is the final correlation-id rule deployed to production after the sprint override?,debugging,hard,wf12_s5_chunk_0
+q11_h2,wf12,"Was the temporary plain stdout only change kept, or did we revert to the original distributed request tracing?",cross_session,hard,wf12_s3_chunk_0|wf12_s5_chunk_0
+q12_e1,wf13,What is the memory limit policy for Docker Compose?,knowledge_retrieval,easy,wf13_s1_chunk_0
+q12_e2,wf13,How is memory limit implemented using Docker Compose?,code_generation,easy,wf13_s1_chunk_0
+q12_m1,wf13,Find the devops standard for container resource quota.,api_integration,medium,wf13_s1_chunk_0|wf13_s4_chunk_0
+q12_m2,wf13,Summarise the technical decision on container resource quota during Docker Compose design.,cross_session,medium,wf13_s4_chunk_0
+q12_h1,wf13,What is the final memory limit rule deployed to production after the sprint override?,debugging,hard,wf13_s5_chunk_0
+q12_h2,wf13,"Was the temporary unbounded resource access change kept, or did we revert to the original container resource quota?",cross_session,hard,wf13_s3_chunk_0|wf13_s5_chunk_0
+q13_e1,wf14,What is the optional fields policy for gRPC Service Contract?,knowledge_retrieval,easy,wf14_s1_chunk_0
+q13_e2,wf14,How is optional fields implemented using grpcio+buf?,code_generation,easy,wf14_s1_chunk_0
+q13_m1,wf14,Find the backend standard for protobuf field presence.,api_integration,medium,wf14_s1_chunk_0|wf14_s4_chunk_0
+q13_m2,wf14,Summarise the technical decision on protobuf field presence during gRPC Service Contract design.,cross_session,medium,wf14_s4_chunk_0
+q13_h1,wf14,What is the final optional fields rule deployed to production after the sprint override?,debugging,hard,wf14_s5_chunk_0
+q13_h2,wf14,"Was the temporary proto2 required fields change kept, or did we revert to the original protobuf field presence?",cross_session,hard,wf14_s3_chunk_0|wf14_s5_chunk_0
+q14_e1,wf15,What is the down() method policy for Database Migration?,knowledge_retrieval,easy,wf15_s1_chunk_0
+q14_e2,wf15,How is down() method implemented using Alembic?,code_generation,easy,wf15_s1_chunk_0
+q14_m1,wf15,Find the backend standard for schema rollback strategy.,api_integration,medium,wf15_s1_chunk_0|wf15_s4_chunk_0
+q14_m2,wf15,Summarise the technical decision on schema rollback strategy during Database Migration design.,cross_session,medium,wf15_s4_chunk_0
+q14_h1,wf15,What is the final down() method rule deployed to production after the sprint override?,debugging,hard,wf15_s5_chunk_0
+q14_h2,wf15,"Was the temporary forward-only one-way change kept, or did we revert to the original schema rollback strategy?",cross_session,hard,wf15_s3_chunk_0|wf15_s5_chunk_0
+q15_e1,wf16,What is the deny-by-default policy for RBAC Access Control?,knowledge_retrieval,easy,wf16_s1_chunk_0
+q15_e2,wf16,How is deny-by-default implemented using Casbin+FastAPI?,code_generation,easy,wf16_s1_chunk_0
+q15_m1,wf16,Find the security standard for baseline permission model.,api_integration,medium,wf16_s1_chunk_0|wf16_s4_chunk_0
+q15_m2,wf16,Summarise the technical decision on baseline permission model during RBAC Access Control design.,cross_session,medium,wf16_s4_chunk_0
+q15_h1,wf16,What is the final deny-by-default rule deployed to production after the sprint override?,debugging,hard,wf16_s5_chunk_0
+q15_h2,wf16,"Was the temporary wildcard admin grants change kept, or did we revert to the original baseline permission model?",cross_session,hard,wf16_s3_chunk_0|wf16_s5_chunk_0
+q16_e1,wf17,What is the retry count policy for Message Queue?,knowledge_retrieval,easy,wf17_s1_chunk_0
+q16_e2,wf17,How is retry count implemented using Celery+RabbitMQ?,code_generation,easy,wf17_s1_chunk_0
+q16_m1,wf17,Find the backend standard for failure recovery strategy.,api_integration,medium,wf17_s1_chunk_0|wf17_s4_chunk_0
+q16_m2,wf17,Summarise the technical decision on failure recovery strategy during Message Queue design.,cross_session,medium,wf17_s4_chunk_0
+q16_h1,wf17,What is the final retry count rule deployed to production after the sprint override?,debugging,hard,wf17_s5_chunk_0
+q16_h2,wf17,"Was the temporary silent drop on failure change kept, or did we revert to the original failure recovery strategy?",cross_session,hard,wf17_s3_chunk_0|wf17_s5_chunk_0
+q17_e1,wf18,What is the cache immutable policy for CDN Cache Invalidation?,knowledge_retrieval,easy,wf18_s1_chunk_0
+q17_e2,wf18,How is cache immutable implemented using CloudFront?,code_generation,easy,wf18_s1_chunk_0
+q17_m1,wf18,Find the frontend standard for edge cache retention policy.,api_integration,medium,wf18_s1_chunk_0|wf18_s4_chunk_0
+q17_m2,wf18,Summarise the technical decision on edge cache retention policy during CDN Cache Invalidation design.,cross_session,medium,wf18_s4_chunk_0
+q17_h1,wf18,What is the final cache immutable rule deployed to production after the sprint override?,debugging,hard,wf18_s5_chunk_0
+q17_h2,wf18,"Was the temporary no-cache validation change kept, or did we revert to the original edge cache retention policy?",cross_session,hard,wf18_s3_chunk_0|wf18_s5_chunk_0
+q18_e1,wf19,What is the contract tests policy for Integration Testing?,knowledge_retrieval,easy,wf19_s1_chunk_0
+q18_e2,wf19,How is contract tests implemented using pact-python?,code_generation,easy,wf19_s1_chunk_0
+q18_m1,wf19,Find the qa standard for boundary verification approach.,api_integration,medium,wf19_s1_chunk_0|wf19_s4_chunk_0
+q18_m2,wf19,Summarise the technical decision on boundary verification approach during Integration Testing design.,cross_session,medium,wf19_s4_chunk_0
+q18_h1,wf19,What is the final contract tests rule deployed to production after the sprint override?,debugging,hard,wf19_s5_chunk_0
+q18_h2,wf19,"Was the temporary full E2E Selenium scripts change kept, or did we revert to the original boundary verification approach?",cross_session,hard,wf19_s3_chunk_0|wf19_s5_chunk_0
+q19_e1,wf20,What is the dynamic creds policy for Secrets Management?,knowledge_retrieval,easy,wf20_s1_chunk_0
+q19_e2,wf20,How is dynamic creds implemented using hvac+psycopg2?,code_generation,easy,wf20_s1_chunk_0
+q19_m1,wf20,Find the security standard for short-lived credential strategy.,api_integration,medium,wf20_s1_chunk_0|wf20_s4_chunk_0
+q19_m2,wf20,Summarise the technical decision on short-lived credential strategy during Secrets Management design.,cross_session,medium,wf20_s4_chunk_0
+q19_h1,wf20,What is the final dynamic creds rule deployed to production after the sprint override?,debugging,hard,wf20_s5_chunk_0
+q19_h2,wf20,"Was the temporary hardcoded .env files change kept, or did we revert to the original short-lived credential strategy?",cross_session,hard,wf20_s3_chunk_0|wf20_s5_chunk_0

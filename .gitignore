@@ -1,0 +1,33 @@
+# Environment & Virtualenvs
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large Vector Stores & Cache (>50MB)
+.qdrant/
+*.sqlite
+*.sqlite3
+
+# Archives & Large Raw Takeout Data (>100MB)
+*.zip
+*.tgz
+*.tar.gz
+*.7z
+*.rar
+01 - Raw Sources/
+03 - Data Lake/llm_chats/
+
+# Large DB backups & Raw JSON dumps (>50MB)
+ai-memory-mcp/data_processed/
+ai-memory-mcp/data_raw/
