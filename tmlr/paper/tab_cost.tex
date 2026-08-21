@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Cost and quality from the same runs, on real corpora with a persistent index. Cross-encoder forward passes per query is the hardware-independent cost; latencies are on a single T4.}
+\label{tab:cost}
+\begin{tabular}{lrrrrrr}
+\toprule
+Corpus & $|D|$ & CE/query & nDCG@10 & p50 & p95 & p99 \\
+\midrule
+scifact & 5,183 & 0 & 0.760 & 40 & 44 & 46 \\
+scifact & 5,183 & 10 & 0.738 & 79 & 83 & 86 \\
+scifact & 5,183 & 50 & 0.722 & 246 & 261 & 264 \\
+scifact & 5,183 & 100 & 0.720 & 463 & 487 & 495 \\
+fiqa & 57,638 & 0 & 0.433 & 39 & 42 & 44 \\
+fiqa & 57,638 & 10 & 0.417 & 76 & 80 & 83 \\
+fiqa & 57,638 & 50 & 0.390 & 242 & 248 & 253 \\
+fiqa & 57,638 & 100 & 0.386 & 447 & 461 & 465 \\
+\bottomrule
+\end{tabular}
+\end{table}

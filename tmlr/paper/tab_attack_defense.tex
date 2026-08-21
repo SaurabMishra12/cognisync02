@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Retrieval-level attack success rate at a matched false-positive budget of 1\%. Rows are attackers ordered by capability; columns are defenses ordered by cost. The \textit{none} column is the undefended payload-entry rate. Every defended cell is measured at the same operating point, calibrated on held-out clean documents.}
+\label{tab:attack_defense}
+\begin{tabular}{lcccccccc}
+\toprule
+Attacker & none & D1 & D1b & D2 & D3 & D4 & D5 & D6 \\
+\midrule
+A0\_static\_templates & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+A1\_query\_conditioned & 0.99 & 0.00 & 0.02 & 0.92 & 0.03 & 0.00 & 0.00 & 0.99 \\
+A2\_imperative\_free & 1.00 & 0.99 & 1.00 & 0.74 & 0.02 & 0.00 & 0.22 & 1.00 \\
+A3\_semantic\_camouflage & 1.00 & 1.00 & 1.00 & 0.98 & 0.99 & 0.99 & 1.00 & 1.00 \\
+A4\_length\_matched & 1.00 & 1.00 & 1.00 & 0.98 & 0.68 & 0.00 & 0.66 & 1.00 \\
+A5\_score\_guided & 1.00 & 1.00 & 1.00 & 0.98 & 0.68 & 0.05 & 0.15 & 1.00 \\
+A6\_split\_payload & 1.00 & 1.00 & 1.00 & 0.98 & 0.93 & 0.01 & 0.90 & 1.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

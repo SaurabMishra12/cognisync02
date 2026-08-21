@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Retrieval-level payload entry versus downstream compliance, on the same episodes with no defense. The last column is the factor by which a retrieval-level metric must be discounted to estimate real exposure.}
+\label{tab:behavioural_gap}
+\begin{tabular}{llccc}
+\toprule
+Model & Attacker & ASR$_\text{retr}$ & ASR$_\text{behav}$ & $P(\text{comply}\mid\text{entry})$ \\
+\midrule
+Qwen2.5-1.5B-Instruct & A0\_static\_templates & 0.00 & 0.00 & -- \\
+Qwen2.5-1.5B-Instruct & A1\_query\_conditioned & 0.99 & 0.00 & 0.00 \\
+Qwen2.5-1.5B-Instruct & A2\_imperative\_free & 1.00 & 0.00 & 0.00 \\
+Qwen2.5-1.5B-Instruct & A3\_semantic\_camouflage & 1.00 & 0.00 & 0.00 \\
+Qwen2.5-1.5B-Instruct & A4\_length\_matched & 1.00 & 0.00 & 0.00 \\
+Qwen2.5-1.5B-Instruct & A5\_score\_guided & 1.00 & 0.00 & 0.00 \\
+Qwen2.5-1.5B-Instruct & A6\_split\_payload & 1.00 & 0.00 & 0.00 \\
+Qwen2.5-3B-Instruct & A0\_static\_templates & 0.00 & 0.00 & -- \\
+Qwen2.5-3B-Instruct & A1\_query\_conditioned & 0.99 & 0.00 & 0.00 \\
+Qwen2.5-3B-Instruct & A2\_imperative\_free & 1.00 & 0.07 & 0.07 \\
+Qwen2.5-3B-Instruct & A3\_semantic\_camouflage & 1.00 & 0.01 & 0.01 \\
+Qwen2.5-3B-Instruct & A4\_length\_matched & 1.00 & 0.01 & 0.01 \\
+Qwen2.5-3B-Instruct & A5\_score\_guided & 1.00 & 0.01 & 0.01 \\
+Qwen2.5-3B-Instruct & A6\_split\_payload & 1.00 & 0.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

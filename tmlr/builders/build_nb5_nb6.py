@@ -294,8 +294,51 @@ defensible engineering trade and should be stated as such — not as "sub-300 ms
 therefore practical", which was a claim about a synthetic 12-word vocabulary.
 '''))
 
-write_notebook("/home/user/cognisync02/tmlr/notebooks/NB5_cost_accounting.ipynb", C,
-               "cost/quality frontier")
+C.append(md(r'''
+## 4. Archive and Download Outputs
+
+Packages all latency profiling results into `cognisync_tmlr_results.zip` and initiates automatic download.
+'''))
+
+C.append(code(r'''
+import shutil
+from IPython.display import FileLink, display, Javascript
+
+out_dir = str(ART)
+zip_name = "cognisync_tmlr_results"
+zip_base = f"/kaggle/working/{zip_name}" if Path("/kaggle/working").exists() else f"./{zip_name}"
+
+shutil.make_archive(zip_base, "zip", out_dir)
+zip_file = f"{zip_base}.zip"
+size_mb = os.path.getsize(zip_file) / (1024 * 1024)
+
+print("\n" + "="*60)
+print(f">>> ARCHIVE CREATED: {zip_file} ({size_mb:.2f} MB)")
+print("="*60)
+
+display(FileLink(os.path.basename(zip_file)))
+
+try:
+    from google.colab import files
+    files.download(zip_file)
+except Exception:
+    try:
+        js_code = f"""
+            const a = document.createElement("a");
+            a.href = "{os.path.basename(zip_file)}";
+            a.download = "{os.path.basename(zip_file)}";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        """
+        display(Javascript(js_code))
+        print(">>> Automatic download triggered in browser.")
+    except Exception:
+        print(">>> Click the link above to download your results archive.")
+'''))
+
+OUT_PATH_NB5 = os.path.join(os.path.dirname(__file__), "..", "notebooks", "NB5_cost_accounting.ipynb")
+write_notebook(OUT_PATH_NB5, C, "cost/quality frontier")
 
 # ===========================================================================
 # NB6
@@ -318,20 +361,33 @@ that `claims.json` cannot account for.
 '''))
 
 C.append(code(ENV_BLOCK + r'''
+# Robust resolution for PAPER directory
 PAPER = ART / "paper"
+for cand in [Path("tmlr/paper"), Path("../paper"), Path("../../tmlr/paper")]:
+    if cand.exists():
+        PAPER = cand.resolve()
+        break
 PAPER.mkdir(parents=True, exist_ok=True)
+
 R = ART / "results"
+
+# Discover and unpack artifacts from /kaggle/input, /kaggle/working, or /content
+discover_artifacts()
 
 def have(name):
     p = R / name
     return p if p.exists() else None
 
+print("\n" + "="*60)
+print("NB6 INPUT ARTIFACT AUDIT:")
+print("="*60)
 for n in ["nb1_summary.csv", "nb1_pairwise.csv", "nb2_headroom.csv",
           "nb2_policy_comparison.csv", "nb2_alpha_predictability.csv",
           "nb3_attack_defense_matrix.csv", "nb3_roc_auc.csv", "nb3_calibration.csv",
           "nb4_behavioural_summary.csv", "nb4_retrieval_vs_behavioural.csv",
           "nb4_tool_selection_summary.csv", "nb5_cost_quality.csv"]:
-    print(("  found  " if have(n) else "  MISSING") + "  " + n)
+    print(f"  [{'✓' if have(n) else '✗'}] {n}")
+print("="*60 + "\n")
 
 CLAIMS = {}
 def claim(key, value, source, note=""):
@@ -707,9 +763,15 @@ Point `PAPER_TEX` at the manuscript and run it before every submission.
 '''))
 
 C.append(code(r'''
-PAPER_TEX = Path("cognisync_tmlr.tex")   # adjust if your .tex lives elsewhere
+PAPER_TEX = None
+for cand in [Path("cognisync_tmlr.tex"), Path("tmlr/paper/cognisync_tmlr.tex"),
+             Path("../paper/cognisync_tmlr.tex"), Path("../../tmlr/paper/cognisync_tmlr.tex"),
+             PAPER / "cognisync_tmlr.tex"]:
+    if cand.exists():
+        PAPER_TEX = cand
+        break
 
-if PAPER_TEX.exists():
+if PAPER_TEX and PAPER_TEX.exists():
     src = PAPER_TEX.read_text()
     src = re.sub(r"%.*", "", src)
     nums = set(re.findall(r"(?<![\w.])(\d+\.\d{2,4})(?![\w])", src))
@@ -732,5 +794,48 @@ else:
           f"to run the audit.")
 '''))
 
-write_notebook("/home/user/cognisync02/tmlr/notebooks/NB6_tables_figures.ipynb", C,
-               "assemble tables/figures + claim audit")
+C.append(md(r'''
+## 5. Archive and Download Outputs
+
+Packages all results, LaTeX tables, figures, and macros into `cognisync_tmlr_results.zip` and initiates automatic download.
+'''))
+
+C.append(code(r'''
+import shutil
+from IPython.display import FileLink, display, Javascript
+
+out_dir = str(ART)
+zip_name = "cognisync_tmlr_results"
+zip_base = f"/kaggle/working/{zip_name}" if Path("/kaggle/working").exists() else f"./{zip_name}"
+
+shutil.make_archive(zip_base, "zip", out_dir)
+zip_file = f"{zip_base}.zip"
+size_mb = os.path.getsize(zip_file) / (1024 * 1024)
+
+print("\n" + "="*60)
+print(f">>> ARCHIVE CREATED: {zip_file} ({size_mb:.2f} MB)")
+print("="*60)
+
+display(FileLink(os.path.basename(zip_file)))
+
+try:
+    from google.colab import files
+    files.download(zip_file)
+except Exception:
+    try:
+        js_code = f"""
+            const a = document.createElement("a");
+            a.href = "{os.path.basename(zip_file)}";
+            a.download = "{os.path.basename(zip_file)}";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        """
+        display(Javascript(js_code))
+        print(">>> Automatic download triggered in browser.")
+    except Exception:
+        print(">>> Click the link above to download your results archive.")
+'''))
+
+OUT_PATH_NB6 = os.path.join(os.path.dirname(__file__), "..", "notebooks", "NB6_tables_figures.ipynb")
+write_notebook(OUT_PATH_NB6, C, "assemble tables/figures + claim audit")

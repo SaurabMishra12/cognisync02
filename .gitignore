@@ -28,6 +28,12 @@ Thumbs.db
 01 - Raw Sources/
 03 - Data Lake/llm_chats/
 
-# Large DB backups & Raw JSON dumps (>50MB)
-ai-memory-mcp/data_processed/
-ai-memory-mcp/data_raw/
+*.npy
+**/cache/**
+*my_archive*
+*trec-covid.parquet
+*alphafit_minilm.npy
+beir_*.parquet
+beirq_*.json
+cognisync_tmlr/cache/
+cognisync_tmlr/results/beir_*

@@ -1,0 +1,7 @@
+feature,mutual_info_with_alpha_star
+query_len,0.0165
+dense_std,0.0392
+bm25_std,0.0537
+dense_cv,0.0091
+bm25_cv,0.0129
+has_identifier,0.0062

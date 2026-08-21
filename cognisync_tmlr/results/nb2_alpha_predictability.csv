@@ -1,0 +1,4 @@
+model,cv_r2,spearman_rho,mae,mae_predict_mean
+"RandomForest(50,d5) [CIKM config]",0.0956,0.3186,0.2677,0.3001
+"RandomForest(500,d16)",0.076,0.3151,0.2673,0.3001
+GradientBoosting(500),-0.0778,0.2708,0.279,0.3001

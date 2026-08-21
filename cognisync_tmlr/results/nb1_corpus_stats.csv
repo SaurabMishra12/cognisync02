@@ -1,0 +1,7 @@
+dataset,n_docs,n_queries
+nfcorpus,3633,323
+scifact,5183,300
+arguana,8674,1406
+scidocs,25657,1000
+fiqa,57638,648
+trec-covid,171332,50

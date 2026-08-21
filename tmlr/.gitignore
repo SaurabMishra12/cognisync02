@@ -1,3 +1,11 @@
-cognisync_tmlr/
 *.pyc
 __pycache__/
+*.npy
+*.zip
+cache/
+**/cache/**
+*my_archive*
+*trec-covid.parquet
+*alphafit_minilm.npy
+beir_*.parquet
+beirq_*.json

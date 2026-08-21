@@ -1,0 +1,23 @@
+{
+  "tier": "standard",
+  "encoders": [
+    "minilm"
+  ],
+  "rerank_budgets": [
+    0,
+    50,
+    100
+  ],
+  "first_stage_depth": 1000,
+  "datasets": [
+    "nfcorpus",
+    "scifact",
+    "arguana",
+    "scidocs",
+    "fiqa",
+    "trec-covid"
+  ],
+  "ce_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "seed": 42,
+  "alpha_fixed": 0.8
+}
