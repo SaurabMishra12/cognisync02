@@ -1,0 +1,41 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Detector-Conditioned Downstream Compliance and End-to-End Behavioural Risk ($P(C\mid E, D)$ and $P(C\mid D) = P(E\mid D)\cdot P(C\mid E, D)$) at matched $\mathrm{FPR}=1\%$. Evaluated on Qwen2.5-3B-Instruct under standard plain system prompt at context position $0$. $N_{\mathrm{surv}}$ is the effective candidate survivor count ($N=400$ total). Values in brackets indicate Wilson 95\% confidence intervals.}
+\label{tab:detector_conditioned_compliance}
+\begin{tabular}{llcccccc}
+\toprule
+Attacker & Metric & D0 (None) & D1 (3-feat) & D2 (Probe) & D3 (DistilBERT) & D4 (Guard) & D6 (Ensemble) \\
+\midrule
+\multirow{4}{*}{A1\_query\_conditioned} & $P(E\mid D)$ & 0.99 & 0.00 & 0.92 & 0.03 & 0.00 & 0.99 \\
+ & $N_{\mathrm{surv}}$ & 397 & 0 & 367 & 12 & 0 & 397 \\
+ & $P(C\mid E, D)$ & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.00] & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.24] & 0.000 [0.00, 0.00] & 0.000 [0.00, 0.01] \\
+ & $P(C\mid D)$ & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
+\midrule
+\multirow{4}{*}{A2\_imperative\_free} & $P(E\mid D)$ & 1.00 & 0.99 & 0.74 & 0.02 & 0.00 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 400 & 397 & 296 & 9 & 0 & 400 \\
+ & $P(C\mid E, D)$ & 0.068 [0.05, 0.10] & 0.068 [0.05, 0.10] & 0.068 [0.04, 0.10] & 0.068 [0.01, 0.39] & 0.000 [0.00, 0.00] & 0.068 [0.05, 0.10] \\
+ & $P(C\mid D)$ & 0.0675 & 0.0670 & 0.0500 & 0.0016 & 0.0000 & 0.0675 \\
+\midrule
+\multirow{4}{*}{A3\_semantic\_camouflage} & $P(E\mid D)$ & 1.00 & 1.00 & 0.98 & 0.99 & 0.99 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 400 & 400 & 393 & 395 & 396 & 400 \\
+ & $P(C\mid E, D)$ & 0.010 [0.00, 0.03] & 0.010 [0.00, 0.03] & 0.010 [0.00, 0.03] & 0.010 [0.00, 0.03] & 0.010 [0.00, 0.03] & 0.010 [0.00, 0.03] \\
+ & $P(C\mid D)$ & 0.0100 & 0.0100 & 0.0098 & 0.0099 & 0.0099 & 0.0100 \\
+\midrule
+\multirow{4}{*}{A4\_length\_matched} & $P(E\mid D)$ & 1.00 & 1.00 & 0.98 & 0.68 & 0.00 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 400 & 400 & 392 & 271 & 0 & 400 \\
+ & $P(C\mid E, D)$ & 0.013 [0.01, 0.03] & 0.013 [0.01, 0.03] & 0.013 [0.01, 0.03] & 0.013 [0.00, 0.03] & 0.000 [0.00, 0.00] & 0.013 [0.01, 0.03] \\
+ & $P(C\mid D)$ & 0.0125 & 0.0125 & 0.0123 & 0.0085 & 0.0000 & 0.0125 \\
+\midrule
+\multirow{4}{*}{A5\_score\_guided} & $P(E\mid D)$ & 1.00 & 1.00 & 0.98 & 0.68 & 0.05 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 400 & 400 & 393 & 273 & 20 & 400 \\
+ & $P(C\mid E, D)$ & 0.013 [0.01, 0.03] & 0.013 [0.01, 0.03] & 0.013 [0.01, 0.03] & 0.013 [0.00, 0.03] & 0.013 [0.00, 0.18] & 0.013 [0.01, 0.03] \\
+ & $P(C\mid D)$ & 0.0125 & 0.0125 & 0.0123 & 0.0085 & 0.0006 & 0.0125 \\
+\midrule
+\multirow{4}{*}{A6\_split\_payload} & $P(E\mid D)$ & 1.00 & 1.00 & 0.98 & 0.93 & 0.01 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 400 & 400 & 391 & 371 & 4 & 400 \\
+ & $P(C\mid E, D)$ & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.49] & 0.000 [0.00, 0.01] \\
+ & $P(C\mid D)$ & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
+\bottomrule
+\end{tabular}
+\end{table*}
