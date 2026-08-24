@@ -37,3 +37,4 @@ beir_*.parquet
 beirq_*.json
 cognisync_tmlr/cache/
 cognisync_tmlr/results/beir_*
+tmlr/Results23Aug/
