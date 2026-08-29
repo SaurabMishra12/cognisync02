@@ -1,8 +1,11 @@
 """
-Generate publication-quality 2-panel Figure B
+Generate publication-quality 2-panel Figure B / Figure 9
 Panel (a): Global Parameter Space (Delta E vs Delta B)
-Panel (b): Detail of Cluster Near Equal Exposure (x in [-0.06, 0.13])
+Panel (b): Detail of Cluster Near Equal Exposure (x in [-0.065, 0.130])
 With zero overlapping text, zero overlapping lines, and proper canvas margins.
+
+Exact Rule: Two exposure rates are defined equal when their underlying candidate survivor
+counts are identical (N_survivors(A3) == N_survivors(A4)), not merely when displayed rates round to the same value.
 """
 
 from pathlib import Path
@@ -35,8 +38,16 @@ def load_data():
     merged = pd.merge(a3, a4, on=["defense", "target_fpr", "model"], suffixes=("_A3", "_A4"))
     cells18 = merged[~merged.defense.isin(["D0_none", "D4_guard_zeroshot"])].copy()
 
+    # Explicit count equality rule:
+    # We call two exposure rates equal when their underlying candidate survivor counts are identical:
+    # N_survivors(A3) == N_survivors(A4), not merely when rounded displayed rates match.
+    cells18["is_count_equal"] = (cells18["N_survivors_A3"] == cells18["N_survivors_A4"])
+
     cells18["dx"] = cells18["P_E_given_D_A3"] - cells18["P_E_given_D_A4"]
     cells18["dy"] = cells18["P_C_given_D_A3"] - cells18["P_C_given_D_A4"]
+    
+    # Exact zero for count-equal cells to eliminate floating point artifacts
+    cells18.loc[cells18["is_count_equal"], "dx"] = 0.0
     return cells18
 
 def generate_figure_b():
@@ -60,7 +71,7 @@ def generate_figure_b():
     fpr_size = {0.001: 70, 0.01: 130, 0.05: 200}
     fpr_label = {0.001: "0.1%", 0.01: "1.0%", 0.05: "5.0%"}
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14.2, 5.8), dpi=300,
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14.5, 6.0), dpi=300,
                                    gridspec_kw={"width_ratios": [1.15, 1.0], "wspace": 0.28})
     fig.patch.set_facecolor("#ffffff")
 
@@ -108,11 +119,11 @@ def generate_figure_b():
     ax1.text(-0.09, -0.04, "Concordant Zone\n($x < 0, y < 0$)\n2 cells",
              ha="center", va="top", fontsize=7.0, color="#334155", zorder=2)
 
-    # Highlight box around cluster
-    rect = plt.Rectangle((-0.07, -0.27), 0.20, 0.055, fill=False, edgecolor="#2563eb",
+    # Highlight box around cluster (14 cells in range [-0.065, 0.130])
+    rect = plt.Rectangle((-0.065, -0.27), 0.195, 0.055, fill=False, edgecolor="#2563eb",
                          linestyle="--", linewidth=1.2, zorder=3)
     ax1.add_patch(rect)
-    ax1.text(0.03, -0.285, "Cluster near $x=0$ (13 cells)\n(See Detail View in Panel b $\\longrightarrow$)",
+    ax1.text(0.03, -0.285, "Cluster near $x=0$ (14 cells)\n(See Detail View in Panel b $\\longrightarrow$)",
              fontsize=7.4, fontweight="bold", color="#2563eb", ha="center", va="top", zorder=5)
 
     ax1.set_xlim(-0.18, 1.05)
@@ -127,18 +138,17 @@ def generate_figure_b():
     ax1.grid(True, linestyle=":", alpha=0.35, zorder=0)
 
     # =========================================================================
-    # PANEL (b): Detail View of the 13 Cells near x=0
+    # PANEL (b): Detail View of the 14 Cells near x=0
     # =========================================================================
     ax2.set_facecolor("#ffffff")
     ax2.fill_between([0, 0.14], -0.275, -0.215, color="#fff1f2", alpha=0.85, zorder=0)
     ax2.fill_between([-0.07, 0], -0.275, -0.215, color="#f8fafc", alpha=0.6, zorder=0)
     ax2.axvline(0, color="#64748b", linestyle="-", linewidth=1.0, zorder=1)
 
-    # In Panel (b), spread the 7 points at x=0 vertically so every single marker is 100% visible
     zoom_cells = cells18[cells18.dx <= 0.12].copy().sort_values(by=["dx", "defense", "target_fpr"])
     
-    # 7 points at x=0
-    eq_rows = zoom_cells[zoom_cells.dx == 0.0]
+    # 7 exact count-equal points at x=0
+    eq_rows = zoom_cells[zoom_cells.is_count_equal]
     y_spreads = np.linspace(-0.258, -0.248, len(eq_rows))
     
     for (idx, r), y_plot in zip(eq_rows.iterrows(), y_spreads):
@@ -150,7 +160,7 @@ def generate_figure_b():
                     edgecolor="#0f172a", linewidth=0.8, alpha=0.95, zorder=4)
 
     # Plot other points in zoom at their exact coordinates
-    for idx, r in zoom_cells[zoom_cells.dx != 0.0].iterrows():
+    for idx, r in zoom_cells[~zoom_cells.is_count_equal].iterrows():
         d = r["defense"]
         fpr = r["target_fpr"]
         st = det_style[d]
@@ -159,11 +169,13 @@ def generate_figure_b():
                     edgecolor="#0f172a", linewidth=0.8, alpha=0.95, zorder=4)
 
     # Clean, non-overlapping labels in zoom
-    ax2.text(-0.025, -0.268, "Equal Exposure ($x = 0$):\n$\\mathbf{7\\ cells}$ at $\\Delta B = -0.2533$\n"
-                             "$D_1, D_{1b}, D_5, D_6$ (@ 0.1%, 1% FPR)\n"
+    ax2.text(-0.024, -0.267, "Exact Equal Exposure ($x = 0$):\n"
+                             "$\\mathbf{7\\ cells}$ at $\\Delta B = -0.2533$:\n"
+                             "$D_1, D_{1b}, D_6$ (@ 0.1%, 1% FPR) [6 cells]\n"
+                             "$D_5$ (@ 0.1% FPR only) [1 cell]\n"
                              "$A_4$ is $7.3\\times$ more potent downstream",
-             fontsize=7.0, fontweight="bold", color="#1e293b", ha="center", va="top",
-             bbox=dict(boxstyle="round,pad=0.22", facecolor="#ffffff", edgecolor="#cbd5e1", alpha=0.95), zorder=5)
+             fontsize=6.7, fontweight="bold", color="#1e293b", ha="center", va="top",
+             bbox=dict(boxstyle="round,pad=0.24", facecolor="#ffffff", edgecolor="#cbd5e1", alpha=0.95), zorder=5)
 
     ax2.text(-0.0433, -0.224, "$D_{1b}$ (5% FPR)\n$\\Delta E=-0.043$",
              fontsize=7.0, color="#0d9488", ha="center", va="bottom", zorder=5)
@@ -189,6 +201,12 @@ def generate_figure_b():
     ax2.set_title("(b) Detail View: Cluster Near Equal Exposure ($\\Delta E \\approx 0$)", fontsize=9.8, fontweight="bold", pad=8)
     ax2.grid(True, linestyle=":", alpha=0.35, zorder=0)
 
+    # Footnote explaining the exact count equality criterion
+    fig.text(0.5, 0.115, "Note: Two exposure rates are defined equal ($x=0$) when their underlying candidate survivor counts are identical ($N_E(A_3) \\equiv N_E(A_4)$),\n"
+                         "not merely when their displayed rates round to the same value.",
+             ha="center", va="center", fontsize=7.5, color="#334155", style="italic",
+             bbox=dict(boxstyle="round,pad=0.25", facecolor="#f8fafc", edgecolor="#cbd5e1", alpha=0.95))
+
     # Shared Legend at Bottom with ample spacing
     legend_handles = []
     for d, st in det_style.items():
@@ -201,10 +219,10 @@ def generate_figure_b():
                         edgecolor="#0f172a", linewidth=0.75, label=f"FPR = {fpr_label[fpr]}")
         legend_handles.append(h)
 
-    fig.legend(handles=legend_handles, loc="lower center", bbox_to_anchor=(0.5, 0.01),
+    fig.legend(handles=legend_handles, loc="lower center", bbox_to_anchor=(0.5, 0.015),
                ncol=5, frameon=True, facecolor="#ffffff", edgecolor="#cbd5e1", fontsize=7.8)
 
-    plt.subplots_adjust(left=0.08, right=0.98, bottom=0.22, top=0.92)
+    plt.subplots_adjust(left=0.08, right=0.98, bottom=0.26, top=0.92)
 
     # Save to all target paths
     for p in OUT_PATHS:
@@ -216,7 +234,7 @@ def generate_figure_b():
         print(f"Saved: {p}")
 
     plt.close()
-    print("2-Panel Figure B generation complete!")
+    print("2-Panel Figure B / Figure 9 generation complete!")
 
 if __name__ == "__main__":
     generate_figure_b()
