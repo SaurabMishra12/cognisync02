@@ -796,5 +796,5 @@ weighting has nothing to offer on these corpora, which is a cleaner and more
 useful negative result.
 '''))
 
-write_notebook("/home/user/cognisync02/tmlr/notebooks/NB1_full_corpus_beir.ipynb", C,
-               "full-corpus BEIR + compute-matched grid")
+OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "notebooks", "NB1_full_corpus_beir.ipynb")
+write_notebook(OUT_PATH, C, "full-corpus BEIR + compute-matched grid")

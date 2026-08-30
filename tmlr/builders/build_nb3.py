@@ -910,5 +910,48 @@ retrieval-layer filtering is viable, but not at three features and twelve
 training examples. That is a useful, publishable, and honest conclusion.
 '''))
 
-write_notebook("/home/user/cognisync02/tmlr/notebooks/NB3_adaptive_security.ipynb", C,
-               "attack x defense matrix")
+C.append(md(r'''
+## 8. Archive and Download Outputs
+
+Packages all results into `cognisync_tmlr_results.zip` and initiates automatic download in Kaggle/Colab.
+'''))
+
+C.append(code(r'''
+import shutil
+from IPython.display import FileLink, display, Javascript
+
+out_dir = str(ART)
+zip_name = "cognisync_tmlr_results"
+zip_base = f"/kaggle/working/{zip_name}" if Path("/kaggle/working").exists() else f"./{zip_name}"
+
+shutil.make_archive(zip_base, "zip", out_dir)
+zip_file = f"{zip_base}.zip"
+size_mb = os.path.getsize(zip_file) / (1024 * 1024)
+
+print("\n" + "="*60)
+print(f">>> ARCHIVE CREATED: {zip_file} ({size_mb:.2f} MB)")
+print("="*60)
+
+display(FileLink(os.path.basename(zip_file)))
+
+try:
+    from google.colab import files
+    files.download(zip_file)
+except Exception:
+    try:
+        js_code = f"""
+            const a = document.createElement("a");
+            a.href = "{os.path.basename(zip_file)}";
+            a.download = "{os.path.basename(zip_file)}";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        """
+        display(Javascript(js_code))
+        print(">>> Automatic download triggered in browser.")
+    except Exception:
+        print(">>> Click the link above to download your results archive.")
+'''))
+
+OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "notebooks", "NB3_adaptive_security.ipynb")
+write_notebook(OUT_PATH, C, "attack x defense matrix")

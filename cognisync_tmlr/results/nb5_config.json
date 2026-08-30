@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    "scifact",
+    "fiqa"
+  ],
+  "n_queries": 200,
+  "depths": [
+    100,
+    1000
+  ],
+  "rerank_budgets": [
+    0,
+    10,
+    50,
+    100
+  ],
+  "seed": 42,
+  "device": "cuda",
+  "gpu": "Tesla T4"
+}

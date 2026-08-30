@@ -42,7 +42,7 @@ def write_notebook(path, cells, title=""):
 # ---------------------------------------------------------------------------
 
 ENV_BLOCK = '''
-import os, sys, json, math, time, random, hashlib, re, gc, warnings
+import os, sys, json, math, time, random, hashlib, re, gc, warnings, shutil, glob, zipfile, io
 from pathlib import Path
 warnings.filterwarnings("ignore")
 
@@ -75,13 +75,90 @@ except ImportError:
 # disconnect.
 if Path("/kaggle/working").exists():
     ART = Path("/kaggle/working/cognisync_tmlr")
+elif Path("/content/drive/MyDrive/cognisync_tmlr").exists():
+    ART = Path("/content/drive/MyDrive/cognisync_tmlr")
 elif Path("/content/drive/MyDrive").exists():
     ART = Path("/content/drive/MyDrive/cognisync_tmlr")
 else:
-    ART = Path("./cognisync_tmlr")
+    ART = Path("./cognisync_tmlr").resolve()
+
 (ART / "results").mkdir(parents=True, exist_ok=True)
 (ART / "cache").mkdir(parents=True, exist_ok=True)
-print("Artifacts ->", ART)
+
+
+def discover_artifacts():
+    """Universal artifact finder: searches /kaggle/input, /kaggle/working, /content,
+    parent folders, and all subdirectories for uploaded .zip archives or raw result files,
+    extracting/copying them directly into ART / 'results'."""
+    res_dir = ART / "results"
+    res_dir.mkdir(parents=True, exist_ok=True)
+    
+    search_dirs = [
+        Path("/kaggle/input"), Path("/kaggle/working"),
+        Path("/content"), Path("/content/drive/MyDrive"),
+        Path("."), Path(".."), Path("../.."),
+        Path("tmlr"), Path("../tmlr"), Path("../../tmlr"),
+        Path("cognisync_tmlr"), Path("../cognisync_tmlr"), Path("../../cognisync_tmlr"),
+        Path("results"), Path("../results"), Path("../../results"),
+        Path("tmlr/results"), Path("../tmlr/results"), Path("../../tmlr/results"),
+    ]
+
+    seen = set()
+    for sdir in search_dirs:
+        try:
+            if not sdir.exists():
+                continue
+            resolved = sdir.resolve()
+            if resolved in seen:
+                continue
+            seen.add(resolved)
+        except Exception:
+            continue
+
+        # 1. Search for any .zip files
+        for zpath in sdir.glob("*.zip"):
+            try:
+                with zipfile.ZipFile(zpath, "r") as zf:
+                    extracted = 0
+                    for info in zf.infolist():
+                        if info.is_dir():
+                            continue
+                        fname = Path(info.filename).name
+                        if (fname.startswith(("nb", "fig_", "beir")) or fname.endswith((".parquet", ".csv", ".json", ".tex", ".pdf", ".png"))):
+                            target_path = res_dir / fname
+                            if not target_path.exists():
+                                with zf.open(info) as source, open(target_path, "wb") as target:
+                                    shutil.copyfileobj(source, target)
+                                extracted += 1
+                    if extracted > 0:
+                        print(f">>> Unpacked {extracted} artifacts from {zpath.name} -> {res_dir}")
+            except Exception:
+                pass
+
+        # 2. Search for any raw files in input datasets / working dirs
+        for p in sdir.rglob("nb*.*"):
+            if p.is_file() and p.suffix in [".parquet", ".csv", ".json", ".tex", ".pdf", ".png"]:
+                dest = res_dir / p.name
+                if not dest.exists():
+                    try:
+                        shutil.copy(p, dest)
+                        print(f">>> Found & copied artifact: {p.name} -> {dest}")
+                    except Exception:
+                        pass
+
+        for p in sdir.rglob("fig_*.*"):
+            if p.is_file() and p.suffix in [".pdf", ".png"]:
+                dest = res_dir / p.name
+                if not dest.exists():
+                    try:
+                        shutil.copy(p, dest)
+                        print(f">>> Found & copied figure: {p.name} -> {dest}")
+                    except Exception:
+                        pass
+
+
+discover_artifacts()
+print("Artifacts directory ->", ART)
 
 
 def save_json(obj, name):

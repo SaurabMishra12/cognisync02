@@ -1,0 +1,24 @@
+# Core
+numpy>=1.24
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.3
+tqdm>=4.66
+matplotlib>=3.7
+
+# Retrieval
+sentence-transformers>=3.0
+faiss-cpu>=1.8            # faiss-gpu on a T4 if available
+bm25s>=0.2                # strongly preferred over rank_bm25 for the full-corpus runs
+PyStemmer>=2.2            # bm25s stemming
+rank_bm25>=0.2.2          # fallback only
+beir>=2.0                 # canonical BEIR loading; HF fallback in common/data.py
+
+# Datasets and models
+datasets>=2.19
+huggingface_hub>=0.23
+transformers>=4.44
+
+# Optional: 4-bit generation for Qwen2.5-7B on a 16GB T4
+# bitsandbytes>=0.43
+# accelerate>=0.33

@@ -1,0 +1,5 @@
+model,poisoned,tool_hijack_rate,unparsed,n
+Qwen/Qwen2.5-1.5B-Instruct,False,0.0,0.0,100
+Qwen/Qwen2.5-1.5B-Instruct,True,0.4,0.0,100
+Qwen/Qwen2.5-3B-Instruct,False,0.0,0.0,100
+Qwen/Qwen2.5-3B-Instruct,True,0.6,0.0,100

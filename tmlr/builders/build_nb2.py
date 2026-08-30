@@ -522,5 +522,5 @@ Either way the claim is now bounded by evidence, which is the thing TMLR asks
 for and the thing the CIKM version did not have.
 '''))
 
-write_notebook("/home/user/cognisync02/tmlr/notebooks/NB2_alpha_headroom.ipynb", C,
-               "oracle headroom + identifiability")
+OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "notebooks", "NB2_alpha_headroom.ipynb")
+write_notebook(OUT_PATH, C, "oracle headroom + identifiability")

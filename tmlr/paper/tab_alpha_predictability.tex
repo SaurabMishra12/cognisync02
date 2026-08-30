@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\small
+\caption{How predictable the oracle fusion weight is from the six query and score-distribution features, under 5-fold cross-validation.}
+\label{tab:alpha_predictability}
+\begin{tabular}{lccc}
+\toprule
+Model & CV $R^2$ & Spearman $\rho$ & MAE \\
+\midrule
+RandomForest(50,d5) [CIKM config] & 0.096 & 0.319 & 0.268 \\
+RandomForest(500,d16) & 0.076 & 0.315 & 0.267 \\
+GradientBoosting(500) & -0.078 & 0.271 & 0.279 \\
+\bottomrule
+\end{tabular}
+\end{table}

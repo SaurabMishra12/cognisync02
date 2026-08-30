@@ -1,0 +1,3 @@
+dataset,n_queries,alpha_fixed,ndcg_dense,ndcg_bm25,ndcg_rrf,ndcg_fixed,ndcg_oracle,headroom_oracle_minus_fixed,headroom_oracle_minus_dense,pct_queries_alpha_irrelevant,median_grid_points_within_eps,median_argmax_ties
+fiqa,648,0.7,0.3681,0.2385,0.3745,0.4115,0.4798,0.0682,0.1116,0.2978,8.0,8.0
+scifact,300,0.4,0.6463,0.6762,0.7148,0.732,0.7817,0.0497,0.1354,0.5033,21.0,21.0

@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Per-query fusion policies against the oracle ceiling. ``\% headroom'' is the share of the oracle-minus-fixed gap a policy captures. Intervals are paired bootstrap over per-query nDCG@10.}
+\label{tab:alpha_policies}
+\begin{tabular}{lcccc}
+\toprule
+Policy & nDCG@10 & $\Delta$ vs.\ Dense & 95\% CI & \% headroom \\
+\midrule
+BM25 (alpha=0) & 0.3770 & -0.0792 & [-0.1007, -0.0576] & -199\% \\
+Dense (alpha=1) & 0.4562 & +0.0000 & [+0.0000, +0.0000] & -79\% \\
+RRF (k=60) & 0.4822 & +0.0260 & [+0.0105, +0.0418] & -40\% \\
+Fixed alpha*=0.65 & 0.5089 & +0.0527 & [+0.0405, +0.0651] & 0\% \\
+Oracle alpha (ceiling) & 0.5753 & +0.1192 & [+0.1061, +0.1327] & 100\% \\
+Learned: RandomForest(50,d5) [CIKM config] & 0.4711 & +0.0149 & [-0.0022, +0.0324] & -57\% \\
+Learned: RandomForest(500,d16) & 0.4731 & +0.0170 & [+0.0001, +0.0343] & -54\% \\
+Learned: GradientBoosting(500) & 0.4675 & +0.0114 & [-0.0059, +0.0290] & -62\% \\
+\bottomrule
+\end{tabular}
+\end{table}

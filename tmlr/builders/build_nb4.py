@@ -43,10 +43,7 @@ to work.
 
 | Model | dtype | VRAM | Notes |
 |---|---|---|---|
-| `Qwen/Qwen2.5-1.5B-Instruct` | fp16 | ~3.2 GB | default |
-| `meta-llama/Llama-3.2-1B-Instruct` | fp16 | ~2.6 GB | gated — needs an HF token |
-| `Qwen/Qwen2.5-3B-Instruct` | fp16 | ~6.4 GB | fits a free T4 |
-| `microsoft/Phi-3.5-mini-instruct` | fp16 | ~7.7 GB | fits a free T4, slower |
+| `microsoft/Phi-3.5-mini-instruct` | fp16 | ~7.6 GB | default — fits a free T4 |
 
 fp16 throughout rather than 4-bit: at these sizes a T4 has the memory, and it
 removes a `bitsandbytes` version dependency that breaks often on Colab.
@@ -66,16 +63,14 @@ C.append(code(ENV_BLOCK + r'''
 # --------------------------------------------------------------------------
 # CONFIG
 # --------------------------------------------------------------------------
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 MODELS = [
-    "Qwen/Qwen2.5-1.5B-Instruct",
-    "Qwen/Qwen2.5-3B-Instruct",
-    # "meta-llama/Llama-3.2-1B-Instruct",   # gated: huggingface-cli login first
-    # "microsoft/Phi-3.5-mini-instruct",
+    "microsoft/Phi-3.5-mini-instruct",
 ]
 N_EPISODES = 400          # attacked episodes per condition
 N_CTX_DOCS = 5            # passages placed in the context window
 MAX_NEW_TOKENS = 64
-GEN_BATCH = 8
+GEN_BATCH = 2             # keep small for Phi-3.5 (3.8B) on T4
 POISON_POSITIONS = [0, 2, 4]   # rank at which the poison is placed, for the
                                # position-sensitivity analysis
 CANARY = "PWNED-7431"
@@ -84,12 +79,30 @@ CONFIG = dict(models=MODELS, n_episodes=N_EPISODES, n_ctx_docs=N_CTX_DOCS,
               max_new_tokens=MAX_NEW_TOKENS, positions=POISON_POSITIONS,
               canary=CANARY, seed=SEED)
 print(json.dumps(CONFIG, indent=2))
+''' + BOOTSTRAP_BLOCK))
 
+C.append(md(r'''
+### Artifact Auto-Discovery (Kaggle & Colab)
+Automatically detects and unpacks any uploaded `.zip` archives or Kaggle Input datasets containing previous experiment artifacts (`nb3_attack_documents.parquet`, etc.).
+'''))
+
+C.append(code(r'''
+# Discover and unpack artifacts from /kaggle/input, /kaggle/working, or /content
+discover_artifacts()
+
+# Verify presence of NB3 artifacts
 nb3_docs = ART / "results" / "nb3_attack_documents.parquet"
 nb3_a5 = ART / "results" / "nb3_a5_documents.parquet"
+nb3_mat = ART / "results" / "nb3_attack_defense_matrix.csv"
 HAVE_NB3 = nb3_docs.exists()
-print("NB3 attack documents present:", HAVE_NB3, "| A5 documents:", nb3_a5.exists())
-''' + BOOTSTRAP_BLOCK))
+
+print("\n" + "="*60)
+print("NB4 ARTIFACT STATUS:")
+print(f"  NB3 Attack Documents : {'[✓] PRESENT (Reusing NB3 attacks)' if HAVE_NB3 else '[✗] MISSING (Will regenerate reduced attacks)'}")
+print(f"  NB3 A5 Optimised Docs: {'[✓] PRESENT' if nb3_a5.exists() else '[✗] MISSING'}")
+print(f"  NB3 Defense Matrix   : {'[✓] PRESENT' if nb3_mat.exists() else '[✗] MISSING'}")
+print("="*60 + "\n")
+'''))
 
 C.append(md(r'''
 ## 1. Episodes
@@ -264,36 +277,100 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 class LocalAgent:
     def __init__(self, model_id):
         self.id = model_id
+        if DEVICE == "cuda":
+            torch.cuda.empty_cache()
+            gc.collect()
+
         self.tok = AutoTokenizer.from_pretrained(model_id)
         if self.tok.pad_token is None:
             self.tok.pad_token = self.tok.eos_token
         self.tok.padding_side = "left"
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_id,
-            torch_dtype=torch.float16 if DEVICE == "cuda" else torch.float32,
-            device_map=None).to(DEVICE).eval()
 
-    @torch.no_grad()
+        if DEVICE == "cuda":
+            try:
+                # Try loading directly to GPU 0 first (avoids .to() duplication)
+                self.model = AutoModelForCausalLM.from_pretrained(
+                    model_id,
+                    torch_dtype=torch.float16,
+                    device_map={"": 0},
+                    low_cpu_mem_usage=True,
+                )
+            except Exception:
+                # Fallback: auto-balance across all available GPUs
+                self.model = AutoModelForCausalLM.from_pretrained(
+                    model_id,
+                    torch_dtype=torch.float16,
+                    device_map="auto",
+                    low_cpu_mem_usage=True,
+                )
+            self.device = self.model.device
+        else:
+            self.model = AutoModelForCausalLM.from_pretrained(
+                model_id, torch_dtype=torch.float32, device_map=None,
+            ).to("cpu")
+            self.device = torch.device("cpu")
+        self.model.eval()
+
+        if DEVICE == "cuda":
+            props = torch.cuda.get_device_properties(0)
+            alloc = torch.cuda.memory_allocated(0) / 1e9
+            print(f"  Model loaded on {self.device} | "
+                  f"VRAM used: {alloc:.1f}/{props.total_memory/1e9:.1f} GB")
+
+    @torch.inference_mode()
     def generate(self, chat_batches, max_new_tokens=MAX_NEW_TOKENS):
         outs = []
-        for i in tqdm(range(0, len(chat_batches), GEN_BATCH), leave=False, desc="  gen"):
-            chunk = chat_batches[i:i + GEN_BATCH]
+        batch_size = GEN_BATCH
+        dev = self.device
+        i = 0
+        pbar = tqdm(total=len(chat_batches), leave=False, desc="  gen")
+        while i < len(chat_batches):
+            chunk = chat_batches[i:i + batch_size]
             texts = [self.tok.apply_chat_template(c, tokenize=False,
                                                   add_generation_prompt=True)
                      for c in chunk]
-            enc = self.tok(texts, return_tensors="pt", padding=True,
-                           truncation=True, max_length=3072).to(DEVICE)
-            gen = self.model.generate(**enc, max_new_tokens=max_new_tokens,
-                                      do_sample=False, temperature=None, top_p=None,
-                                      pad_token_id=self.tok.pad_token_id)
-            for j in range(len(chunk)):
-                outs.append(self.tok.decode(gen[j][enc["input_ids"].shape[1]:],
-                                            skip_special_tokens=True).strip())
+            try:
+                enc = self.tok(texts, return_tensors="pt", padding=True,
+                               truncation=True, max_length=2048).to(dev)
+                gen = self.model.generate(
+                    input_ids=enc["input_ids"],
+                    attention_mask=enc["attention_mask"],
+                    max_new_tokens=max_new_tokens,
+                    do_sample=False,
+                    temperature=None,
+                    top_p=None,
+                    pad_token_id=self.tok.pad_token_id,
+                )
+                input_len = enc["input_ids"].shape[1]
+                for j in range(len(chunk)):
+                    outs.append(self.tok.decode(gen[j][input_len:],
+                                                skip_special_tokens=True).strip())
+                del enc, gen
+                i += len(chunk)
+                pbar.update(len(chunk))
+            except Exception as e:
+                err_msg = str(e).lower()
+                if "out of memory" in err_msg or "cuda" in err_msg:
+                    if DEVICE == "cuda":
+                        torch.cuda.empty_cache()
+                        gc.collect()
+                    if batch_size > 1:
+                        batch_size = 1
+                        print(f"\n  [OOM Recovery] Switching batch size to 1 and retrying...")
+                        continue
+                    else:
+                        raise e
+                else:
+                    raise e
+        pbar.close()
         return outs
 
     def free(self):
         del self.model
-        gc.collect(); torch.cuda.empty_cache()
+        del self.tok
+        gc.collect()
+        if DEVICE == "cuda":
+            torch.cuda.empty_cache()
 '''))
 
 C.append(md(r'''
@@ -567,5 +644,50 @@ redundant is worth knowing about, and a filter that catches what prompting misse
 is a stronger result *because* the comparison was run.
 '''))
 
-write_notebook("/home/user/cognisync02/tmlr/notebooks/NB4_downstream_llm.ipynb", C,
-               "behavioural ASR + tool spoofing")
+C.append(md(r'''
+## 7. Archive and Download Outputs
+
+Packages all results into `cognisync_tmlr_results.zip` and initiates automatic download in Kaggle/Colab.
+'''))
+
+C.append(code(r'''
+import shutil
+from IPython.display import FileLink, display, Javascript
+
+out_dir = str(ART)
+zip_name = "cognisync_tmlr_results"
+zip_base = f"/kaggle/working/{zip_name}" if Path("/kaggle/working").exists() else f"./{zip_name}"
+
+shutil.make_archive(zip_base, "zip", out_dir)
+zip_file = f"{zip_base}.zip"
+size_mb = os.path.getsize(zip_file) / (1024 * 1024)
+
+print("\n" + "="*60)
+print(f">>> ARCHIVE CREATED: {zip_file} ({size_mb:.2f} MB)")
+print("="*60)
+
+# Display clickable link
+display(FileLink(os.path.basename(zip_file)))
+
+# Automatic browser download trigger
+try:
+    from google.colab import files
+    files.download(zip_file)
+except Exception:
+    try:
+        js_code = f"""
+            const a = document.createElement("a");
+            a.href = "{os.path.basename(zip_file)}";
+            a.download = "{os.path.basename(zip_file)}";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        """
+        display(Javascript(js_code))
+        print(">>> Automatic download triggered in browser.")
+    except Exception:
+        print(">>> Click the link above to download your results archive.")
+'''))
+
+OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "notebooks", "NB4_downstream_llm.ipynb")
+write_notebook(OUT_PATH, C, "behavioural ASR + tool spoofing")

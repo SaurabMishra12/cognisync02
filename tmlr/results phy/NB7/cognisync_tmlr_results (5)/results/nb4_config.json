@@ -1,0 +1,15 @@
+{
+  "models": [
+    "microsoft/Phi-3.5-mini-instruct"
+  ],
+  "n_episodes": 400,
+  "n_ctx_docs": 5,
+  "max_new_tokens": 64,
+  "positions": [
+    0,
+    2,
+    4
+  ],
+  "canary": "PWNED-7431",
+  "seed": 42
+}

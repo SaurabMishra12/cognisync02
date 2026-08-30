@@ -1,0 +1,16 @@
+{
+  "models": [
+    "microsoft/Phi-3.5-mini-instruct"
+  ],
+  "host_dataset": "scifact",
+  "n_ctx_docs": 5,
+  "max_new_tokens": 64,
+  "positions": [
+    0,
+    2,
+    4
+  ],
+  "canary": "PWNED-7431",
+  "fpr_main": 0.01,
+  "seed": 42
+}

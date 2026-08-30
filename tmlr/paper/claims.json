@@ -1,0 +1,512 @@
+{
+  "ndcg10.bm25.budget0": {
+    "value": 0.3798,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.dense.budget0": {
+    "value": 0.3977,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.rrf.budget0": {
+    "value": 0.4495,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_fixed.budget0": {
+    "value": 0.4303,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_learned.budget0": {
+    "value": 0.4487,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_learned_override.budget0": {
+    "value": 0.4387,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_oracle.budget0": {
+    "value": 0.5239,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.bm25.budget50": {
+    "value": 0.4294,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.dense.budget50": {
+    "value": 0.4314,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.rrf.budget50": {
+    "value": 0.4452,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_fixed.budget50": {
+    "value": 0.4404,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_learned.budget50": {
+    "value": 0.4442,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_learned_override.budget50": {
+    "value": 0.4405,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_oracle.budget50": {
+    "value": 0.4503,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.bm25.budget100": {
+    "value": 0.435,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.dense.budget100": {
+    "value": 0.4377,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.rrf.budget100": {
+    "value": 0.4406,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_fixed.budget100": {
+    "value": 0.4396,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_learned.budget100": {
+    "value": 0.4405,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_learned_override.budget100": {
+    "value": 0.4394,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "ndcg10.alpha_oracle.budget100": {
+    "value": 0.4454,
+    "source": "nb1_summary.csv",
+    "note": "mean over 6 BEIR corpora, encoder=minilm"
+  },
+  "headroom.oracle_minus_fixed": {
+    "value": 0.0664,
+    "source": "nb2_policy_comparison.csv",
+    "note": ""
+  },
+  "headroom.pct_queries_alpha_irrelevant": {
+    "value": 0.4005,
+    "source": "nb2_headroom.csv",
+    "note": "fraction of queries where the entire alpha grid moves nDCG@10 by <0.01"
+  },
+  "asr.A0_static_templates.D0_none.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A0_static_templates.D1_3feat_tiny.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A0_static_templates.D1b_3feat_trained.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A0_static_templates.D2_embed_probe.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A0_static_templates.D3_distilbert.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A0_static_templates.D4_guard_zeroshot.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A0_static_templates.D5_perplexity.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A0_static_templates.D6_ensemble.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A1_query_conditioned.D0_none.fpr0.01": {
+    "value": 0.9933,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A1_query_conditioned.D1_3feat_tiny.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A1_query_conditioned.D1b_3feat_trained.fpr0.01": {
+    "value": 0.02,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A1_query_conditioned.D2_embed_probe.fpr0.01": {
+    "value": 0.9167,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A1_query_conditioned.D3_distilbert.fpr0.01": {
+    "value": 0.03,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A1_query_conditioned.D4_guard_zeroshot.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A1_query_conditioned.D5_perplexity.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A1_query_conditioned.D6_ensemble.fpr0.01": {
+    "value": 0.9933,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A2_imperative_free.D0_none.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A2_imperative_free.D1_3feat_tiny.fpr0.01": {
+    "value": 0.9933,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A2_imperative_free.D1b_3feat_trained.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A2_imperative_free.D2_embed_probe.fpr0.01": {
+    "value": 0.74,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A2_imperative_free.D3_distilbert.fpr0.01": {
+    "value": 0.0233,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A2_imperative_free.D4_guard_zeroshot.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A2_imperative_free.D5_perplexity.fpr0.01": {
+    "value": 0.22,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A2_imperative_free.D6_ensemble.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A3_semantic_camouflage.D0_none.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A3_semantic_camouflage.D1_3feat_tiny.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A3_semantic_camouflage.D1b_3feat_trained.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A3_semantic_camouflage.D2_embed_probe.fpr0.01": {
+    "value": 0.9833,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A3_semantic_camouflage.D3_distilbert.fpr0.01": {
+    "value": 0.9867,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A3_semantic_camouflage.D4_guard_zeroshot.fpr0.01": {
+    "value": 0.99,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A3_semantic_camouflage.D5_perplexity.fpr0.01": {
+    "value": 0.9967,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A3_semantic_camouflage.D6_ensemble.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A4_length_matched.D0_none.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A4_length_matched.D1_3feat_tiny.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A4_length_matched.D1b_3feat_trained.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A4_length_matched.D2_embed_probe.fpr0.01": {
+    "value": 0.98,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A4_length_matched.D3_distilbert.fpr0.01": {
+    "value": 0.6767,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A4_length_matched.D4_guard_zeroshot.fpr0.01": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A4_length_matched.D5_perplexity.fpr0.01": {
+    "value": 0.66,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A4_length_matched.D6_ensemble.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A5_score_guided.D0_none.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=420"
+  },
+  "asr.A5_score_guided.D1_3feat_tiny.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=420"
+  },
+  "asr.A5_score_guided.D1b_3feat_trained.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=420"
+  },
+  "asr.A5_score_guided.D2_embed_probe.fpr0.01": {
+    "value": 0.9833,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=420"
+  },
+  "asr.A5_score_guided.D3_distilbert.fpr0.01": {
+    "value": 0.6833,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=420"
+  },
+  "asr.A5_score_guided.D4_guard_zeroshot.fpr0.01": {
+    "value": 0.05,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=420"
+  },
+  "asr.A5_score_guided.D5_perplexity.fpr0.01": {
+    "value": 0.15,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=420"
+  },
+  "asr.A5_score_guided.D6_ensemble.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=420"
+  },
+  "asr.A6_split_payload.D0_none.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A6_split_payload.D1_3feat_tiny.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A6_split_payload.D1b_3feat_trained.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A6_split_payload.D2_embed_probe.fpr0.01": {
+    "value": 0.9767,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A6_split_payload.D3_distilbert.fpr0.01": {
+    "value": 0.9267,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A6_split_payload.D4_guard_zeroshot.fpr0.01": {
+    "value": 0.01,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A6_split_payload.D5_perplexity.fpr0.01": {
+    "value": 0.9,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "asr.A6_split_payload.D6_ensemble.fpr0.01": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "n=300"
+  },
+  "compliance.Qwen2.5-1.5B-Instruct.A0_static_templates": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-1.5B-Instruct.A1_query_conditioned": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-1.5B-Instruct.A2_imperative_free": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-1.5B-Instruct.A3_semantic_camouflage": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-1.5B-Instruct.A4_length_matched": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-1.5B-Instruct.A5_score_guided": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-1.5B-Instruct.A6_split_payload": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-3B-Instruct.A0_static_templates": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-3B-Instruct.A1_query_conditioned": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-3B-Instruct.A2_imperative_free": {
+    "value": 0.0675,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-3B-Instruct.A3_semantic_camouflage": {
+    "value": 0.01,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-3B-Instruct.A4_length_matched": {
+    "value": 0.0125,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-3B-Instruct.A5_score_guided": {
+    "value": 0.0125,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "compliance.Qwen2.5-3B-Instruct.A6_split_payload": {
+    "value": 0.0,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": ""
+  },
+  "macro.ndcgDenseCE": {
+    "value": 0.4376775353778226,
+    "source": "nb1_summary.csv",
+    "note": "mean nDCG@10, cross-encoder top-100"
+  },
+  "macro.ndcgLearnedCE": {
+    "value": 0.44054036337815505,
+    "source": "nb1_summary.csv",
+    "note": "mean nDCG@10, cross-encoder top-100"
+  },
+  "macro.headroomPct": {
+    "value": -0.5392,
+    "source": "nb2_policy_comparison.csv",
+    "note": "share of oracle-minus-fixed gap captured by the best learned policy"
+  },
+  "macro.alphaRtwo": {
+    "value": 0.0956,
+    "source": "nb2_alpha_predictability.csv",
+    "note": "best cross-validated R^2 over all predictors tried"
+  },
+  "macro.asrDoneStatic": {
+    "value": 0.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "A0_static_templates vs D1_3feat_tiny at FPR 1.0%"
+  },
+  "macro.asrDoneAdaptive": {
+    "value": 1.0,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "A5_score_guided vs D1_3feat_tiny at FPR 1.0%"
+  },
+  "macro.asrDthreeAdaptive": {
+    "value": 0.6833,
+    "source": "nb3_attack_defense_matrix.csv",
+    "note": "A5_score_guided vs D3_distilbert at FPR 1.0%"
+  },
+  "macro.complianceRate": {
+    "value": 0.0085,
+    "source": "nb4_retrieval_vs_behavioural.csv",
+    "note": "mean over models and attacks"
+  },
+  "macro.promptHardenASR": {
+    "value": 0.0377,
+    "source": "nb4_behavioural_summary.csv",
+    "note": "hardened system prompt, poison at rank 0"
+  }
+}

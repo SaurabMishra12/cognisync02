@@ -1,0 +1,13 @@
+{
+  "host_dataset": "scifact",
+  "n_target_queries": 300,
+  "top_k": 10,
+  "fpr_budgets": [
+    0.001,
+    0.01,
+    0.05
+  ],
+  "a5_query_budget": 200,
+  "split_k": 3,
+  "seed": 42
+}

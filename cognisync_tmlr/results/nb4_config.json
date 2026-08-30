@@ -1,0 +1,16 @@
+{
+  "models": [
+    "Qwen/Qwen2.5-1.5B-Instruct",
+    "Qwen/Qwen2.5-3B-Instruct"
+  ],
+  "n_episodes": 400,
+  "n_ctx_docs": 5,
+  "max_new_tokens": 64,
+  "positions": [
+    0,
+    2,
+    4
+  ],
+  "canary": "PWNED-7431",
+  "seed": 42
+}

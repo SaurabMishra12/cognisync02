@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Utility cost of filtering: nDCG@10 lost on clean full-corpus retrieval, with no attack present, at each operating point.}
+\label{tab:utility_cost}
+\begin{tabular}{lccc}
+\toprule
+Defense & FPR 0.1\% & FPR 1\% & FPR 5\% \\
+\midrule
+D0\_none & 0.0000 & 0.0000 & 0.0000 \\
+D1\_3feat\_tiny & 0.0000 & 0.0016 & 0.0267 \\
+D1b\_3feat\_trained & 0.0000 & 0.0065 & 0.0415 \\
+D2\_embed\_probe & 0.0067 & 0.0100 & 0.0366 \\
+D3\_distilbert & 0.0000 & 0.0054 & 0.0129 \\
+D4\_guard\_zeroshot & 0.0000 & -0.0002 & 0.0170 \\
+D5\_perplexity & 0.0005 & 0.0030 & 0.0435 \\
+D6\_ensemble & 0.0000 & 0.0000 & 0.0033 \\
+\bottomrule
+\end{tabular}
+\end{table}
