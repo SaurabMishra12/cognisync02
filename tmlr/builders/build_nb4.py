@@ -43,10 +43,7 @@ to work.
 
 | Model | dtype | VRAM | Notes |
 |---|---|---|---|
-| `Qwen/Qwen2.5-1.5B-Instruct` | fp16 | ~3.2 GB | default |
-| `meta-llama/Llama-3.2-1B-Instruct` | fp16 | ~2.6 GB | gated — needs an HF token |
-| `Qwen/Qwen2.5-3B-Instruct` | fp16 | ~6.4 GB | fits a free T4 |
-| `microsoft/Phi-3.5-mini-instruct` | fp16 | ~7.7 GB | fits a free T4, slower |
+| `microsoft/Phi-3.5-mini-instruct` | fp16 | ~7.6 GB | default — fits a free T4 |
 
 fp16 throughout rather than 4-bit: at these sizes a T4 has the memory, and it
 removes a `bitsandbytes` version dependency that breaks often on Colab.
@@ -66,16 +63,14 @@ C.append(code(ENV_BLOCK + r'''
 # --------------------------------------------------------------------------
 # CONFIG
 # --------------------------------------------------------------------------
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 MODELS = [
-    "Qwen/Qwen2.5-1.5B-Instruct",
-    "Qwen/Qwen2.5-3B-Instruct",
-    # "meta-llama/Llama-3.2-1B-Instruct",   # gated: huggingface-cli login first
-    # "microsoft/Phi-3.5-mini-instruct",
+    "microsoft/Phi-3.5-mini-instruct",
 ]
 N_EPISODES = 400          # attacked episodes per condition
 N_CTX_DOCS = 5            # passages placed in the context window
 MAX_NEW_TOKENS = 64
-GEN_BATCH = 8
+GEN_BATCH = 2             # keep small for Phi-3.5 (3.8B) on T4
 POISON_POSITIONS = [0, 2, 4]   # rank at which the poison is placed, for the
                                # position-sensitivity analysis
 CANARY = "PWNED-7431"
@@ -282,48 +277,92 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 class LocalAgent:
     def __init__(self, model_id):
         self.id = model_id
+        if DEVICE == "cuda":
+            torch.cuda.empty_cache()
+            gc.collect()
+
         self.tok = AutoTokenizer.from_pretrained(model_id)
         if self.tok.pad_token is None:
             self.tok.pad_token = self.tok.eos_token
         self.tok.padding_side = "left"
 
         if DEVICE == "cuda":
-            n_gpus = torch.cuda.device_count()
-            dmap = "auto" if n_gpus > 1 else None
-            self.model = AutoModelForCausalLM.from_pretrained(
-                model_id,
-                torch_dtype=torch.float16,
-                device_map=dmap,
-            )
-            if dmap is None:
-                self.model = self.model.to("cuda")
+            try:
+                # Try loading directly to GPU 0 first (avoids .to() duplication)
+                self.model = AutoModelForCausalLM.from_pretrained(
+                    model_id,
+                    torch_dtype=torch.float16,
+                    device_map={"": 0},
+                    low_cpu_mem_usage=True,
+                )
+            except Exception:
+                # Fallback: auto-balance across all available GPUs
+                self.model = AutoModelForCausalLM.from_pretrained(
+                    model_id,
+                    torch_dtype=torch.float16,
+                    device_map="auto",
+                    low_cpu_mem_usage=True,
+                )
+            self.device = self.model.device
         else:
             self.model = AutoModelForCausalLM.from_pretrained(
-                model_id,
-                torch_dtype=torch.float32,
-                device_map=None,
+                model_id, torch_dtype=torch.float32, device_map=None,
             ).to("cpu")
+            self.device = torch.device("cpu")
         self.model.eval()
 
-    @torch.no_grad()
+        if DEVICE == "cuda":
+            props = torch.cuda.get_device_properties(0)
+            alloc = torch.cuda.memory_allocated(0) / 1e9
+            print(f"  Model loaded on {self.device} | "
+                  f"VRAM used: {alloc:.1f}/{props.total_memory/1e9:.1f} GB")
+
+    @torch.inference_mode()
     def generate(self, chat_batches, max_new_tokens=MAX_NEW_TOKENS):
         outs = []
-        n_gpus = torch.cuda.device_count() if DEVICE == "cuda" else 1
-        batch_size = max(GEN_BATCH, GEN_BATCH * n_gpus)
-        dev = self.model.device
-        for i in tqdm(range(0, len(chat_batches), batch_size), leave=False, desc="  gen"):
+        batch_size = GEN_BATCH
+        dev = self.device
+        i = 0
+        pbar = tqdm(total=len(chat_batches), leave=False, desc="  gen")
+        while i < len(chat_batches):
             chunk = chat_batches[i:i + batch_size]
             texts = [self.tok.apply_chat_template(c, tokenize=False,
                                                   add_generation_prompt=True)
                      for c in chunk]
-            enc = self.tok(texts, return_tensors="pt", padding=True,
-                           truncation=True, max_length=3072).to(dev)
-            gen = self.model.generate(**enc, max_new_tokens=max_new_tokens,
-                                      do_sample=False, temperature=None, top_p=None,
-                                      pad_token_id=self.tok.pad_token_id)
-            for j in range(len(chunk)):
-                outs.append(self.tok.decode(gen[j][enc["input_ids"].shape[1]:],
-                                            skip_special_tokens=True).strip())
+            try:
+                enc = self.tok(texts, return_tensors="pt", padding=True,
+                               truncation=True, max_length=2048).to(dev)
+                gen = self.model.generate(
+                    input_ids=enc["input_ids"],
+                    attention_mask=enc["attention_mask"],
+                    max_new_tokens=max_new_tokens,
+                    do_sample=False,
+                    temperature=None,
+                    top_p=None,
+                    pad_token_id=self.tok.pad_token_id,
+                )
+                input_len = enc["input_ids"].shape[1]
+                for j in range(len(chunk)):
+                    outs.append(self.tok.decode(gen[j][input_len:],
+                                                skip_special_tokens=True).strip())
+                del enc, gen
+                i += len(chunk)
+                pbar.update(len(chunk))
+            except Exception as e:
+                err_msg = str(e).lower()
+                if "out of memory" in err_msg or "cuda" in err_msg:
+                    if DEVICE == "cuda":
+                        torch.cuda.empty_cache()
+                        gc.collect()
+                    if batch_size > 1:
+                        batch_size = 1
+                        print(f"\n  [OOM Recovery] Switching batch size to 1 and retrying...")
+                        continue
+                    else:
+                        raise e
+                else:
+                    raise e
+        pbar.close()
         return outs
 
     def free(self):

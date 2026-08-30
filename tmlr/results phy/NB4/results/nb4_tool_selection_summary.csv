@@ -1,0 +1,3 @@
+model,poisoned,tool_hijack_rate,unparsed,n
+microsoft/Phi-3.5-mini-instruct,False,0.0,0.0,100
+microsoft/Phi-3.5-mini-instruct,True,0.4,0.0,100

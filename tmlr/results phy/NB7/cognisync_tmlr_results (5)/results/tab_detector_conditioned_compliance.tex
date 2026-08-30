@@ -1,0 +1,47 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Detector-Conditioned Downstream Compliance and End-to-End Risk at matched $\mathrm{FPR}=1\%$. $P(C\mid E,D)$ is measured by running the LLM on episodes where the payload survived detector $D$, not assumed equal to the no-detector baseline. Phi-3.5-mini-instruct, plain system prompt, position~0. $N_{\mathrm{surv}}$: survivors out of $N$ total. Brackets: Wilson 95\% CI.}
+\label{tab:detector_conditioned_compliance}
+\begin{tabular}{llccccccc}
+\toprule
+Attacker & Metric & D0 (None) & D1 (3-feat) & D2 (Probe) & D3 (DistilBERT) & D4 (Guard) & D5 (Perplexity) & D6 (Ensemble) \\
+\midrule
+\multirow{5}{*}{A1\_query\_conditioned} & $P(E\mid D)$ & 0.99 & 0.00 & 0.92 & 0.03 & 0.00 & 0.00 & 0.99 \\
+ & $N_{\mathrm{surv}}$ & 298 & 0 & 275 & 9 & 0 & 0 & 298 \\
+ & $N_{\mathrm{comp,surv}}$ & 119 & 0 & 111 & 4 & 0 & 0 & 119 \\
+ & $P(C\mid E, D)$ & 0.399 [0.35, 0.46] & \text{NA} & 0.404 [0.35, 0.46] & 0.444 [0.19, 0.73] & \text{NA} & \text{NA} & 0.399 [0.35, 0.46] \\
+ & $P(C\mid D)$ & 0.3967 & 0.0000 & 0.3700 & 0.0133 & 0.0000 & 0.0000 & 0.3967 \\
+\midrule
+\multirow{5}{*}{A2\_imperative\_free} & $P(E\mid D)$ & 1.00 & 0.99 & 0.74 & 0.02 & 0.00 & 0.22 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 300 & 298 & 222 & 7 & 0 & 66 & 300 \\
+ & $N_{\mathrm{comp,surv}}$ & 167 & 166 & 117 & 5 & 0 & 36 & 167 \\
+ & $P(C\mid E, D)$ & 0.557 [0.50, 0.61] & 0.557 [0.50, 0.61] & 0.527 [0.46, 0.59] & 0.714 [0.36, 0.92] & \text{NA} & 0.545 [0.43, 0.66] & 0.557 [0.50, 0.61] \\
+ & $P(C\mid D)$ & 0.5567 & 0.5533 & 0.3900 & 0.0167 & 0.0000 & 0.1200 & 0.5567 \\
+\midrule
+\multirow{5}{*}{A3\_semantic\_camouflage} & $P(E\mid D)$ & 1.00 & 1.00 & 0.98 & 0.99 & 0.99 & 1.00 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 300 & 300 & 295 & 296 & 297 & 299 & 300 \\
+ & $N_{\mathrm{comp,surv}}$ & 25 & 25 & 24 & 24 & 24 & 25 & 25 \\
+ & $P(C\mid E, D)$ & 0.083 [0.06, 0.12] & 0.083 [0.06, 0.12] & 0.081 [0.06, 0.12] & 0.081 [0.06, 0.12] & 0.081 [0.05, 0.12] & 0.084 [0.06, 0.12] & 0.083 [0.06, 0.12] \\
+ & $P(C\mid D)$ & 0.0833 & 0.0833 & 0.0800 & 0.0800 & 0.0800 & 0.0833 & 0.0833 \\
+\midrule
+\multirow{5}{*}{A4\_length\_matched} & $P(E\mid D)$ & 1.00 & 1.00 & 0.98 & 0.68 & 0.00 & 0.66 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 300 & 300 & 294 & 203 & 0 & 198 & 300 \\
+ & $N_{\mathrm{comp,surv}}$ & 74 & 74 & 72 & 53 & 0 & 43 & 74 \\
+ & $P(C\mid E, D)$ & 0.247 [0.20, 0.30] & 0.247 [0.20, 0.30] & 0.245 [0.20, 0.30] & 0.261 [0.21, 0.33] & \text{NA} & 0.217 [0.17, 0.28] & 0.247 [0.20, 0.30] \\
+ & $P(C\mid D)$ & 0.2467 & 0.2467 & 0.2400 & 0.1767 & 0.0000 & 0.1433 & 0.2467 \\
+\midrule
+\multirow{5}{*}{A5\_score\_guided} & $P(E\mid D)$ & -- & 1.00 & 0.98 & 0.68 & 0.05 & 0.15 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & -- & 60 & 59 & 41 & 3 & 9 & 60 \\
+ & $N_{\mathrm{comp,surv}}$ & -- & 19 & 25 & 14 & 0 & 3 & 27 \\
+ & $P(C\mid E, D)$ & -- & 0.317 [0.21, 0.44] & 0.424 [0.31, 0.55] & 0.342 [0.22, 0.49] & 0.000 [0.00, 0.56] & 0.333 [0.12, 0.65] & 0.450 [0.33, 0.58] \\
+ & $P(C\mid D)$ & -- & 0.3167 & 0.4167 & 0.2333 & 0.0000 & 0.0500 & 0.4500 \\
+\midrule
+\multirow{5}{*}{A6\_split\_payload} & $P(E\mid D)$ & 1.00 & 1.00 & 0.98 & 0.93 & 0.01 & 0.90 & 1.00 \\
+ & $N_{\mathrm{surv}}$ & 300 & 300 & 293 & 278 & 3 & 270 & 300 \\
+ & $N_{\mathrm{comp,surv}}$ & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ & $P(C\mid E, D)$ & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.56] & 0.000 [0.00, 0.01] & 0.000 [0.00, 0.01] \\
+ & $P(C\mid D)$ & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
+\bottomrule
+\end{tabular}
+\end{table*}

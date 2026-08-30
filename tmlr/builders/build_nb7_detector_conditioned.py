@@ -59,8 +59,7 @@ C.append(code(ENV_BLOCK + r'''
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
 MODELS = [
-    "Qwen/Qwen2.5-3B-Instruct",
-    "Qwen/Qwen2.5-1.5B-Instruct",
+    "microsoft/Phi-3.5-mini-instruct",
 ]
 HOST_DATASET = "scifact"
 N_CTX_DOCS = 5            # clean passages in the context window
@@ -300,7 +299,7 @@ def detect_canary(text, attack):
 C.append(md(r'''
 ## 4. LLM Inference
 
-The same model setup and prompting as NB4: Qwen2.5 instruct models in fp16,
+The same model setup and prompting as NB4: Phi-3.5-mini-instruct in fp16,
 greedy decoding, two system prompt variants (plain and hardened).
 '''))
 
@@ -662,7 +661,7 @@ for (atk, defense, fpr, model, system, pos), g in groups:
         "defense": defense,
         "target_fpr": fpr,
         "model": model,
-        "model_short": "1.5B" if "1.5B" in model else "3B",
+        "model_short": "Phi-3.5" if "Phi" in model else model.split("/")[-1],
         "system": system,
         "position": pos,
         "N": N,
@@ -736,7 +735,7 @@ for atk, pe in d0_pe.items():
     print(f"    [{flag}] {atk}: P(E|D0) = {pe:.3f}")
 
 # 6. Verify P(E|D) matches NB3 aggregated rates
-nb3_agg = det_df.groupby(["attack", "defense", "target_fpr"])["E"].mean().reset_index()
+nb3_agg = det.groupby(["attack", "defense", "target_fpr"])["E"].mean().reset_index()
 nb3_agg.columns = ["attack", "defense", "target_fpr", "P_E_nb3"]
 our_pe = summary.groupby(["attack", "defense", "target_fpr"])["P_E_given_D"].mean().reset_index()
 our_pe.columns = ["attack", "defense", "target_fpr", "P_E_nb7"]
@@ -760,9 +759,9 @@ C.append(md(r'''
 '''))
 
 C.append(code(r'''
-# Headline table: FPR = 1%, Qwen2.5-3B, plain, pos = 0
+# Headline table: FPR = 1%, Phi-3.5-mini, plain, pos = 0
 headline = summary[(summary.target_fpr == FPR_MAIN) &
-                   (summary.model_short == "3B") &
+                   (summary.model_short == "Phi-3.5") &
                    (summary.system == "plain") &
                    (summary.position == 0)]
 
@@ -771,7 +770,7 @@ DEFENSE_ORDER = ["D0_none", "D1_3feat_tiny", "D1b_3feat_trained",
                  "D4_guard_zeroshot", "D5_perplexity", "D6_ensemble"]
 
 print("=" * 100)
-print("HEADLINE TABLE: P(C|E,D) at FPR=1%, Qwen2.5-3B, plain prompt, pos=0")
+print("HEADLINE TABLE: P(C|E,D) at FPR=1%, Phi-3.5-mini, plain prompt, pos=0")
 print("=" * 100)
 
 for atk in sorted(headline.attack.unique()):
@@ -844,7 +843,7 @@ def tex_escape(s):
     return str(s).replace("_", r"\_").replace("&", r"\&").replace("%", r"\%")
 
 headline = summary[(summary.target_fpr == FPR_MAIN) &
-                   (summary.model_short == "3B") &
+                   (summary.model_short == "Phi-3.5") &
                    (summary.system == "plain") &
                    (summary.position == 0)]
 
@@ -861,7 +860,7 @@ latex_lines = [
     r"\caption{Detector-Conditioned Downstream Compliance and End-to-End Risk "
     r"at matched $\mathrm{FPR}=1\%$. $P(C\mid E,D)$ is measured by running the "
     r"LLM on episodes where the payload survived detector $D$, not assumed equal "
-    r"to the no-detector baseline. Qwen2.5-3B-Instruct, plain system prompt, "
+    r"to the no-detector baseline. Phi-3.5-mini-instruct, plain system prompt, "
     r"position~0. $N_{\mathrm{surv}}$: survivors out of $N$ total. "
     r"Brackets: Wilson 95\% CI.}",
     r"\label{tab:detector_conditioned_compliance}",
